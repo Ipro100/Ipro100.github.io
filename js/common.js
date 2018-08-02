@@ -33,9 +33,9 @@ $(".open_mnu").click(function(){
 
 });
 
-// $(window).on('load', function () {
-//     $preloader = $('.loader'),
-//       $loader = $preloader.find('.loader_inner');
-//     $loader.fadeOut();
-//     $preloader.delay(0).fadeOut('slow');
-//   });
+$(window).on('load', function () {
+    $preloader = $('.loader'),
+      $loader = $preloader.find('.loader_inner');
+    $loader.fadeOut();
+    $preloader.delay(0).fadeOut('slow');
+  });
