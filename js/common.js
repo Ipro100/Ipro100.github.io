@@ -1,25 +1,8 @@
-$(function() {
+$(document).ready(function() {
 
-$(".toggle_mnu").click(function() {
-  $(this).toggleClass("on");
-  $(".hidden_lg_mnu").slideToggle();
-  return false;
-});
 
-$(".hidden_lg_mnu ul a").click(function(){
-   $(this).toggleClass("on");		
-  $(".hidden_lg_mnu").slideToggle();
-   $(".toggle_mnu").removeClass("on");
-})
 
-$(".open_mnu").click(function(){
-	 $(this).toggleClass("on");
-  $(".hidden_lg_mnu").slideToggle();
-  $(".toggle_mnu").removeClass("on");
-  
-})
-
- $(".popup_content").magnificPopup({
+   $(".popup_content").magnificPopup({
    	type : "image",
    	gallery : {
    		enabled : true
@@ -28,8 +11,40 @@ $(".open_mnu").click(function(){
    	
    });
 
+   $(".header_content h1").animated("fadeInDown");
+   $(".line_caption p, .section_header").animated("fadeInUp");
+   $(".mnu_line").animated("zoomIn");
+   
+   $(".anim_zoom ").animated("zoomIn","zoomOut");
+   $(".anim_rotate_left ").animated("rotateInUpRight");
+   $(".anim_rotate_right ").animated("rotateInUpLeft");
 
-	$("a[href*='#']").mPageScroll2id();
+
+
+	//SVG Fallback
+	if(!Modernizr.svg) {
+		$("img[src*='svg']").attr("src", function() {
+			return $(this).attr("src").replace(".svg", ".png");
+		});
+	};
+
+	
+
+	//Chrome Smooth Scroll
+	try {
+		$.browserSelector();
+		if($("html").hasClass("chrome")) {
+			$.smoothScroll();
+		}
+	} catch(err) {
+
+	};
+
+	$("img, a").on("dragstart", function(event) { event.preventDefault(); });
+
+
+	
+	$(".mnu_line ul li a").mPageScroll2id();
 
 });
 
@@ -37,5 +52,5 @@ $(window).on('load', function () {
     $preloader = $('.loader'),
       $loader = $preloader.find('.loader_inner');
     $loader.fadeOut();
-    $preloader.delay(0).fadeOut('slow');
+    $preloader.delay(350).fadeOut('slow');
   });
