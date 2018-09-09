@@ -48,21 +48,32 @@ $(function() {
 $("a[href*='#']").mPageScroll2id();
 
 
-$("form").submit(function() { //Change
-    var th = $(this);
-    $.ajax({
-      type: "POST",
-      url: "mail.php", //Change
-      data: th.serialize()
-    }).done(function() {
-      alert("Thank you!");
-      setTimeout(function() {
-        // Done Functions
-        th.trigger("reset");
-      }, 1000);
-    });
-    return false;
+  $('.popup-youtube').magnificPopup({
+    
+    type: 'iframe',
+    mainClass: 'mfp-fade',
+    removalDelay: 160,
+    preloader: false,
+
+    fixedContentPos: false
   });
+
+$('.open-popup').magnificPopup({
+  type: 'inline'
+  });
+
+
+var owl = $('.testimonials-block');
+owl.owlCarousel({
+    items:4,
+    loop:true,
+    margin:10,
+    autoplay:true,
+    autoplayTimeout:1000,
+    autoplayHoverPause:true
+});
+
+
 
 });
 
