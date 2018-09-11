@@ -75,6 +75,15 @@ owl.owlCarousel({
 
 
 
+
+   if ($(window).width() <= '568'){
+        $('.price-item').removeClass('revealator-slideright');
+        $('.team-item').removeClass('revealator-slideleft');
+        $('.bgform').removeClass('revealator-slideleft');
+           
+  }
+
+
 });
 
 $(window).on('load', function () {
