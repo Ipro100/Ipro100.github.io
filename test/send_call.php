@@ -33,7 +33,7 @@ if (count($error))
 }else
 {
     // Отправка email
-	mail_utf8( 'nahodkaekbb@gmail.com, lobudova@nahodka.pro, 79222220707@ya.ru',
+	mail_utf8( 'igorpro1990@gmail.com, lobudova@nahodka.pro, 79222220707@ya.ru',
 		'ЖК Сказка',
 		'admin@nahodka-an.ru',
 		$subject,
