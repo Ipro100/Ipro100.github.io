@@ -1,0 +1,179 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+body
+	font-size: 16px
+	min-width: 320px
+	margin: 0
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	color: $text
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+
+.header
+	position: relative
+	width: 100%
+	height: 100%	
+	min-height: 100vh
+	background-position: top center
+	background-size: cover
+	background-repeat: no-repeat
+	text-transform: uppercase
+
+.header__Line
+	padding: 20px 25px
+	display: flex
+	justify-content: space-between
+	align-items: flex-end
+	
+.headerSendvichMenu
+	flex: 0.34
+	display: flex
+	color: rgba(255, 255, 255, 0.502)
+	font-size: 0.93em
+	align-items: end
+
+
+
+	
+.toggle_mnu 
+	display: inline-block
+	width: 32px
+	height: 28px	
+	z-index: 200
+	margin-bottom: -5px
+	margin-right: 10px
+
+	span:after, span:before
+		content: ""
+		position: absolute
+		left: 0
+		top: 9px
+				 
+		content: ""
+		position: absolute
+		left: 0
+		top: 9px
+
+	span
+		&:after
+			top: 18px
+
+	span 
+		position: relative
+		display: block
+
+	span, span:after, span:before
+		width: 100%
+		height: 1px
+		background-color: $accent
+		transition: all 0.3s
+		backface-visibility: hidden
+		border-radius: 2px
+
+
+	&.on span 
+		background-color: transparent
+
+	&.on span:before 
+		transform: rotate(45deg) translate(0px, 1px)
+
+	&.on span:after 
+		transform: rotate(-45deg) translate(6px, -6px)
+
+
+.header__Line-wrapper	
+	display: flex	
+
+.headerLogo
+	position: relative
+	display: block
+	vertical-align: center
+	font-size: 2.25em
+	color: #fff
+	line-height: 1.2
+	margin-bottom: -5px
+	margin-right: 43px
+	+kerning(10)
+
+
+		
+
+.headerMenu
+	display: flex
+	align-items: flex-end
+	ul
+		padding: 0
+		list-style-type: none
+		margin: 0
+		li
+			display: inline-block
+			margin: 0 60px
+			a
+				text-decoration: none
+				
+				line-height: 1.8
+				font-size: 0.93em
+				transition: color 0.25s
+				color: rgba(255, 255, 255, 0.502)
+				&:hover
+					color: rgba(255, 255, 255, 0.7)
+	
+.line-style
+	background-color: $accent
+	position: absolute
+	content: ''
+	width: 64px
+	height: 4px	
+	left: 33px
+	top: 22px
+	display: inline-block	
+
+
+.select-language
+	display: flex	
+	span
+		color: #fff
+		opacity: 0.5
+
+.info
+	margin-right: 50px
+	width: 25px
+	height: 25px
+	background-image: url("../img/info44.png")	
+	background-position: center
+	background-size: cover
+	background-repeat: no-repeat
+
+
+		
+
