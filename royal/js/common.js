@@ -30,8 +30,9 @@ $('.center').slick({
 	$("#form-button").click(function() {
 		var chek = checkParams();
 		if(chek){
+    setTimeout(function() {  
 		$.magnificPopup.close();
-		
+		},3000);
 	}
 	});
 
