@@ -1,0 +1,811 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.3
+	font-family: $default-font
+	overflow-x: hidden
+	margin: 0
+	padding: 0
+	color: $text
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+	align-items: center
+
+b, strong
+	font-weight: bold
+
+
+.container
+	+wrapper()
+
+
+.header
+	position: relative
+	min-height: 90vh
+	display: flex
+	justify-content: center
+	align-items: flex-end
+
+.header_bg
+	background-image: url(../img/bg.png)
+	background-position: top center
+	background-size: cover	
+	background-attachment: fixed
+
+.header__content
+	color: #fff
+
+.header__content-composition
+	max-width: 480px
+	text-align: center
+	margin-bottom: 65px
+	.description
+		font-size: 46px
+		+xs(font-size, 42px)
+		font-family: $mbold-font
+		text-transform: uppercase
+		position: relative
+		margin-bottom: 45px
+		line-height: 1.2
+		letter-spacing: 0.2px
+		&:after
+			content: ''
+			background-color: #fff
+			width: 50%
+			height: 1px
+			position: absolute
+			left: 24%
+			bottom: -20px
+	p
+		font-size: 27px	
+		margin-bottom: 40px
+
+
+		
+
+.h1
+	font-size: 69px
+	+xs(font-size, 56px)
+	font-family: $mbold-font
+	margin-bottom: 10px
+
+.header_button
+	color: #fff
+	text-transform: uppercase
+	cursor: pointer
+	text-decoration: none
+	touch-action: manipulation
+	vertical-align: middle
+	white-space: nowrap
+	background-color: $accent
+	font-size: 24px
+	border-radius: 6px
+	padding: 15px 25px
+	transition: all 0.25s
+	&:hover
+		background-color: #1C7F44
+		box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.2)
+
+
+//////////SECTION1////////////////////////
+
+.bg_dark
+	background-color: #d8d8d8
+
+.s1_steps
+	.container
+		display: flex
+		flex-wrap: wrap
+		padding-top: 25px
+		padding-bottom: 25px
+		max-width: 1200px 
+		justify-content: center
+
+		
+		.s1_item
+			+col()
+			+size(4)
+			+size-sm(6)
+			+size-xs(10)
+			margin-left: 5px
+			margin-right: 5px	
+			+sm(margin-top, 10px)
+			display: flex
+			.img_wrapper
+				padding: 15px
+				background-color: #fff
+				padding-bottom: 20px
+				img
+					width: 100%
+			.s1_list
+				list-style-type: none
+				padding-left: 0
+				margin: 0
+				li
+					font-size: 27px
+					+md(font-size, 20px)
+
+					a
+						text-decoration: none
+						color: rgb(51, 51, 51)
+					
+					&:before
+						content: '• '
+a
+	text-decoration: none
+	color: rgb(51, 51, 51)
+
+////////SECTION 2////////////////
+
+
+.s2_advantages
+
+	padding: 30px 0
+	.container
+		display: flex
+		flex-wrap: wrap
+		justify-content: center
+		.s2_item
+			+col()
+			+size(4)
+			+size-sm(6)
+			+size-xs(10)
+			+xs(border, solid rgba(0,0,0, .5)  1px)
+			+xs(margin-bottom, 10px)
+			+xs(background-color, rgba(0,0,0, .3))
+			.s2_item-adv
+				text-align: center
+				color: #fff
+				font-family: $mbold-font
+				font-size: 35px
+				span
+					font-size: 52px
+
+
+
+
+
+///////SECTION 3//////////////////////
+.bg_gray
+	background-color: #f5f5f5
+
+
+.s3_sced
+	padding-bottom: 70px
+	&-form
+		+col()
+		+size(5)
+		+size-xs(10)
+		+shift-xs-left(1.5)
+		text-align: center
+		position: relative
+		margin-bottom: -70px
+		+xs(margin-bottom, 30px)
+		h2
+			font-size: 28px
+			font-family: $mbold-font
+			margin-bottom: 0
+
+		p
+			margin-top: 5px
+			font-family: $msemibold-font
+			font-size: 23px
+			line-height: 1.1
+		.s3_form-list
+			text-align: left
+			font-size: 18px
+			ul
+				margin-bottom: 10px	
+
+.s3_sced
+	padding-top: 35px
+	.container
+		max-width: 950px 
+
+
+
+.less_form
+	display: flex
+	flex-direction: column
+	input
+		margin-top: 10px	
+		padding: 10px 
+		background-color: #E2E2E2
+		border: 1px solid #D1CFCF
+	.submit_button
+		display: inline-block
+		width: 170px
+		cursor: pointer
+		background-color: $accent
+		font-size: 16px
+		text-transform: uppercase
+		&:hover
+			background-color: #1C7F44
+			box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.2)
+
+
+.s3_list1, .s3_list2
+	position: relative
+	+col()
+	+size(5)
+	+size-xs(11)
+	font-size: 20px
+	@media screen and (max-width: 380px)
+		font-size: 16px
+	+shift-xs-left(1)
+	li
+		margin-bottom: 5px
+
+
+.s3_list1
+	+shift-left(7)
+	+shift-md-left(6)
+	+shift-sm-left(5)
+	white-space: nowrap	
+
+
+
+.s3_list2
+	margin-top: 100px	
+	+xs(margin-top, 100px)
+	@media screen and (max-width: 380px)
+		margin-top: 118px
+
+
+.circle1, .circle2, .circle3
+	position: absolute
+	display: inline-block
+
+	font-family: $mbold-font
+	border-radius: 50%
+	background-color: $accent
+	padding: 10px	
+	width: 26px
+	height: 26px
+	text-align: center
+	font-size: 28px
+	line-height: 1
+	color: #fff
+	left: -100px
+	+md(left, -50px)
+	+sm(left, -25px)
+	+xs(left, -45px)	
+
+.circle1, .circle2
+	right: -100px
+	&:before
+		content: ''
+		position: absolute
+		height: 321%
+		width: 4px
+		background-color: $accent
+		top: 60px
+		right: 46%
+
+.circle1
+	top: -170px
+	@media screen and (max-width: 380px)
+		top: -191px	
+
+.circle2	
+	top: 50px
+	@media screen and (max-width: 380px)
+		top: 30px
+
+
+.circle3
+	bottom: -170px	
+	@media screen and (max-width: 380px)
+		bottom: -178px
+
+
+
+
+///////////////SECTION 4////////////
+
+.s4_best
+	overflow-x: hidden
+	border-top: 1px solid #ebebeb
+	border-bottom: 1px solid #ebebeb
+	box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.75)
+	padding-bottom: 30px
+	h2
+		font-size: 2.61rem
+		font-weight: 400
+		line-height: 3.07rem
+	.center
+		dispalay: flex
+		.item
+			
+			flex-basis: 250px
+			border: 1px solid #e2e9e6
+			margin: 3px
+			box-sizing: border-box
+			padding: 15px
+			padding-bottom: 20px
+			cursor: pointer
+			transition: all 0.25s
+			&:hover
+					box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.3)
+					
+
+			.s4_img
+				margin-bottom: 20px
+
+				img
+					width: 100%
+			a
+				font-size: 17px
+				color: #212121
+				font-weight: 500
+				
+.slick-track
+	+lg(display, flex)
+	+xxs(display, block)				
+.slick-slide
+	+lg(height, auto)
+
+				
+.slick-dots li button 
+	border-radius: 50%
+	background: #d8d8d8
+	display: block
+	height: 12px
+	width: 12px
+	margin: 3px
+	&:before
+		color: transparent 
+
+.slick-dots .slick-active button
+	background-color: $accent
+	color: transparent
+	&:before
+		content: ""
+
+.slick-dots li
+	margin: 0
+
+.slick-dots
+	height: 25px
+
+
+
+////////////SECTION5////////////
+
+
+.s5
+	position: relative
+	overflow-x: hidden
+	&_head-line
+		position: relative
+		z-index: -1
+		width: 100%
+		padding: 10px 
+	&-h2
+		// font-family: 'Zeyada', cursive
+		font-family: $mbold-font
+		font-size: 29px
+	ul
+		list-style-type: none
+		color: #333
+	p
+		font-size: 18px	
+		color: #333
+	.side_head
+		padding-right: 100px
+		+xs(padding-right, 0)
+		h3
+			font-size: 24px
+			font-family: 'Zeyada', cursive
+			font-weight: 300
+			margin-top: 15px
+			color: #1E1E1E
+
+		
+.s5_bg_picture
+	background-image: url(../img/bg3.png)	
+	background-repeat: no-repeat
+	background-position: top center
+	background-size: contain
+	min-height: 1800px
+	+sm(min-height, 100vh)	
+	position: relative
+	background-color: #C6C6C6
+	
+	.container
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+
+
+
+
+.west_side, .east_side
+	position: absolute
+	+md(position, static)
+	max-width: 500px 
+	+md(margin-top, 40px)
+
+
+.west_side
+	top: 10%
+	+lg(top, 2%)
+	right: 18%
+	transform: rotate(15deg)
+	+xs(transform, rotate(0))
+	+md(margin-top, 30px)
+	+md(margin-left, 30px)
+	+xs(margin-left, 0)
+	+xs(right, 0)
+
+
+
+
+.west_list1, .east_list
+	p
+		margin-top: 0
+		font-weight: bold	
+
+.west_list1
+	position: relative
+	p, ul
+		margin-bottom: 0 
+
+	ul
+		margin-top: 0
+		+xxs(padding-left, 15px)	
+	.west_img
+		position: absolute
+		left: -27px
+		+xxs(left, -35px)
+		top: 20px
+		height: 280px
+		+xxs(height, 280px)
+		img
+			height: 100%
+
+.west_list2
+	p,ul
+		margin: 0
+		+xxs(padding-left, 15px)
+	ul	
+	p
+		margin-left: 40px
+		+xxs(margin-left, 0)	
+
+
+.west_list3
+	ul
+		margin: 0
+		margin-top: 7px
+		+xxs(padding-left, 15px)		
+
+.west_side-wrapper, .east_side-wrapper
+	background-image: url(../img/5.png)	
+	background-position: center
+	background-size: 100% 100%
+	background-repeat: no-repeat
+	padding: 45px
+	padding-left: 120px
+	@media screen and (max-width: 460px)
+		padding-left: 100px
+		margin-left: -30px
+	+xxs(width, 70%)
+	
+
+
+	// padding-right: 50px
+
+	display: flex
+	flex-direction: column
+	flex-basis: 450px
+
+
+
+.east_side
+	top: 28%
+	+lg(top, 15%)
+	left: 25%
+	+lg(left, 3%)
+	transform: rotate(-15deg)
+	+xs(transform, rotate(0))
+	+xs(margin-top, 0)
+	+md(margin-right, 30px)
+	+xs(margin-right, 0)
+
+	h3
+		margin-bottom: 0
+	p
+		margin-bottom: 10px	
+	.p
+		font-weight: 400
+
+.east_list
+	ol
+		padding-left: 15px
+
+
+@media screen and (max-width: 1530px)
+	.west_side
+		right: 5%
+	.east_side
+		left: 10%
+
+
+.s5_tablet
+	background-image: url(../img/tablet.png)
+	background-repeat: no-repeat
+	background-position: top center
+	background-size: contain
+	margin-top: 30px
+	position: absolute
+	+md(position, static)
+	padding-left: 20px
+	bottom: 0
+	width: 1000px
+	height: 600px
+
+	.carousel11
+		margin: 20px auto
+		height: 355px
+		width: 520px
+		@media screen and (max-width: 650px)
+			height: 240px
+			width: 350px
+			margin: 10px auto	
+		@media screen and (max-width: 430px)
+			height: 180px
+			width: 275px
+			margin: 10px auto		
+		.slick-dots
+			bottom: 5px
+		iframe
+			height: 355px
+			width: 520px
+			@media screen and (max-width: 650px)
+				height: 240px
+				width: 350px
+			@media screen and (max-width: 430px)
+				height: 180px
+				width: 270px
+					
+@media screen and (max-width: 650px)
+	.s5_tablet
+		width: 700px
+		height: 400px
+@media screen and (max-width: 430px)
+	.s5_tablet
+		width: 480px
+		height: 305px
+		.header_button
+			margin-top: 35px
+			font-size: 14px
+
+.s5_tablet
+	text-align: center
+	.header_button
+		display: inline-block
+		margin-top: 65px
+		+sm(font-size, 18px)
+		+xs(font-size, 16px)
+		+xs(padding, 10px)
+
+
+
+//////SECTION6////////////////////
+
+.s6
+	background-image: url(../img/bg5.png)
+	background-repeat: no-repeat
+	background-position: top center
+	background-size: contain
+	background-color: #f5f5f5
+	padding: 120px 0
+	font-size: 30px
+	+xs(font-size, 25px)
+	&_header, &_list
+		col()
+		+size(6)
+		+size-md(8)
+		+size-sm(10)
+		+size-xs(12)
+
+	&_header
+
+	&_list
+		+shift-left(4)
+		+shift-md-left(3)
+		+shift-sm-left(2)
+		+shift-xs-left(0)
+	.container
+		display: flex
+		flex-direction: column
+
+
+///////////SECTION7//////////////////
+
+.s7
+	padding-top: 150px
+	padding-bottom: 50px
+	background-color: #D6D6D6
+	&_img
+		width: 100%
+		img
+			width: 100%
+	&_side
+		display: flex
+		flex-wrap: wrap
+		margin-top: 100px
+		+xs(margin-top, 35px)
+		&-left, &-right
+		  +col()		  
+		&-right
+			+size(6)
+			+size-xs(12)
+			+shift-left(1)
+			+shift-sm-left(0)
+
+			
+			.s3_sced-form
+				width: 100%
+				+xs(margin-left, 0)
+			.less_form
+				padding: 0 40px	
+
+				input
+					font-size: 19px	
+					margin-top: 15px 
+					min-width: 178px 
+				.submit_button
+					width: 200px
+		&-left
+			font-size: 18px
+			+size(5)
+			+size-sm(6)
+			+size-xs(10)
+			+size-xxs(12)
+
+			p
+				margin-top: 30px
+				&:nth-child(even)
+					padding-left: 100px  
+					+sm(padding-left, 15px)
+.s7
+	.container
+		max-width: 1000px 
+
+
+
+/////////SECTION8//////////////////////////
+
+.s8
+	padding: 100px 0
+	&_items
+		display: flex
+		flex-wrap: wrap
+		justify-content: center
+		position: relative
+		&-item
+			+col()
+			+size(4)
+			+size-sm(6)
+			+size-xs(10)
+			position: relative
+			margin-bottom: 30px
+			
+			
+			.descr
+				border: 1px solid #ECEEED
+				padding: 15px
+				box-sizeng: border-box
+				position: relative
+				&:before
+					content: ''
+					position: absolute
+					bottom: -10px
+					left: 25px
+					background-color: #fff
+					width: 15px
+					height: 15px
+					border-bottom: 1px solid #ECEEED
+					border-right: 1px solid #ECEEED
+					transform: rotate(45deg)
+				p
+					margin: 0
+					font-size: 17px
+					color: #2F2F2F
+					text-align: center
+
+.s8_img
+	width: 50px
+	height: 50px
+	margin-top: 20px
+	margin-left: 10px
+	img
+		width: 100%
+		border-radius: 50%
+
+.more
+	position: absolute
+	text-transform: uppercase
+	color: #666
+	font-size: 14px
+	cursor: pointer
+	bottom: 0
+	right: 0		
+
+
+
+
+
+
+
+
+	////////FOOTER	/////////////////
+
+.main_footer
+	box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.75)
+	padding: 48px 0
+	background-color: #212121
+	&_columns
+		display: flex
+		flex-wrap: wrap
+		ul
+			list-style-type: none
+			padding: 0
+			li
+				margin-bottom: 8px
+				font-size: 1.0rem
+				box-sizing: border-box
+				color: #4caf50
+				a
+					color: #4caf50
+					&:focus, &:hover
+						color: #0c80df
+						text-decoration: underline
+		
+		h4
+			font-size: 1.84rem	
+			margin: 15px 0
+			a
+				color: #4caf50
+				&:hover
+					text-decoration: underline
+
+		&-column
+			+col()
+			+size(2.4)
+			&:nth-child(3)
+				margin-top: 53px
+
+.text-light
+	color: #757575
