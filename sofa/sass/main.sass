@@ -97,7 +97,9 @@ b, strong
 	+xs(font-size, 56px)
 	font-family: $mbold-font
 	margin-bottom: 10px
-
+	// transition: all 0.5s
+	animation-delay: 1s
+	
 .header_button
 	color: #fff
 	text-transform: uppercase
@@ -140,6 +142,10 @@ b, strong
 			margin-right: 5px	
 			+sm(margin-top, 10px)
 			display: flex
+			&:nth-child(2)
+				animation-delay: 0.5s			
+			&:nth-child(2)
+				animation-delay: 1s
 			.img_wrapper
 				padding: 15px
 				background-color: #fff
@@ -151,7 +157,7 @@ b, strong
 				padding-left: 0
 				margin: 0
 				li
-					font-size: 27px
+					font-size: 22px
 					+md(font-size, 20px)
 
 					a
@@ -182,6 +188,7 @@ a
 			+xs(border, solid rgba(0,0,0, .5)  1px)
 			+xs(margin-bottom, 10px)
 			+xs(background-color, rgba(0,0,0, .3))
+
 			.s2_item-adv
 				text-align: center
 				color: #fff
@@ -231,7 +238,8 @@ a
 	.container
 		max-width: 950px 
 
-
+// .submit
+// 	display: inline-block
 
 .less_form
 	display: flex
@@ -242,8 +250,7 @@ a
 		background-color: #E2E2E2
 		border: 1px solid #D1CFCF
 	.submit_button
-		display: inline-block
-		width: 170px
+		align-self: flex-start 
 		cursor: pointer
 		background-color: $accent
 		font-size: 16px
@@ -589,7 +596,8 @@ a
 			margin: 10px auto		
 		.slick-dots
 			bottom: 5px
-		iframe
+		.frame
+
 			height: 355px
 			width: 520px
 			@media screen and (max-width: 650px)
@@ -631,7 +639,7 @@ a
 	background-size: contain
 	background-color: #f5f5f5
 	padding: 120px 0
-	font-size: 30px
+	font-size: 25px
 	+xs(font-size, 25px)
 	&_header, &_list
 		col()
@@ -687,7 +695,7 @@ a
 					margin-top: 15px 
 					min-width: 178px 
 				.submit_button
-					width: 200px
+					align-self: flex-start
 		&-left
 			font-size: 18px
 			+size(5)
@@ -788,6 +796,25 @@ a
 				font-size: 1.0rem
 				box-sizing: border-box
 				color: #4caf50
+				.contacts
+					margin-left: 10px
+				.social
+					display: inline-block
+					padding: 0
+					background-color: #2196f3	
+					border-radius: 100%
+					color: #fff
+					width: 34px
+					height: 34px
+					text-align: center
+					vertical-align: middle
+					&:focus, &:hover
+						color: #fff
+					i
+						line-height: 34px
+				.mob_version
+					margin-top: 30px	
+					display: block
 				a
 					color: #4caf50
 					&:focus, &:hover
@@ -810,16 +837,20 @@ a
 
 			&:nth-child(3)
 				margin-top: 53px
+			&:nth-child(5)
+				margin-top: 7px
+	
 
 .text-light
 	color: #757575
 
+.yellow-green 
+	color: yellowgreen
 
 
 
 
-
-
+//////////////////MENU??????
 
 
 .main_mnu
@@ -847,7 +878,6 @@ a
 			margin-top: 10px
 			position: relative
 			margin-right: 30px
-			+xxs(margin-right, 10px)
 			&:after
 				content: ''
 				position: absolute
@@ -887,10 +917,18 @@ a
 		display: flex
 		vertical-align: middle
 		align-items: center
+		position: relative
 		+md(order, -1)
 		padding-top: 10px
+		
+		.phone
+			display: inline-block
+			background-color: #42a5f5
+			margin-top: 3px	!important
+			margin-right: 10px !important
+			margin-left: 0
 		.main_mnu-btn
-			display: inline-block !important
+			display: inline-block 
 			width: 70px
 			margin-top: 7px
 			img
@@ -900,7 +938,24 @@ a
 			font-size: 16px
 			padding: 8px 15px
 			border-radius: 8px
-			margin-left: 15px
+			margin-left: 10px
+			margin-top: 3px
+
+@media screen and (max-width: 430px)
+	.main_mnu .mnu_left .logo
+		margin-right: 0
+	.main_mnu .mnu_right
+		align-items: flex-start	
+	.main_mnu .mnu_btns .slide
+			display: none 
+			
+	.mnu-list
+		order: -1 !important
+	
+	.main_mnu .mnu_btns .headerSendvichMenu	
+		position: fixed
+		top: 25px
+		right: 0
 
 			
 .headerSendvichMenu
@@ -964,6 +1019,69 @@ a
 	+md(display, flex)
 	+md(flex-direction, column)
 
+
+.callme
+	display: none
+	position: absolute
+	text-align: center
+	border: 1px solid rgba(0, 0, 0, 0.2)
+	border-radius: 6px
+	background-color: #fff
+	top: 83px
+	right: 90px
+	+md(right, 165px)
+	@media screen and(max-width: 430px)
+		right: 90px		
+	&:before
+		content: ''
+		width: 15px
+		height: 15px
+		position: absolute
+		background-color: #fff
+		border: 1px solid rgba(0, 0, 0, 0.2)
+		border-right: none
+		border-bottom: none
+		top: -8.5px
+		left: 48%
+		transform: rotate(45deg)
+		
+		
+
+
+	&_head
+		font-size: 14px
+		background-color: #fff
+		padding-top: 5px
+		padding-bottom: 5px
+		border-radius: 6px
+
+	&_form	
+		padding: 0 10px
+		display: flex
+		flex-direction: column
+		.text, .tel, .submit
+			padding: 10px
+			margin-top: 15px
+			border: 1px solid #efefef
+		.submit
+			margin-bottom: 10px
+			align-self: center
+			font-size: 16px
+			padding: 7px 10px
+			cursor: pointer
+			background-color: #42a5f5
+			color: #fff
+
+
+
+
+
+
+
+
+
+
+//////FREEELESSON////////////////
 
 
 .contactForm

@@ -78,6 +78,10 @@ $('.carousel11').slick({
   $(".toggle_mnu").click(function() {
   $(this).toggleClass("on");
   $(".mnu-list").slideToggle();
+  if($(window).width() <= 430) {
+  $(".slide").slideToggle();
+ }
+
   return false;
 });
 
@@ -92,10 +96,21 @@ $('.popup_content').click(function() {
     $('#contactForm').fadeToggle();
   })
 
+
+
+
+  $(document).mouseup(function (e) {
+    var container = $("#call_to_cell");
+    	    if (!container.is(e.target)  // if the target of the click isn't the container...
+        && container.has(e.target).length === 0) // ... nor a descendant of the container
+    {
+        container.fadeOut();
+    }
+  });  
+
   $(document).mouseup(function (e) {
     var container = $("#contactForm");
-
-    if (!container.is(e.target) // if the target of the click isn't the container...
+    	    if (!container.is(e.target)  // if the target of the click isn't the container...
         && container.has(e.target).length === 0) // ... nor a descendant of the container
     {
         container.fadeOut();
@@ -107,6 +122,10 @@ $('.popup_content').click(function() {
 		$('#contactForm').fadeToggle();
 		$.magnificPopup.close();
 	});
-  
+
+$('#callback').click(function(){
+	$('#call_to_cell').fadeToggle();
+})
                  
 });
+

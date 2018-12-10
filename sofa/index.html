@@ -14,8 +14,8 @@
 	
 	<!-- Template Basic Images Start -->
 	<meta property="og:image" content="path/to/image.jpg">
-<!-- 	<link rel="icon" href="img/favicon/favicon.ico">
-	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png"> -->
+	<link rel="icon" href="img/favicon/favicon.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
 	<!-- Template Basic Images End -->
 	
 	<!-- Custom Browsers Color Start -->
@@ -23,7 +23,7 @@
 	<!-- Custom Browsers Color End -->
 	<link href="https://fonts.googleapis.com/css?family=Zeyada" rel="stylesheet"> 
 	<link rel="stylesheet" href="css/main.min.css">
-
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 
 </head>
 
@@ -46,13 +46,22 @@
 	</nav>
 	 
 	<div class="mnu_btns">
-		<a class="main_mnu-btn" onclick="Skype.tryAnalyzeSkypeUri('call', '0');" href="skype:live:522a6451ad33f440?call">
+		<div  id="callback" class="header_button phone slide" title="Заказать нам звонок" ><i class="fas fa-phone"></i></div>
+		<a class="main_mnu-btn slide" title="Позвонить нам в Skype" onclick="Skype.tryAnalyzeSkypeUri('call', '0');" href="skype:live:522a6451ad33f440?call">
 			<img src="img/callbutton_32px.png" alt="Позвонить в онлайн школу по скайпу">
 		</a>
-		<a class="header_button" href="#">вход</a>
+		<a class="header_button slide" href="#">вход</a>
 	<div class="headerSendvichMenu"   >
 			 <a href="#" class="toggle_mnu "><span></span></a>
 			 <span></span>
+		 </div>
+		 <div id="call_to_cell" class="callme">
+		 	<div class="callme_head">Заказать звонок</div>
+		 	<form id="callback" class="callme_form">
+		 	<input class="text form-control" type="text" name="Name" placeholder="Имя" required>
+		 	<input class="tel form-control"type="tel" name="Phone"	placeholder="Телефон" required>
+		 	<input class="submit"type="submit" value="Заказать">
+		 	</form>
 		 </div>
 	</div>
 	</div>
@@ -77,7 +86,7 @@
 				<div class="img_wrapper">
 					<img src="img/1.png" alt="1">
 					<ul class="s1_list">
-						<li><a href="https//sofaenglish.com/register">Зарегистрируйтесь</a></li>
+						<li><a href="https://sofaenglish.com/register">Зарегистрируйтесь</a></li>
 						<li><a class="popup_content" href="#contactForm">Пройдите бесплатный урок</a></li>
 					</ul>
 				</div>
@@ -88,7 +97,7 @@
 					<img src="img/2.png" alt="2">
 					<ul class="s1_list">
 						<li>Учитесь дистанционно</li>
-						<li><a href="https//sofaenglish.com/kopilka_slov">Пополняйте копилку слов</a></li>
+						<li><a href="https://sofaenglish.com/kopilka_slov">Пополняйте копилку слов</a></li>
 					</ul>
 				</div>
 
@@ -97,8 +106,8 @@
 				<div class="img_wrapper">
 					<img src="img/3.png" alt="3">
 					<ul class="s1_list">
-						<li><a href="https//sofaenglish.com/tests">Тестируйте знания</a></li>
-						<li><a href="https//sofaenglish.com/certificate">Получайте сертификат</a></li>
+						<li><a href="https://sofaenglish.com/tests">Тестируйте знания</a></li>
+						<li><a href="https://sofaenglish.com/certificate">Получайте сертификат</a></li>
 					</ul>
 				</div>
 
@@ -138,7 +147,9 @@
 					<input type="text" name="Name" placeholder="Имя">
 					<input type="mail" name="Mail" placeholder="E-mail">
 					<input type="tel"  name="Phone" placeholder="Телефон">
+					
 					<input class="submit_button" type="submit" value="Отправить заявку">
+				
 				</form>
 
 			</div>
@@ -146,7 +157,7 @@
 				<ul>
 					<li>Составьте удобное расписание</li>
 					<li>Учитесь английскому онлайн <br> по персональной программе</li>
-					<li><a href="https//sofaenglish.com/kopilka_slov">Пополняйте Копилку Слов</a></li>
+					<li><a href="https://sofaenglish.com/kopilka_slov">Пополняйте Копилку Слов</a></li>
 					<li>Повторяйте слова где угодно</li>
 				</ul>		
 				<div class="circle1">1</div>
@@ -155,9 +166,9 @@
 			</nav>
 			<nav class="s3_list2">
 				<ul>
-					<li><a href="https//sofaenglish.com/tests">Проходите тесты</a></li>
-					<li><a href="https//sofaenglish.com/reviews">Оставляйте отзывы</a></li>
-					<li><a href="https//sofaenglish.com/certificate">Получайте сертификат знаний</a></li>
+					<li><a href="https://sofaenglish.com/tests">Проходите тесты</a></li>
+					<li><a href="https://sofaenglish.com/reviews">Оставляйте отзывы</a></li>
+					<li><a href="https://sofaenglish.com/certificate">Получайте сертификат знаний</a></li>
 				</ul>
 
 			</nav>
@@ -280,13 +291,13 @@
 									example https://www.youtube.com/embed/Cfj4fd53--s   -->
 
 									<div class="video">
-										<iframe src="https://www.youtube.com/embed/X8ZavPqB_kk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+										<iframe class="frame" src="https://www.youtube.com/embed/X8ZavPqB_kk" frameborder="0"  allowfullscreen></iframe>
 									</div>			
 									<div class="video">
-										<iframe src="https://www.youtube.com/embed/X8ZavPqB_kk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+										<iframe class="frame" src="https://www.youtube.com/embed/X8ZavPqB_kk" frameborder="0"  allowfullscreen></iframe>
 									</div>						  	
 									<div class="video">
-										<iframe src="https://www.youtube.com/embed/X8ZavPqB_kk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+										<iframe class="frame" src="https://www.youtube.com/embed/X8ZavPqB_kk" frameborder="0"  allowfullscreen></iframe>
 									</div>						
 
 								</div>	
@@ -349,7 +360,7 @@
 									<div class="s8_items-item">
 										<div class="descr">
 											<p>
-											Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Домах буквенных которой дороге проектах единственное свой составитель океана вопрос пунктуация страна за выйти вдали оксмокс запятых, агенство они если курсивных. Взобравшись, мир, страна. Взгляд.
+												У меня занимается сын 8 лет. В школе изучает английский с первого класса, но дается не просто. У нас строгий учитель и высокие требования. Учится по скайпу удобно: не надо ни куда водить ребенка. Смогли увлечь, занимается с интересом. Проверяем домашние задания и идем на опережение школьной программы. 
 										</p>
 									</div>
 									<div class="s8_img">
@@ -359,7 +370,7 @@
 								<div class="s8_items-item">
 									<div class="descr">
 										<p>
-										Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Домах буквенных которой дороге проектах единственное свой составитель океана вопрос пунктуация страна за выйти вдали оксмокс запятых, агенство они если курсивных. Взобравшись, мир, страна. Взгляд.
+										Задумался подтянуть английский после нескольких заграничных поездок. Среди нескольких онлайн школ выбрал Sofa English после сравнения цен. Здесь оказалось дешевле. После начала обучения положительных эмоций только добавилось. Спасибо учителю, и жду своей новой поездки, чтобы испытать новые знания на практике))
 									</p>
 								</div>
 								<div class="s8_img">
@@ -369,7 +380,7 @@
 							<div class="s8_items-item">
 								<div class="descr">
 									<p>
-									Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Домах буквенных которой дороге проектах единственное свой составитель океана вопрос пунктуация страна за выйти вдали оксмокс запятых, агенство они если курсивных. Взобравшись, мир, страна. Взгляд.
+									Благодарю школу Sofa English за профессиональный подход, грамотно подобранные учебные материалы и, конечно же, своего самого чедесного преподавателя, которая быстро нашла ко мне подход в обучении. Каждый урок проходит комфортно и интересно. Спасибо!!!
 								</p>
 							</div>
 							<div class="s8_img">
@@ -379,6 +390,12 @@
 					</div>	
 				</div>
 			</section>
+
+
+
+
+
+
 			<footer class="main_footer">
 				<div class="container">
 					<div class="main_footer_columns">
@@ -412,21 +429,27 @@
 						<div class="main_footer_columns-column">
 							<h4><a href="#">Контакты</a></h4>
 							<ul>
-								<li><a href="tel:79654835244">+7(965)483-52-44</a></li>
-								<li><a href="mailto:mail@sofaenglish.com"></a>mail@sofaenglish.com</li>
-								<li><a href="skype:live:522a6451ad33f440?call">Sofa English</a></li>
+								<li><i class="fas fa-mobile-alt yellow-green "></i><a class="contacts" href="tel:79654835244">+7(965)483-52-44</a></li>
+								<li><i class="far fa-envelope yellow-green "></i><a class="contacts" href="mailto:mail@sofaenglish.com"></a>mail@sofaenglish.com</li>
+								<li><i class="fab fa-skype yellow-green "></i><a class="contacts" href="skype:live:522a6451ad33f440?call">Sofa English</a></li>
 							</ul>
 						</div>
 						<div class="main_footer_columns-column">
 							<ul>
-								<li><i>#</i></li>
-								<li><i>#</i></li>
-								<li><a href="#">Мобильная версия</a></li>
+								<li><a class="social" href="#"><i class="fab fa-vk"></i></a></li>
+								<li><a class="social" href="#"><i class="fab fa-instagram"></i></a></li>
+								<li><a class="mob_version" href="#">Мобильная версия</a></li>
 							</ul>
 						</div>
 					</div>
 				</div>	
 			</footer>
+
+
+
+
+
+
 		
 		<section id="contactForm" class="contactForm">	
 		<div class="container">																											
