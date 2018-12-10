@@ -48,6 +48,7 @@ b, strong
 
 
 .header
+	padding-top: 50px
 	position: relative
 	min-height: 90vh
 	display: flex
@@ -804,8 +805,247 @@ a
 		&-column
 			+col()
 			+size(2.4)
+			+size-sm(4.8)
+			+size-xs(10)
+
 			&:nth-child(3)
 				margin-top: 53px
 
 .text-light
 	color: #757575
+
+
+
+
+
+
+
+
+
+.main_mnu
+	position: fixed
+	top: 0
+	left: 0
+	z-index: 1001
+	background-color: #fff
+	border-bottom-color: rgb(226, 233, 230)
+	width: 100%
+	box-shadow: 0 0 11px 0 rgba(0,0,0,.5)
+	
+	.container
+		display: flex
+		
+	
+		padding-top: 5px
+		padding-bottom: 5px
+	.mnu_left
+		display: flex
+		.logo
+			display: inline-block !important
+			vertical-align: middle
+			width: 70px
+			margin-top: 10px
+			position: relative
+			margin-right: 30px
+			+xxs(margin-right, 10px)
+			&:after
+				content: ''
+				position: absolute
+				background-color: #eceeed
+				height: 140%
+				+md(display, none)
+				width: 1px
+				right: -38px
+				top: -25px
+			img
+				max-width: 100%
+	.mnu_right
+		display: flex		
+		flex-grow: 1
+		justify-content: space-between
+		+md(flex-direction, column)	
+		+md(align-items, flex-end)
+
+		.mnu-list
+			+md(display, none)
+			+md(align-self, center)
+			+sm(align-self, flex-start)
+			ul
+				li 
+					display: inline-block
+					+md(display, block)
+					+md(margin-top, 15px)
+					margin-right: 25px
+					text-align: center	
+					vertical-align: middle
+					font-size: 1.3rem
+					a
+						transition: all 0.25s
+						&:hover
+							color: $accent
+	.mnu_btns
+		display: flex
+		vertical-align: middle
+		align-items: center
+		+md(order, -1)
+		padding-top: 10px
+		.main_mnu-btn
+			display: inline-block !important
+			width: 70px
+			margin-top: 7px
+			img
+				width: 100%
+		.header_button
+			margin: 0
+			font-size: 16px
+			padding: 8px 15px
+			border-radius: 8px
+			margin-left: 15px
+
+			
+.headerSendvichMenu
+	display: none
+	margin-left: 25px
+	margin-top: 5px
+	min-width: 40px
+	+md(display, flex)
+	z-index: 999
+	color: rgba(255, 255, 255, 0.502)
+	font-size: 0.93em
+	align-items: end
+	
+.toggle_mnu 
+	display: inline-block
+	width: 39px
+	height: 35px	
+	z-index: 200
+	margin-bottom: -5px
+	margin-right: 10px
+
+	span:after, span:before
+		content: ""
+		position: absolute
+		left: 0
+		top: 9px
+				 
+		content: ""
+		position: absolute
+		left: 0
+		top: 9px
+
+	span
+		&:after
+			top: 18px
+
+	span 
+		position: relative
+		display: block
+
+	span, span:after, span:before
+		width: 100%
+		height: 3px
+		background-color: rgb(136, 136, 136)
+		transition: all 0.3s
+		backface-visibility: hidden
+		border-radius: 2px
+
+
+	&.on span 
+		background-color: transparent
+
+	&.on span:before 
+		transform: rotate(45deg) translate(0px, 1px)
+
+	&.on span:after 
+		transform: rotate(-45deg) translate(6px, -6px)
+
+.for_md_screen
+	display: none
+	+md(display, flex)
+	+md(flex-direction, column)
+
+
+
+.contactForm
+	display: none
+	.container
+		display: flex
+		justify-content: center
+		.modal-content
+			width: 400px
+			box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5)
+			position: relative
+			background-color: #ffffff
+			border: 1px solid #999999
+			border: 1px solid rgba(0, 0, 0, 0.2)
+			border-radius: 6px
+			box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5)
+			background-clip: padding-box
+			
+			outline: 0
+			.modal-header 
+				padding: 15px
+				border-bottom: 1px solid #e5e5e5
+				min-height: 16.42857143px
+			.modal-body 
+				position: relative
+				
+		.modal-title
+			margin: 0
+			line-height: 1.42857143
+			font-size: 25px
+	
+		.form-group
+			display: flex
+			justify-content: center
+			align-items: center
+			margin-top: 15px
+		.col-sm-9
+			+col()
+			+size(8)	
+			.form-control-material
+
+				input, .form-control
+
+					width: 100%
+					font-size: 1.23rem
+					border: none
+					line-height: 16px
+					background-color: transparent
+					padding: 3px 0 13px
+					box-shadow: none
+					border-radius: 0
+					appearance: none
+					height: auto	
+					border-bottom: 1px solid #e5e5e5
+					&:focus:required:invalid
+						border-color: red
+					&:required:valid
+						border-color: green
+
+		.col-sm-3
+			+col()
+			+size(4)
+			margin: 0
+			padding-top: 0
+			margin-top: 10px
+		.modal-footer
+			text-align: right
+			.btn
+				color: #444444
+				text-decoration: none
+				border-color: rgba(0, 0, 0, 0)	
+				font-size: 18px
+				margin: 10px
+				padding: 5px 10px
+				cursor: pointer
+			.btn-primary
+				background-color: $accent
+				transition: all 0.25s
+				&:focus, &:hover
+					background-color: #0c80df
+
+
+						
+
+					

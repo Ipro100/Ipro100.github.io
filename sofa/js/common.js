@@ -75,5 +75,38 @@ $('.carousel11').slick({
   ]
 });
 
+  $(".toggle_mnu").click(function() {
+  $(this).toggleClass("on");
+  $(".mnu-list").slideToggle();
+  return false;
+});
 
+	$(".popup_content").magnificPopup({
+		type:"inline",
+    removalDelay: 300,
+		midClick: true
+	});
+
+
+$('.popup_content').click(function() {
+    $('#contactForm').fadeToggle();
+  })
+
+  $(document).mouseup(function (e) {
+    var container = $("#contactForm");
+
+    if (!container.is(e.target) // if the target of the click isn't the container...
+        && container.has(e.target).length === 0) // ... nor a descendant of the container
+    {
+        container.fadeOut();
+    }
+  });
+
+
+  	$(".btn-outline").click(function() {
+		$('#contactForm').fadeToggle();
+		$.magnificPopup.close();
+	});
+  
+                 
 });

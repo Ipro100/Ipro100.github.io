@@ -21,21 +21,52 @@
 	<!-- Custom Browsers Color Start -->
 	<meta name="theme-color" content="#000">
 	<!-- Custom Browsers Color End -->
-	<link href="https://fonts.googleapis.com/css?family=Zeyada" rel="stylesheet">  
+	<link href="https://fonts.googleapis.com/css?family=Zeyada" rel="stylesheet"> 
 	<link rel="stylesheet" href="css/main.min.css">
+
 
 </head>
 
 <body>
 
-	<!-- Custom HTML -->
+<div id="main_menu" class="main_mnu ">
+	<div class="container">
+	<div class="mnu_left">	
+	<a class="logo" href="#"><img src="img/logo.png" alt="logo"></a>
+
+	 </div>
+	 <div class="mnu_right">
+	<nav class="mnu-list">
+		<ul>
+			<li><a href="#">Школа</a></li>
+			<li><a href="#">Обучение</a></li>
+			<li><a href="#">Самостоятельное <br> обучение</a></li>
+			<li><a href="#">Стоимость</a></li>
+		</ul>
+	</nav>
+	 
+	<div class="mnu_btns">
+		<a class="main_mnu-btn" onclick="Skype.tryAnalyzeSkypeUri('call', '0');" href="skype:live:522a6451ad33f440?call">
+			<img src="img/callbutton_32px.png" alt="Позвонить в онлайн школу по скайпу">
+		</a>
+		<a class="header_button" href="#">вход</a>
+	<div class="headerSendvichMenu"   >
+			 <a href="#" class="toggle_mnu "><span></span></a>
+			 <span></span>
+		 </div>
+	</div>
+	</div>
+</div>
+</div>
 	<header class="header header_bg">
+
+
 		<div class="header__content">
 			<div class="header__content-composition">
 				<h1 class="h1">SofaEnglish</h1>
 				<div class="description">АНГЛИЙСКИЙ ЯЗЫК ПО СКАЙПУ</div>
 				<p>С вами везде, где есть интернет</p>
-				<a class="header_button" href="#">НАЧАТЬ УЧИТЬСЯ</a>
+				<a class="header_button popup_content" href="#contactForm">НАЧАТЬ УЧИТЬСЯ</a>
 			</div>
 		</div>
 	</header>
@@ -47,7 +78,7 @@
 					<img src="img/1.png" alt="1">
 					<ul class="s1_list">
 						<li><a href="https//sofaenglish.com/register">Зарегистрируйтесь</a></li>
-						<li><a href="">Пройдите бесплатный урок</a></li>
+						<li><a class="popup_content" href="#contactForm">Пройдите бесплатный урок</a></li>
 					</ul>
 				</div>
 
@@ -245,22 +276,22 @@
 				<div class="s5_tablet">
 					<div class="carousel11">
 
-						  	<!--ADD VIDEO FROM YOUTUBE http://www.youtube.com/embed/VIDEO_ID 
-						  		example https://www.youtube.com/embed/Cfj4fd53--s   -->
+								<!--ADD VIDEO FROM YOUTUBE http://www.youtube.com/embed/VIDEO_ID 
+									example https://www.youtube.com/embed/Cfj4fd53--s   -->
 
-						  		<div class="video">
-						  			<iframe src="https://www.youtube.com/embed/X8ZavPqB_kk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-						  		</div>			
-						  		<div class="video">
-						  			<iframe src="https://www.youtube.com/embed/X8ZavPqB_kk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-						  		</div>						  	
-						  		<div class="video">
-						  			<iframe src="https://www.youtube.com/embed/X8ZavPqB_kk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-						  		</div>						
+									<div class="video">
+										<iframe src="https://www.youtube.com/embed/X8ZavPqB_kk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+									</div>			
+									<div class="video">
+										<iframe src="https://www.youtube.com/embed/X8ZavPqB_kk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+									</div>						  	
+									<div class="video">
+										<iframe src="https://www.youtube.com/embed/X8ZavPqB_kk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+									</div>						
 
-						  	</div>	
-						  	<a class="header_button" href="#">ЗАПИСАТЬСЯ НА ВВОДНЫЙ УРОК</a>
-						  </div>
+								</div>	
+								<a class="header_button popup_content" href="#contactForm">ЗАПИСАТЬСЯ НА ВВОДНЫЙ УРОК</a>
+							</div>
 						</section>
 
 
@@ -396,8 +427,74 @@
 					</div>
 				</div>	
 			</footer>
-			
-			<script src="js/scripts.min.js"></script>
+		
+		<section id="contactForm" class="contactForm">	
+		<div class="container">																											
+			<div class="modal-content">
 
+				<div class="modal-header">
+					
+					<h4 class="modal-title">Записаться на бесплатный вводный урок</h4>
+				</div>
+				<div class="modal-body">
+					<form method="post" class="form-horizontal" role="form" id="form_free_lessons" action="/free_lessons">
+						<input type="hidden" name="_token" value="dL9L1ZYFJ8QNTWt13nIWJ3oeLpydvfmBdWqxf7Sv" />
+						<div class="form-group">
+							<label for="inputEmail3"  class="col-sm-3 control-label">Ваше имя</label>
+							<div class="col-sm-9">
+								<div class="form-control-material">
+									<input required type="text" class="form-control" name="name" id="name"><span class="ma-form-highlight"></span><span class="ma-form-bar"></span>
+
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="inputEmail3" class="col-sm-3 control-label">Ваш телефон</label>
+							<div class="col-sm-9">
+								<div class="form-control-material">
+									<input required type="text" class="form-control" id="phone" name="phone"><span class="ma-form-highlight"></span><span class="ma-form-bar"></span>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="inputEmail3" class="col-sm-3 control-label">Ваш Email</label>
+							<div class="col-sm-9">
+								<div class="form-control-material">
+									<input required type="email" class="form-control" parent="/^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/" id="email" name="email"><span class="ma-form-highlight"></span><span class="ma-form-bar"></span>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-3 control-label" >Комментарий</label>
+							<div class="col-sm-9">
+								<div class="form-control-material static">
+									<textarea required id="comment" name="comment" class="form-control" rows="2"></textarea><span class="ma-form-highlight"></span><span class="ma-form-bar"></span>
+
+								</div>
+							</div>
+						</div>
+
+
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn dark btn-outline" data-dismiss="modal">Отмена</button>
+						<input type="submit" class="btn btn-primary" value="Отправить">
+					</div>
+				</form>
+			</div>
+		</div>
+</section>
+
+
+
+
+
+
+
+
+
+			<script src="js/scripts.min.js"></script>
+			<script src="js/jquery.inputmask.bundle.js"></script>
+			
 		</body>
 		</html>
