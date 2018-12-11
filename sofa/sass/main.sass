@@ -68,38 +68,41 @@ b, strong
 	max-width: 480px
 	text-align: center
 	margin-bottom: 65px
-	.description
-		font-size: 46px
-		+xs(font-size, 42px)
-		font-family: $mbold-font
-		text-transform: uppercase
-		position: relative
-		margin-bottom: 45px
-		line-height: 1.2
-		letter-spacing: 0.2px
-		&:after
-			content: ''
-			background-color: #fff
-			width: 50%
-			height: 1px
-			position: absolute
-			left: 24%
-			bottom: -20px
+
 	p
 		font-size: 27px	
 		margin-bottom: 40px
+		margin-top: 40px
 
-
-		
 
 .h1
 	font-size: 69px
-	+xs(font-size, 56px)
+	+xs(font-size, 52px)
 	font-family: $mbold-font
-	margin-bottom: 10px
-	// transition: all 0.5s
-	animation-delay: 1s
-	
+	position: relative
+	line-height: 1.6
+
+.description
+	font-size: 46px !important
+	+xs(font-size, 42px)
+	font-family: $mbold-font
+	text-transform: uppercase
+	line-height: 1.2
+	letter-spacing: 0.2px
+	margin-top: 25px
+	position: relative
+	&:after
+		content: ''
+		background-color: #fff
+		width: 55%
+		height: 1px
+		position: absolute
+		left: 22%
+		bottom: -75px
+
+
+
+
 .header_button
 	color: #fff
 	text-transform: uppercase
@@ -142,30 +145,26 @@ b, strong
 			margin-right: 5px	
 			+sm(margin-top, 10px)
 			display: flex
-			&:nth-child(2)
-				animation-delay: 0.5s			
-			&:nth-child(2)
-				animation-delay: 1s
 			.img_wrapper
 				padding: 15px
 				background-color: #fff
-				padding-bottom: 20px
+				padding-bottom: 7px
+				text-align: center
 				img
 					width: 100%
-			.s1_list
-				list-style-type: none
-				padding-left: 0
-				margin: 0
-				li
-					font-size: 22px
-					+md(font-size, 20px)
-
-					a
-						text-decoration: none
-						color: rgb(51, 51, 51)
-					
-					&:before
-						content: '• '
+				.s1_list
+					list-style-type: none
+					padding-left: 0
+					display: inline-block
+					text-align: left
+					li
+						font-size: 18px
+						a
+							text-decoration: none
+							color: rgb(51, 51, 51)
+						
+						&:before
+							content: '• '
 a
 	text-decoration: none
 	color: rgb(51, 51, 51)
@@ -185,9 +184,8 @@ a
 			+size(4)
 			+size-sm(6)
 			+size-xs(10)
-			+xs(border, solid rgba(0,0,0, .5)  1px)
-			+xs(margin-bottom, 10px)
-			+xs(background-color, rgba(0,0,0, .3))
+			+xs(margin-bottom, 25px)
+			
 
 			.s2_item-adv
 				text-align: center
@@ -217,7 +215,7 @@ a
 		position: relative
 		margin-bottom: -70px
 		+xs(margin-bottom, 30px)
-		h2
+		.h2
 			font-size: 28px
 			font-family: $mbold-font
 			margin-bottom: 0
@@ -352,7 +350,7 @@ a
 	.center
 		dispalay: flex
 		.item
-			
+			text-align: center
 			flex-basis: 250px
 			border: 1px solid #e2e9e6
 			margin: 3px
@@ -638,9 +636,9 @@ a
 	background-position: top center
 	background-size: contain
 	background-color: #f5f5f5
-	padding: 120px 0
-	font-size: 25px
-	+xs(font-size, 25px)
+	padding: 20px 0
+	font-size: 20px
+	
 	&_header, &_list
 		col()
 		+size(6)
@@ -663,17 +661,19 @@ a
 ///////////SECTION7//////////////////
 
 .s7
-	padding-top: 150px
+	padding-top: 70px
 	padding-bottom: 50px
 	background-color: #D6D6D6
 	&_img
 		width: 100%
+		text-align: center
 		img
-			width: 100%
+			width: 60%
+			+xs(width, 80%)
 	&_side
 		display: flex
 		flex-wrap: wrap
-		margin-top: 100px
+		margin-top: 30px
 		+xs(margin-top, 35px)
 		&-left, &-right
 		  +col()		  
@@ -687,6 +687,11 @@ a
 			.s3_sced-form
 				width: 100%
 				+xs(margin-left, 0)
+				.h2
+					font-size: 28px
+					font-family: myriadprobold
+					margin-bottom: 0
+					margin-top: 23px
 			.less_form
 				padding: 0 40px	
 
@@ -821,7 +826,7 @@ a
 						color: #0c80df
 						text-decoration: underline
 		
-		h4
+		.f_head
 			font-size: 1.84rem	
 			margin: 15px 0
 			a
@@ -864,20 +869,20 @@ a
 	box-shadow: 0 0 11px 0 rgba(0,0,0,.5)
 	
 	.container
-		display: flex
-		
-	
-		padding-top: 5px
-		padding-bottom: 5px
+		display: flex	
+		+md(padding-top, 5px)
+		+md(padding-bottom, 5px)
 	.mnu_left
 		display: flex
 		.logo
 			display: inline-block !important
 			vertical-align: middle
-			width: 70px
+			width: 50px
 			margin-top: 10px
+			+md(margin-top, 5px)
 			position: relative
 			margin-right: 30px
+
 			&:after
 				content: ''
 				position: absolute
@@ -901,6 +906,8 @@ a
 			+md(align-self, center)
 			+sm(align-self, flex-start)
 			ul
+				margin-top: 10px
+				margin-bottom: 10px
 				li 
 					display: inline-block
 					+md(display, block)
@@ -908,7 +915,7 @@ a
 					margin-right: 25px
 					text-align: center	
 					vertical-align: middle
-					font-size: 1.3rem
+					font-size: 1.1rem
 					a
 						transition: all 0.25s
 						&:hover
@@ -919,7 +926,7 @@ a
 		align-items: center
 		position: relative
 		+md(order, -1)
-		padding-top: 10px
+		
 		
 		.phone
 			display: inline-block
@@ -956,12 +963,13 @@ a
 		position: fixed
 		top: 25px
 		right: 0
+		margin-top: 0
 
 			
 .headerSendvichMenu
 	display: none
 	margin-left: 25px
-	margin-top: 5px
+	margin-top: 10px
 	min-width: 40px
 	+md(display, flex)
 	z-index: 999
