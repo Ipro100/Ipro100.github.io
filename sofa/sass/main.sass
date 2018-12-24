@@ -83,7 +83,7 @@ b, strong
 	line-height: 1.6
 
 .description
-	font-size: 46px !important
+	font-size: 46px 
 	+xs(font-size, 42px)
 	font-family: $mbold-font
 	text-transform: uppercase
@@ -99,6 +99,10 @@ b, strong
 		position: absolute
 		left: 22%
 		bottom: -75px
+		@media screen and (max-width: 380px)
+			bottom: -130%
+		@media screen and (max-width: 347px)	
+			bottom: -225%
 
 
 
