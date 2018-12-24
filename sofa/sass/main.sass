@@ -81,6 +81,18 @@ b, strong
 	font-family: $mbold-font
 	position: relative
 	line-height: 1.6
+	&:after
+		content: ''
+		background-color: #fff
+		width: 65%
+		height: 1px
+		position: absolute
+		left: 17%
+		bottom: -145px
+		// @media screen and (max-width: 380px)
+		// 	bottom: -130%
+		@media screen and (max-width: 347px)	
+			bottom: -185px
 
 .description
 	font-size: 46px 
@@ -91,18 +103,7 @@ b, strong
 	letter-spacing: 0.2px
 	margin-top: 25px
 	position: relative
-	&:after
-		content: ''
-		background-color: #fff
-		width: 55%
-		height: 1px
-		position: absolute
-		left: 22%
-		bottom: -75px
-		@media screen and (max-width: 380px)
-			bottom: -130%
-		@media screen and (max-width: 347px)	
-			bottom: -225%
+
 
 
 
