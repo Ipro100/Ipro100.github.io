@@ -31,7 +31,7 @@ $(function() {
       }
     },
     {
-      breakpoint: 360,
+      breakpoint: 380,
       settings: {
         // arrows: false,
         centerPadding: '60',
