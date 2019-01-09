@@ -83,11 +83,11 @@ a:visited, a:hover, a:active
 
 .header
 	min-height: 85vh
-	background-image: url(../img/1bg.jpg)	
+	background-image: url(../img/bg.jpg)	
 	display: flex
 	flex-direction: column
 	// justify-content: center 
-	+xs(justify-content, space-between)
+	+sm(justify-content, space-between)
 	align-items: center
 	color: #fff
 	position: relative
@@ -102,7 +102,7 @@ a:visited, a:hover, a:active
 	padding: 15px 0
 	background: #fff
 	position: absolute
-	+xs(position, static)
+	+sm(position, static)
 	top: 0
 	left: 0
 	.container
@@ -131,7 +131,8 @@ a:visited, a:hover, a:active
 .header__center
 	padding: 25px
 	margin-top: 18%
-	+xs(margin-top, 0)
+	margin-bottom: 5%
+	+sm(margin-top, 0)
 	.wrapper
 		display: flex
 		justify-content: center
@@ -160,7 +161,7 @@ a:visited, a:hover, a:active
 .header__bottom
 	width: 100%
 	position: absolute
-	+xs(position, static)
+	+sm(position, static)
 	bottom: 0
 	left: 0
 	.items
