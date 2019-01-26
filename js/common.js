@@ -14,7 +14,7 @@ $(document).ready(function() {
    $(".header_content h1").animated("fadeInDown");
    $(".line_caption p, .section_header").animated("fadeInUp");
    $(".line_caption").animated("fadeInUp");
-   $(".portfolio_item").animated("zoomIn");
+   $(".portfolio_item").animated("fadeInUp");
    $(".mnu_line").animated("zoomIn");
    
    $(".anim_zoom ").animated("zoomIn","zoomOut");
@@ -83,6 +83,9 @@ $(document).mouseup(function (e) { // по клику вне попапа
     if (e.target!=popup[0]&&popup.has(e.target).length === 0){
         $('.js-overlay-thank-you').fadeOut();
     }
+
+
+
 });
 
 $(window).on('load', function () {
