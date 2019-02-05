@@ -1,0 +1,520 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	margin: 0
+	color: $text
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+
+.header
+	position: relative
+	min-height: 90vh
+
+.container
+	+wrapper()
+	display: flex
+	flex-wrap: wrap
+
+
+.headline
+	width: 100%
+	background-color: rgb(226, 177, 56)
+	padding-top: 15px
+	padding-bottom: 15px
+	box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.16)
+	.container
+		max-width: 1100px
+		justify-content: space-between
+		+xs(flex-direction, column)
+		+xs(align-items, center)
+	&_mail
+		font-size: 20px
+		display: flex
+		align-items: center
+		+xs(margin-bottom, 15px)
+		&-description
+			margin-left: 18px
+
+
+.button 
+	white-space: nowrap
+	background-color: $accent
+	border-radius: 50px
+	box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.3)
+	padding: 3px 75px
+	text-align: center
+	display: inline-block
+	font-family: $medium-font
+	font-size: 20px
+	line-height: 1.8
+	color: #fff
+	text-decoration: none
+	cursor: pointer
+	border: none
+	transition: all 0.5s 
+	&:hover
+		box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.3)
+		outline-color: rgba(255, 255, 255, 0)
+		outline-offset: 15px
+	&:active
+		color: #fff
+		text-decoration: none	
+
+a:visited, a:hover, a:active 
+		color: #fff
+		text-decoration: none 
+
+.header-composition
+		position: absolute
+		top: -50px
+		left: 15px
+		+sm(max-width, 90px)
+		+sm(top, -80px)
+		img
+			width: 100%
+
+.header_content
+	padding-top: 95px
+	.container
+		position: relative
+		+xs(justify-content, center)
+	&_left
+		+col()
+		+size(7)
+		+size-sm(6)
+		+size-xs(10)
+		+size-xxs(12)
+		+xs(margin-bottom, 25px)
+		margin-top: 105px
+		+sm(margin-top, 15px)
+		+sm(display, flex)
+		+sm(flex-direction, column)
+		+sm(justify-content, center)
+		
+		&-logo
+			max-width: 90%
+		.h1
+			text-transform: uppercase
+			font-size: 40px
+			font-family: $bold-font	
+			margin-top: 45px
+			margin-bottom: 0
+			+md(margin-top, 15px)
+			+md(font-size, 32px)
+			+sm(font-size, 28px)
+			+sm(margin-top, 15px)
+		&-description
+			font-size: 28px	
+			line-height: 1.42
+			letter-spacing: 0.7px
+			+md(font-size, 22px)
+			+sm(font-size, 18px)
+			+xxs(font-size, 20px)
+	&_right
+		+col()
+		+size(4.8)
+		+size-sm(6)
+		+size-xs(10)
+		+size-xxs(12)
+		+lg(margin-top, 60px)
+		+xs(margin-top, 15px)
+		display: flex
+		align-items: center
+		&-upakovka
+			width: 100%
+
+
+.header_content_items
+	margin-top: 20px
+	margin-bottom: -35px
+	+md(margin-top, 40px)
+	+sm(margin-bottom, -65px)
+	width: 100%	
+	display: flex
+	flex-wrap: wrap
+	justify-content: center
+	
+
+	&-item
+		+col()
+		+size(3)
+		+size-sm(4.2)
+		+size-xs(6)
+		+size-xxs(10)
+		+sm(margin-bottom, 25px)
+		border-radius: 10px
+		box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.16);
+		text-align: center
+		padding: 25px 0	
+		margin-right: 10px
+		background-color: #fff
+		img
+			width: 55%
+		.description
+			font-size: 22px	
+			margin-top: 25px	
+			+md(font-size, 18px)
+			+xs(font-size, 16px)
+			+xxs(font-size, 18px)
+		
+
+
+
+
+
+
+////////////Section1/////////////////
+.bg
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: top center
+.s1
+	padding: 250px 0
+	background-image: url(../img/1.jpg)
+	+md(padding, 150px 0)
+	+xs(padding, 100px 0)
+	
+	
+
+.section_img
+	flex-basis: 12%
+	margin-right: 35px
+	min-width: 110px
+	+xxs(flex-basis, 45%)
+	img
+		width: 100%
+.section_content
+	flex-basis: 55%
+	+xs(flex-basis, 75%)
+	+xxs(flex-basis, 90%)
+
+
+h2
+	margin: 0	
+	padding: 0
+.h2
+	font-size: 40px
+	font-family: $bold-font
+	margin-top: 25px
+	margin-bottom: 30px
+	+md(font-size, 32px)
+	+sm(font-size, 28px)
+.section_description
+	font-size: 28px
+	+md(font-size, 22px)
+	+sm(font-size, 18px)
+	+xxs(font-size, 20px)
+
+
+
+	/////////SECTION2////////////////
+
+.s2
+	padding: 150px 0
+	background-color: #ebebeb
+	+md(padding, 100px 0)
+	.section_content
+		flex-basis: 70%
+		+xxs(flex-basis, 100%)
+	&_items
+		display: flex
+		flex-wrap: nowrap
+		margin-top: 40px
+		margin-left: -65px
+		justify-content: center
+		+lg(margin-left, 0)
+		+xxs(flex-wrap, wrap)
+		+xxs-block()
+			flex-direction: column
+			align-items: center
+		
+
+		&-item
+			display: flex
+			align-items: flex-start
+			+col()
+			+xs-block()
+				margin-right: 5px
+				margin-left: 5px				
+			
+			img
+				width: 100%
+				height: auto
+
+
+.i1,.i3,.i5
+	+size-md(3)
+	min-width: 80px
+	+size-xxs(12)
+	+xxs-block()
+		max-width: 150px
+.i2,.i4
+	align-self: center
+	+size-md(1.5)
+	+size-xxs(12)
+	min-width: 36px
+	+xxs-block()
+		transform: rotate(90deg)
+		max-width: 60px
+		margin-top: 30px
+		margin-bottom: 30px
+
+
+
+.s3
+	padding: 120px 0
+	background-image: url(../img/2.png)
+	background-size: 40%
+	background-position: 90% 70%
+	+md-block()
+		background-size: 50%
+		background-position: 100% 50%
+	+xs-block()
+		background-position: 100% 24%
+		background-size: 70%
+	+xxs-block()	
+		background-size: 100%
+		background-position: 0 22%
+	.section_content
+		flex-basis: 50%
+		+xs(flex-basis, 90%)
+
+
+
+
+///////////SECTION4////////////////
+
+
+.s4
+	padding: 150px 0
+	padding-top: 43vh
+	background-image: url(../img/4.png)
+	.section_content
+		flex-basis: 70%
+		+xs(flex-basis, 90%)
+		color: #fff
+
+
+
+
+
+///////////SECTION5////////////////		
+
+
+
+.s5	
+	// min-height: 60vh
+	padding-top: 100px
+	// .section_img
+	// 	img 
+	// 		width: 100%
+	.section_content
+		flex-basis: 80%
+		margin-bottom: 50px
+		+xs(flex-basis, 90%)
+		+xs(margin-bottom, 0)
+
+	.bgbottom
+		min-height: 35vh
+		background-image: url(../img/5.jpg)
+
+
+
+
+
+///////////SECTION6////////////////	
+
+
+
+.s6
+	.section_img
+		margin-top: 15px
+		+sm-block()
+			margin-top: 0
+		+xs(margin-top, 35px)
+		+xs(padding-left, 15px)
+		img 
+			width: 100%	
+			height: auto
+	.container
+		margin-right: 0
+		padding-right: 0
+		max-width: 1535px
+		justify-content: flex-end
+		align-items: center
+		flex-wrap: nowrap
+		position: relative
+		+lg(margin, 0 auto)
+		+lg(justify-content, flex-start)
+		+md(padding-top, 100px)
+		+xs(flex-wrap, wrap)
+		+xs(padding-top, 15px)
+		+xs(padding-left, 0)
+	.section_content
+		flex-basis: 55%
+		box-sizing: border-box
+		padding-right: 35px
+		padding-top: 35px
+		margin-bottom: 45px
+		+md(padding-top, 0)
+		+sm(padding-right, 15px)
+		+xs(flex-basis, 100%)
+		+xs(padding-left, 15px)
+		.h2
+			margin-top: 0	
+			+md-block()	
+				position: absolute
+				margin-bottom: 10px
+				top: 15px
+			+xs-block()
+				position: relative	
+				margin-bottom: 25px
+.content_img
+	flex-basis: 30%
+	align-self: flex-end
+	+sm(flex-basis, 40%)
+	+xs(flex-basis, 100%)
+	box-sizing: border-box
+	img
+		width: 100%
+		height: auto
+		margin-bottom: -9px
+
+				
+
+
+
+///////////SECTION7////////////////	
+
+
+.s7
+	background-image: url(../img/7.jpg)
+	padding-top: 150px
+	padding-bottom: 350px	
+	+xs(padding-bottom, 150px)		
+	color: #fff	
+	.section_content
+		flex-basis: 85%
+		.section_description
+			.list
+				list-style-type: none
+				padding-left: 0
+				li
+					text-shadow: 0px 3px 7px rgba(0, 0, 0, 0.41)
+					&:before
+						content: '•'
+
+
+
+
+///////////SECTION8////////////////
+
+
+.s8
+	display: flex
+	padding: 70px 0
+	justify-content: center
+	.button
+		font-size: 26px
+		letter-spacing: 2px
+		line-height: 59px
+		padding: 7px 105px
+		+xs(padding, 2px 65px)
+
+
+
+
+//////////////footer////////////////////
+
+
+
+
+.footer
+	background: #525252
+	color: #fff
+	padding: 50px 0
+	.container
+		max-width: 1160px
+
+.footer__content
+	width: 100%
+	display: flex 
+	flex-wrap: wrap
+	justify-content: space-between
+	+xs(flex-direction, column)
+	+xs(align-items, center)  
+	.footer__content-logo
+		margin-bottom: 25px
+		+col()
+		+size(3)
+		+size-xs(8)
+		text-align: center
+		img
+			width: 100%
+			max-width: 223px
+	.footer__content-block_01
+		+col()
+		+size(6)
+		+size-xs(10)
+		// margin: 0 25px
+		p
+			margin-top: 0
+			font-size: 16px
+			line-height: 18px
+	.footer__content-block_02
+		+col()
+		+size(3)
+		+size-xs(10)
+		font-size: 16px
+		text-align: right
+		position: relative
+		p
+			font-size: 16px 
+			line-height: 18px
+			margin: 0
+			margin-bottom: 10px
+
+		.footer_line
+			position: absolute
+			width: 55px
+			right: 0  
+
+		.phone
+			margin-top: 35px  
+			line-height: 25px
+
+
+
