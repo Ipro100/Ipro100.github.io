@@ -49,6 +49,7 @@ b, strong
 	flex-wrap: wrap
 
 
+
 .headline
 	width: 100%
 	background-color: rgb(226, 177, 56)
@@ -201,25 +202,39 @@ a:visited, a:hover, a:active
 	background-repeat: no-repeat
 	background-size: cover
 	background-position: top center
+
 .s1
 	padding: 250px 0
 	background-image: url(../img/1.jpg)
+	.container
+		flex-wrap: nowrap
 	+md(padding, 150px 0)
-	+xs(padding, 100px 0)
-	
-	
+	+xs-block()
+		padding, 50px 0
+		background-position: 60% 0
+		.section_img
+			position: absolute	
+			max-width: 80px
+		.h2
+			margin-left: 120px	
+	+xxs-block()
+		background-position: 55% 0
+
 
 .section_img
 	flex-basis: 12%
+	margin-top: 35px
 	margin-right: 35px
-	min-width: 110px
-	+xxs(flex-basis, 45%)
+	min-width: 100px
+	+xs-block()
+		position: absolute	
+		max-width: 80px
 	img
 		width: 100%
 .section_content
 	flex-basis: 55%
 	+xs(flex-basis, 75%)
-	+xxs(flex-basis, 90%)
+	// +xxs(flex-basis, 85%)
 
 
 h2
@@ -232,13 +247,14 @@ h2
 	margin-bottom: 30px
 	+md(font-size, 32px)
 	+sm(font-size, 28px)
+	+xs(margin-left, 120px)
 .section_description
 	font-size: 28px
 	+md(font-size, 22px)
-	+sm(font-size, 18px)
 	+xxs(font-size, 20px)
 
-
+.nowrap
+	flex-wrap: nowrap
 
 	/////////SECTION2////////////////
 
@@ -303,14 +319,18 @@ h2
 		background-size: 50%
 		background-position: 100% 50%
 	+xs-block()
-		background-position: 100% 24%
+		background-position: 100% 100%
 		background-size: 70%
 	+xxs-block()	
 		background-size: 100%
-		background-position: 0 22%
+		// background-position: 0 22%
 	.section_content
 		flex-basis: 50%
 		+xs(flex-basis, 90%)
+		.section_description
+			+xs(margin-top, 70px)
+			+xxs(margin-top, 0)
+			+xxs(margin-bottom, 80px)
 
 
 
@@ -320,7 +340,7 @@ h2
 
 .s4
 	padding: 150px 0
-	padding-top: 43vh
+	padding-top: 35vh
 	background-image: url(../img/4.png)
 	.section_content
 		flex-basis: 70%
@@ -336,11 +356,9 @@ h2
 
 
 .s5	
-	// min-height: 60vh
-	padding-top: 100px
-	// .section_img
-	// 	img 
-	// 		width: 100%
+	
+	padding-top: 70px
+
 	.section_content
 		flex-basis: 80%
 		margin-bottom: 50px
@@ -348,7 +366,7 @@ h2
 		+xs(margin-bottom, 0)
 
 	.bgbottom
-		min-height: 35vh
+		min-height: 50vh
 		background-image: url(../img/5.jpg)
 
 
@@ -360,41 +378,47 @@ h2
 
 
 .s6
+	color: #fff
+	padding: 200px 0
+	background-image: url(../img/3.jpg)
+	background-size: 100% 140%
+	background-position: 1% 50%
+	@media screen and(max-width: 1550px)
+		background-size: 100% 120%
+	@media screen and(max-width: 1350px)
+		background-size: 100% 100%
+	
+	+lg-block()
+		background-size: cover
+		padding: 150px 0
+	+sm(padding, 100px 0)	
+	+xs(background-position, 50% 50%)
+	background-color: #00387f
 	.section_img
-		margin-top: 15px
+		margin-top: 0
+		max-width: 130px
 		+sm-block()
 			margin-top: 0
-		+xs(margin-top, 35px)
-		+xs(padding-left, 15px)
+		// +xs(margin-top, 35px)
+		
+		+xxs-block()
+			min-width: 80px
+			flex-basis: 10%
+			margin-right: 15px
+			background-position: 70% 50%
+		
 		img 
 			width: 100%	
 			height: auto
 	.container
-		margin-right: 0
-		padding-right: 0
-		max-width: 1535px
-		justify-content: flex-end
-		align-items: center
-		flex-wrap: nowrap
-		position: relative
-		+lg(margin, 0 auto)
-		+lg(justify-content, flex-start)
-		+md(padding-top, 100px)
-		+xs(flex-wrap, wrap)
-		+xs(padding-top, 15px)
-		+xs(padding-left, 0)
+	
 	.section_content
-		flex-basis: 55%
-		box-sizing: border-box
-		padding-right: 35px
-		padding-top: 35px
-		margin-bottom: 45px
-		+md(padding-top, 0)
-		+sm(padding-right, 15px)
-		+xs(flex-basis, 100%)
-		+xs(padding-left, 15px)
+		box-sizing: border-box	
+		flex-basis: 45%
+		// +xs(flex-basis, 100%)
 		.h2
 			margin-top: 0	
+			line-height: 1
 			+md-block()	
 				position: absolute
 				margin-bottom: 10px
@@ -402,17 +426,12 @@ h2
 			+xs-block()
 				position: relative	
 				margin-bottom: 25px
-.content_img
-	flex-basis: 30%
-	align-self: flex-end
-	+sm(flex-basis, 40%)
-	+xs(flex-basis, 100%)
-	box-sizing: border-box
-	img
-		width: 100%
-		height: auto
-		margin-bottom: -9px
-
+				margin-left: 145px
+				margin-top: 40px
+			+xxs(margin-top, 0)
+		.section_description
+			+xs(margin-top, 85px)
+			+xxs(margin-top, 125px)
 				
 
 
@@ -426,6 +445,7 @@ h2
 	padding-bottom: 350px	
 	+xs(padding-bottom, 150px)		
 	color: #fff	
+	+xs(background-position, 10% 50%)
 	.section_content
 		flex-basis: 85%
 		.section_description
