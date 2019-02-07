@@ -182,6 +182,7 @@ a:visited, a:hover, a:active
 		padding: 25px 0	
 		margin-right: 10px
 		background-color: #fff
+		z-index: 500
 		img
 			width: 55%
 		.description
@@ -205,22 +206,46 @@ a:visited, a:hover, a:active
 
 .s1
 	padding: 250px 0
-	background-image: url(../img/1.jpg)
+	position: relative
+	+md(padding, 150px 0)
+	+xs(padding, 50px 0)
+	+xs(padding-bottom, 105%)
+	background-image: url(../img/girl-hd.png), url(../img/bg1.png) 
+	background-size: contain, cover
+	background-position: 85% 50%, 10% 30%
+	@media screen and(max-width: 1700px)
+		background-position: 95% 50%, 10% 30%	
+	@media screen and(max-width: 1270px)
+		background-position: 120% 50%, 10% 30%
+	+lg-block()
+		background-position: 120% 50%, 10% 30%
+	+sm-block()
+		background-position: 145% 50%, 10% 30%
+		
+	+xs-block()
+		background-image: url(../img/bg1.png)
+		background-size: cover
+		background-position: center
+	+xxs-block()
+		background-size: cover
 	.container
 		flex-wrap: nowrap
-	+md(padding, 150px 0)
-	+xs-block()
-		padding, 50px 0
-		background-position: 60% 0
-		.section_img
-			position: absolute	
-			max-width: 80px
-		.h2
-			margin-left: 120px	
-	+xxs-block()
-		background-position: 55% 0
+	
+	.grl
+		display: none
+		position: absolute
+		max-width: 450px
+		right: 20%
+		bottom: -5px
 
-
+		+xs-block()
+			display: block !important
+		+xxs-block()
+			width: 300px
+			right: 5%
+			bottom: -10px
+		img
+			width: 100%
 .section_img
 	flex-basis: 12%
 	margin-top: 35px
@@ -235,7 +260,7 @@ a:visited, a:hover, a:active
 	flex-basis: 55%
 	+xs(flex-basis, 75%)
 	// +xxs(flex-basis, 85%)
-
+	z-index: 100
 
 h2
 	margin: 0	
@@ -314,13 +339,17 @@ h2
 	padding: 120px 0
 	background-image: url(../img/2.png)
 	background-size: 40%
-	background-position: 90% 70%
+	background-position: 95% 70%
 	+md-block()
 		background-size: 50%
 		background-position: 100% 50%
-	+xs-block()
+	+sm-block()
 		background-position: 100% 100%
-		background-size: 70%
+		background-size: 60%
+		.section_content
+			margin-bottom: 80px
+	+xs-block()
+		background-size: 70%		
 	+xxs-block()	
 		background-size: 100%
 		// background-position: 0 22%
@@ -330,7 +359,7 @@ h2
 		.section_description
 			+xs(margin-top, 70px)
 			+xxs(margin-top, 0)
-			+xxs(margin-bottom, 80px)
+			
 
 
 
@@ -383,6 +412,7 @@ h2
 	background-image: url(../img/3.jpg)
 	background-size: 100% 140%
 	background-position: 1% 50%
+	background-color: #003791
 	@media screen and(max-width: 1550px)
 		background-size: 100% 120%
 	@media screen and(max-width: 1350px)
@@ -392,18 +422,22 @@ h2
 		background-size: cover
 		padding: 150px 0
 	+sm(padding, 100px 0)	
-	+xs(background-position, 50% 50%)
-	background-color: #00387f
+	+xs-block()
+		background-image: url(../img/61.jpg)
+		background-position: 50% 430px
+		background-size: 80%
+		padding-bottom: 450px
+		+xxs-block()
+			padding-bottom: 350px
+
 	.section_img
 		margin-top: 0
 		max-width: 130px
 		+sm-block()
 			margin-top: 0
-		// +xs(margin-top, 35px)
-		
 		+xxs-block()
-			min-width: 80px
-			flex-basis: 10%
+			width: 80px
+			flex-basis: 8%
 			margin-right: 15px
 			background-position: 70% 50%
 		
@@ -426,12 +460,11 @@ h2
 			+xs-block()
 				position: relative	
 				margin-bottom: 25px
-				margin-left: 145px
 				margin-top: 40px
 			+xxs(margin-top, 0)
 		.section_description
 			+xs(margin-top, 85px)
-			+xxs(margin-top, 125px)
+			
 				
 
 
@@ -440,7 +473,8 @@ h2
 
 
 .s7
-	background-image: url(../img/7.jpg)
+	background-image: url(../img/71.jpg)
+	background-position: center
 	padding-top: 150px
 	padding-bottom: 350px	
 	+xs(padding-bottom, 150px)		
