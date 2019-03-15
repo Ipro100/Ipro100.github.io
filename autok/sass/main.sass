@@ -1,0 +1,558 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	margin: 0
+	color: $text
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+
+
+.header
+	position: relative
+	min-height: 90vh
+
+.container
+	+wrapper()
+	display: flex
+	flex-wrap: wrap
+
+
+.header_line
+	width: 100%
+	padding-top: 15px
+	padding-bottom: 15px
+	
+	.container
+	
+		justify-content: space-between
+		+xs(flex-direction, column)
+		+xs(align-items, center)
+	&_mail
+		font-size: 20px
+		display: flex
+		align-items: center
+		+xs(margin-bottom, 15px)
+		&-description
+			margin-left: 18px
+
+
+.button 
+	white-space: nowrap
+	background-color: $accent
+	border-radius: 20px
+	box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.3)
+	padding: 1px 75px
+	text-align: center
+	display: inline-block
+	font-family: $medium-font
+	font-size: 20px
+	line-height: 1.8
+	color: #fff
+	text-decoration: none
+	margin-right: 85px
+	+xs(margin-right, 0)
+	cursor: pointer
+	border: none
+	transition: all 0.5s 
+	&:hover
+		box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.3)
+		outline-color: rgba(255, 255, 255, 0)
+		outline-offset: 15px
+	&:active
+		color: #fff
+		text-decoration: none	
+
+a:visited, a:hover, a:active 
+		color: #fff
+		text-decoration: none 
+
+h1,h2
+	margin: 0
+	padding: 0
+
+
+.header_content
+	min-height: 93vh
+	background-image: url(../img/bg.jpg)
+	background-position: top center
+	background-size: cover
+	+sm(padding-top, 155px)
+	&-left
+		flex-basis: 48%
+		+sm(flex-basis, 80%)
+		
+		
+		.h1
+			color: #fff
+			font-size: 49px
+			+md(font-size, 39px)
+			font-family: $bold-font
+			line-height: 1.2
+			margin-bottom: 35px
+		.logo
+			display: inline-block
+
+
+	&-right
+		flex-basis: 47%	
+		+sm(flex-basis, 60%)
+		+sm(margin-top, 35px)
+		+sm(margin-bottom, 35px)
+		+xs(flex-basis, 80%)
+		+xxs(flex-basis, 100%)
+		margin-left: 35px
+	.container
+		justify-content: center
+		align-items: center
+		min-height: 93vh
+
+
+
+
+//////////SECTION1////////////////
+
+
+
+.s1_advantage
+	padding: 70px 0
+	padding-bottom: 40px
+	.items
+		width: 100%
+		display: flex	
+		flex-wrap: wrap
+		justify-content: center
+		.item
+			+col()
+			+size(2.4)
+			+size-sm(4)
+			+size-xs(6)
+			margin-bottom: 30px
+			display: flex
+			flex-direction: column
+			align-items: center
+			text-align: center
+			.img_wrap
+				height: 110px
+
+.h2
+	font-family: $bold-font
+	font-size: 34px
+	+sm(font-size, 28px )
+
+.description
+	font-size: 22px
+	line-height: 1.2
+	margin-top: 20px
+	+sm(font-size, 20px)
+
+//////////SECTION2????????????????
+
+.dark_bg
+	background-color: #f2f2f2
+
+.s2_save
+	padding: 45px 0
+	padding-bottom: 65px
+	.container
+		align-items: center
+		justify-content: center
+		flex-wrap: nowrap
+		position: relative
+		+xs(flex-wrap, wrap)
+	.scontent_left
+		flex-basis: 80%
+		padding-right: 25px
+		padding-left: 25px
+		box-sizing: border-box
+		+xs(margin-bottom, 25px)
+		+xs(padding, 0)
+		.description
+			position: relative
+			padding-bottom: 35px
+			margin-bottom: 25px
+			+sm-block()
+				padding-bottom: 20px
+				margin-bottom: 15px
+				
+
+			&:after
+				position: absolute
+				content: ""
+				height: 1px
+				width: 79px
+				background-color: rgb(112, 112, 112)
+				left: 0
+				bottom: 0
+		.simple
+			font-family: $gilroy-lightItalic
+			font-size: 22px		
+			+sm-block()
+				position: absolute
+				font-size: 20px
+			+xs(position, relative)	
+	.scontent_right	
+		position: relative
+		height: 100%
+		flex-basis: 50%
+		+xs(flex-basis, 80%)
+		display: flex
+		justify-content: flex-end
+.rotate
+	opacity: 0
+	position: absolute
+	
+.active
+	opacity: 1 !important
+
+
+.wrapper
+	position: relative
+	width: 450px
+	height: 450px
+	border-radius: 7px
+	overflow: hidden
+	+md-block()
+		width: 350px
+		height: 350px
+	+sm-block()	
+		width: 250px
+		height: 250px	
+	+xs-block()	
+		width: 350px
+		height: 350px
+		margin-right: 45px
+	+xxs-block()	
+		width: 310px
+		height: 310px
+		margin-right: 0
+
+
+
+///////section3///////////////
+
+
+.s3_dosage
+	padding: 50px 0
+	.container
+		position: relative
+	.description
+		font-size: 26px
+		+xs(font-size, 20px)
+		line-height: 1.5
+		margin-top: 5px
+	.scontent
+		display: flex	
+		+xs(flex-wrap, wrap)
+		align-items: center
+		justify-content: center
+		margin-bottom: 45px
+		&_left
+			flex-basis: 50%
+			margin-right: 75px
+			+xs-block()
+				flex-basis: 80%
+				margin-right: 0
+		&_right
+			flex-basis: 50%	
+			+xs-block()
+				order: -1
+				margin-bottom: 35px
+				flex-basis: 80%	
+	.items
+		margin-top: 35px	
+		display: flex
+		flex-wrap: wrap
+		justify-content: center
+		.item
+			+col()
+			+size(3)
+			+size-xs(5)
+			+size-xxs(6)
+			+xs(margin-bottom, 30px)
+
+			box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.16)
+		
+	.decor1, .decor2
+		position: absolute	
+		+sm(max-width, 80px)
+	.decor1
+		top: 0
+		right: 170px
+		+md(top, -30px)
+		+xs-block()
+			right: 10px
+			top: -25px
+	.decor2
+		top: 37%
+		left: 50%
+		+sm(top, 34%)
+		+xs-block()
+			top: 40%
+			left: 10px
+
+
+			
+
+///////////////s4/////////////////
+
+
+
+
+.s4_uni
+	color: #fff
+	padding: 80px 0
+	padding-bottom: 50px
+	background-image: url(../img/bg4.jpg)
+	background-size: cover
+	background-position: top center
+	text-align: center
+	.container
+		justify-content: center
+		max-width: 920px
+		+sm(max-width, 1170px)
+	.items
+		width: 100%
+		height: 100%
+		display: flex
+		flex-wrap: wrap
+		justify-content: center
+		align-items: center	
+		margin-top: 40px
+		.item
+			+col()
+			+size(6)
+			+size-xs(10)
+			text-align: center
+			display: flex
+			flex-direction: column
+			align-items: center
+			+md(margin-bottom, 35px)
+			.description
+				font-size: 30px
+				+xs(font-size, 25px)
+				
+
+.s5_ekran
+	+xs(padding-top, 80px)
+	padding-bottom: 140px 
+	.container
+		flex-wrap: nowrap
+		+xs(flex-wrap, wrap)
+		justify-content: center
+		align-items: center
+		position: relative
+		.description
+			font-size: 24px
+			margin-top: 10px
+		.left_side
+			flex-basis: 55%	
+			+xs(flex-basis, 80%	)	
+		.right_side
+			flex-basis: 45%
+			+xs(flex-basis, 80%	)	
+
+			.img_wrap
+				transform: rotate(-35deg)
+				margin-top: 155px
+				margin-left: -85px
+				+xs(margin-left, 0)	
+				+xs(margin-top, 85px)	
+				z-index: -1
+		.decor1
+			position: absolute
+			left: 55px
+			bottom: 25px
+			+md(bottom, 0)
+			+sm(max-width, 80px)
+			+xs(bottom, 200px)
+		.decor2
+			position: absolute
+			right: 75px
+			bottom: -95px
+			+sm(max-width, 80px)
+		.decor3
+			position: absolute
+			top: 45px
+			right: 500px
+			+md(top, 15px)
+			+sm-block()
+				max-width: 80px
+				top: 15px
+				right: 100px
+			+xs(top, 75px)				
+			+xs(right, 15px)				
+
+
+///////section6////////////
+
+
+
+.s6_glass
+	padding: 60px 0
+	.container
+		flex-wrap: nowrap
+		+xs(flex-wrap, wrap)
+		justify-content: center
+		align-items: center
+	.left_side
+		+col()
+		+size(5)	
+		+size-xs(11)	
+	.right_side
+		+col()	
+		+size(6)
+		+size-xs(11)
+		+xs(order, -1)
+		+xs(margin-bottom, 35px)
+
+
+
+///////s7_novoise/////////////////
+
+
+
+.s7_novoise
+	padding: 200px 0
+	color: #fff
+	background-image: url(../img/bg7.png)
+	background-size: cover
+	background-position: top center
+	.content
+		flex-basis: 55%
+		+sm(flex-basis, 100%)
+		.description
+			letter-spacing: 1px
+	
+
+
+///////////s8button//////////////////
+
+
+
+.s8_button
+	padding: 50px 0
+	+xs(padding, 80px 0)
+	.container
+		justify-content: space-between
+		align-items: center
+		+xs(justify-content, center)
+		position: relative
+		.button
+			margin-right: 0
+			font-size: 26px
+			letter-spacing: 2px
+			line-height: 59px
+			padding: 7px 105px
+			border-radius: 50px
+			+xs-block()
+				padding: 7px 75px
+				line-height: 39px
+
+		.decor1, .decor2
+			+sm(max-width, 80px)
+			+xs(position, absolute)
+			z-index: -1
+		.decor1
+
+			+xs-block()
+				top: -75px
+				left: 15px	
+		.decor2
+			+xs-block()
+				bottom: -75px
+				right: 25px
+					
+
+
+
+//////////////footer////////////////////
+
+
+
+
+.footer
+	background: #525252
+	color: #fff
+	padding: 50px 0
+	.container
+		max-width: 1160px
+
+.footer__content
+	width: 100%
+	display: flex 
+	flex-wrap: wrap
+	justify-content: space-between
+	+xs(flex-direction, column)
+	+xs(align-items, center)  
+	.footer__content-logo
+		margin-bottom: 25px
+		+col()
+		+size(3)
+		+size-xs(8)
+		text-align: center
+		img
+			width: 100%
+			max-width: 223px
+	.footer__content-block_01
+		+col()
+		+size(6)
+		+size-xs(10)
+		// margin: 0 25px
+		p
+			margin-top: 0
+			font-size: 16px
+			line-height: 18px
+	.footer__content-block_02
+		+col()
+		+size(3)
+		+size-xs(10)
+		font-size: 16px
+		text-align: right
+		position: relative
+		p
+			font-size: 16px 
+			line-height: 18px
+			margin: 0
+			margin-bottom: 10px
+
+		.footer_line
+			position: absolute
+			width: 55px
+			right: 0  
+
+		.phone
+			margin-top: 35px  
+			line-height: 25px
