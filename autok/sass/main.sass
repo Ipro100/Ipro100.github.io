@@ -43,6 +43,7 @@ b, strong
 .header
 	position: relative
 	min-height: 90vh
+	+md(padding-top, 70px)
 
 .container
 	+wrapper()
@@ -54,9 +55,11 @@ b, strong
 	width: 100%
 	padding-top: 15px
 	padding-bottom: 15px
+	position: absolute
+	top: 0
+	left: 0
 	
-	.container
-	
+	.container	
 		justify-content: space-between
 		+xs(flex-direction, column)
 		+xs(align-items, center)
@@ -104,17 +107,18 @@ h1,h2
 	padding: 0
 
 
-.header_content
-	min-height: 93vh
-	background-image: url(../img/bg.jpg)
+.header_content	
+	background-image: url(../img/bg2.jpg)
 	background-position: top center
-	background-size: cover
+	background-size: cover	
 	+sm(padding-top, 155px)
+	
 	&-left
-		flex-basis: 48%
+		flex-basis: 55%
+		padding-top: 80px
 		+sm(flex-basis, 80%)
-		
-		
+		+md(padding-top, 0)
+
 		.h1
 			color: #fff
 			font-size: 49px
@@ -127,17 +131,26 @@ h1,h2
 
 
 	&-right
-		flex-basis: 47%	
-		+sm(flex-basis, 60%)
+		flex-basis: 60%	
+		+sm(flex-basis, 80%)
 		+sm(margin-top, 35px)
 		+sm(margin-bottom, 35px)
-		+xs(flex-basis, 80%)
 		+xxs(flex-basis, 100%)
-		margin-left: 35px
+		// margin-left: 35px
 	.container
 		justify-content: center
-		align-items: center
-		min-height: 93vh
+		max-width: 1300px
+		flex-wrap: nowrap
+		+sm(flex-wrap, wrap)
+		min-height: 96vh
+		padding: 30vh 30px
+		box-sizing: border-box
+		+sm-block()
+			padding: 0 30px
+			flex-wrap: wrap
+			align-items: center
+			min-height: auto
+
 
 
 
@@ -178,6 +191,9 @@ h1,h2
 	margin-top: 20px
 	+sm(font-size, 20px)
 
+
+.fade-in
+	opacity: 1 !important
 //////////SECTION2????????????????
 
 .dark_bg
@@ -186,6 +202,8 @@ h1,h2
 .s2_save
 	padding: 45px 0
 	padding-bottom: 65px
+	
+	
 	.container
 		align-items: center
 		justify-content: center
@@ -230,11 +248,14 @@ h1,h2
 		+xs(flex-basis, 80%)
 		display: flex
 		justify-content: flex-end
-.rotate
+.rotate, .rotate1
 	opacity: 0
 	position: absolute
+	img
+		width: 100%
+
 	
-.active
+.active, .active1
 	opacity: 1 !important
 
 
@@ -260,7 +281,6 @@ h1,h2
 		margin-right: 0
 
 
-
 ///////section3///////////////
 
 
@@ -275,18 +295,23 @@ h1,h2
 		margin-top: 5px
 	.scontent
 		display: flex	
+		flex-wrap: nowrap
 		+xs(flex-wrap, wrap)
 		align-items: center
 		justify-content: center
 		margin-bottom: 45px
 		&_left
-			flex-basis: 50%
+			+col()
+			+size(6)
 			margin-right: 75px
+	
 			+xs-block()
 				flex-basis: 80%
 				margin-right: 0
 		&_right
-			flex-basis: 50%	
+			+col()
+			+size(6)
+			margin-bottom: 45px
 			+xs-block()
 				order: -1
 				margin-bottom: 35px
@@ -365,9 +390,16 @@ h1,h2
 				+xs(font-size, 25px)
 				
 
+
+
+
+
+
+
 .s5_ekran
 	+xs(padding-top, 80px)
-	padding-bottom: 140px 
+	padding-bottom: 55px 
+	overflow: hidden
 	.container
 		flex-wrap: nowrap
 		+xs(flex-wrap, wrap)
@@ -380,28 +412,45 @@ h1,h2
 		.left_side
 			flex-basis: 55%	
 			+xs(flex-basis, 80%	)	
+			z-index: 100
 		.right_side
 			flex-basis: 45%
 			+xs(flex-basis, 80%	)	
 
-			.img_wrap
+			.wrapper2
 				transform: rotate(-35deg)
-				margin-top: 155px
+				margin-top: 85px
 				margin-left: -85px
 				+xs(margin-left, 0)	
-				+xs(margin-top, 85px)	
+				+xs(margin-top, 0)	
 				z-index: -1
+				width: 600px
+				height: 600px
+				+md-block()
+					width: 450px
+					height: 450px				
+				+sm-block()
+					width: 350px
+					height: 350px			
+				+xs-block()
+					width: 450px
+					height: 450px				
+				+xxs-block()
+					width: 300px
+					height: 300px
+
 		.decor1
 			position: absolute
 			left: 55px
 			bottom: 25px
 			+md(bottom, 0)
 			+sm(max-width, 80px)
-			+xs(bottom, 200px)
+			+xs(bottom, 300px)
+			+xxs(bottom, 200px)
 		.decor2
 			position: absolute
 			right: 75px
-			bottom: -95px
+			bottom: -15px
 			+sm(max-width, 80px)
 		.decor3
 			position: absolute
