@@ -4,18 +4,26 @@ $(function() {
  var images1  = $('.rotate1');
  var i = 0;
  var j = 0;
+ var n = 0;
+ var k = true;
 
 	$(window).scroll(function() {
-		
+	
+		if(n % 2 == 0){
 		window.requestAnimationFrame(function() {
         	isScrolling(); 
         	    	
     });
-
-
+}
+	n++;
+	if(n == 1000){
+		n = 0;
+	}
 });
 
 	function isScrolling(){
+
+		
 		 if ($(this).scrollTop() > 0) {
         
 
@@ -34,6 +42,7 @@ $(function() {
 			 	images1[j].classList.add('active'); 
 
     }
+
 	}	
 
 	// var controller = new ScrollMagic.Controller()
