@@ -98,6 +98,11 @@ body
 		left: 0
 		padding-top: 48px
 		padding-left: 20px
+		animation-name: moveApacity
+		animation-duration: 1.5s
+		animation-iteration-count: 1
+		animation-timing-function: ease-out
+		opacity: 1
 
 		z-index: 1001 !important
 
@@ -143,17 +148,57 @@ body
 	text-align: center
 	+kerning(2)
 	h1
-		animation-delay: 1.5s
 		display: inline-block
 		margin-top: 0
 		font-size: 2.8em
 		margin-bottom: 10px 
-		
+		animation-name: moveDown
+		animation-duration: 1.5s
+		animation-iteration-count: 1
+		animation-timing-function: ease-out
+		animation-fill-mode: forwards
+		animation-delay: 0.5s
+		opacity: 0
 
 		
+@keyframes moveDown
+	0%
+		margin-bottom: 100px
+		opacity: 0
+	25%
+		margin-bottom: 75px
+		opacity: 0.25
+	50%
+		margin-bottom: 50px
+		opacity: 0.5
+	75%
+		margin-bottom: 25px	
+		opacity: 0.75
+	100%
+		margin-bottom: 10px
+		opacity: 1
+
+@keyframes moveApacity
+	0%
+		opacity: 0
+	25%
+		opacity: 0.25
+	50%
+		opacity: 0.5
+	75%
+		opacity: 0.75
+	100%
+		opacity: 1
+
+
 
 .wrap_descr
 	position: ralative	
+	animation-name: moveApacity
+	animation-duration: 1.5s
+	animation-iteration-count: 1
+	animation-timing-function: ease-out
+	opacity: 1
 	.line_caption
 		margin-left: 20px
 		margin-right: 20px
@@ -204,6 +249,7 @@ section
 	flex-wrap: wrap
 	align-items: center
 	justify-content: center
+	animation-delay: 2s
 
 .s_about_self
 	padding-bottom: 10px	
@@ -309,7 +355,7 @@ section
 	+size(7)
 	+size-sm(12)	
 	strong
-		font-size: 32px
+		font-size: 28px
 	.do_it
 		font-size: 24px	
 
@@ -350,14 +396,14 @@ section
 	+row-flex()	
 	margin-bottom: 50px
 	justify-content: center
-	.adv_items-item
-		
+	.adv_items-item	
 		+col()
-		+size(3)
+		+size(2.4)
 		+size-md(6)
 		+size-xs(10)
+		+md(margin-bottom, 50px )
 		text-align: center
-		.fab
+		.fab, .fas
 			font-size: 88px
 			color: $color_bg_gray
 		
@@ -366,12 +412,14 @@ section
 			font-size: 28px
 			font-weight: bold
 			color: $color_bg_gray
+			margin-top: 15px
 			span
-				font-size: 80px	
+				font-size: 65px	
 		p
-			color: $color_text_gray
-			font-size: 1.3em
+			color: lighten($color_text_gray, 10%)
+			font-size: 1.0em
 			font-weight: bold
+			+kerning(1)
 		&:nth-child(1)
 			animation-delay: 0.25s	
 		&:nth-child(2)
@@ -379,7 +427,9 @@ section
 		&:nth-child(3)
 			animation-delay: 0.75s	
 		&:nth-child(4)
-			animation-delay: 1s	
+			animation-delay: 1s			
+		&:nth-child(5)
+			animation-delay: 1.25s	
 
 
 
