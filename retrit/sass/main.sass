@@ -60,6 +60,7 @@ b, strong
 	+xs(margin-top, 20%)
 	h1
 		font-size: 58px
+		margin-bottom: 15px
 		+xs(font-size, 38px)
 
 		
@@ -87,6 +88,12 @@ b, strong
 				transition: color 0.25s
 				&:hover, &:focus
 					color: #e17646			
+
+h1
+	animation-delay: 0.5s
+.anim-descr
+	animation-delay: 1.2s
+
 
 .descr
 	padding: 35px 0
@@ -231,7 +238,8 @@ b, strong
 		font-size: 32px			
 
 
-
+.mfp-img
+	transition: all 0.5s
 
 .cotage
 	padding: 50px 0
@@ -256,16 +264,23 @@ b, strong
 				transition: transform 1.5s ease
 				box-sizing: border-box
 				&:hover
-					transform: scale(2)
-					+sm(transform, scale(1.5))
+					transform: scale(1.1)
+					+sm(transform, scale(1.1))
 
 
 .food
-	padding: 50px 0
+	padding: 50px 0 
+	padding-bottom: 100px
+	background-color: #fff
+	background-image: url(../img/food.jpg)
+	background-size: cover
+	background-position: center
+	background-repeat: no-repeat
 	.container
 		flex-direction: column
 	.section-content
 		display: flex
+		align-items: center
 		flex-wrap: wrap
 		margin-top: 30px
 		.img-wrapper
@@ -275,10 +290,70 @@ b, strong
 			img
 				width: 100%
 		.descripton
+			padding: 15px
 			+col()	
 			+size(6)
 			+size-md(12)
 			font-size: 18px
+			background-color: rgba(255,255,255,0.8)
+			box-shadow: 2px -3px 12px 12px rgba(255,255,255,.8)
+
+
+.price	
+	padding: 50px 0
+	.container
+		flex-direction: column
+		.section-header
+			text-align: center
+			h2
+				margin-bottom: 15px
+			.description
+				font-size: 38px
+				font-family: $bold-font
+			p
+				color: lighten($text, 10%)
+				font-size: 28px		
+		.section-content
+			text-align: center
+			ul
+				margin: 0
+				padding: 0
+				list-style-type: none
+				font-size: 22px
+				display: block
+				text-align: left
+				.fas
+					font-size: 52px
+					margin-right: 45px
+					color: rgba(235,137,0,1)
+				li
+					margin-top: 45px	
+					display: flex
+					align-items: center
+					&:nth-child(1)
+						animation-delay: .25s
+						.fas
+							margin-right: 35px
+					&:nth-child(2)		
+						animation-delay: .5s
+					&:nth-child(3)
+						animation-delay: .75s
+						.fas
+							margin-right: 33px
+					&:nth-child(4)
+						animation-delay: 1s
+						.content
+							margin-top: 10px
+						.fas
+							margin-right: 23px
+							align-self: flex-start
+
+					span
+						margin-top: 10px
+						font-size: 12px
+						display: block
+						color: lighten($text, 20%)
+						
 
 
 .map
