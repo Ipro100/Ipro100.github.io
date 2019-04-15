@@ -11,9 +11,9 @@ $(document).ready(function() {
    	
    });
 
-   $(".header_content h1").animated("fadeInDown");
+  $(".header_content h1").animated("fadeInDown");
    $(".line_caption p, .section_header").animated("fadeInUp");
-   $(".line_caption").animated("fadeInUp");
+   // $(".line_caption").animated("fadeInUp");
    $(".portfolio_item").animated("fadeInUp");
    $(".mnu_line").animated("zoomIn");
    
