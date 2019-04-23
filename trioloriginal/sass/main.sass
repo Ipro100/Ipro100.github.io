@@ -50,6 +50,12 @@ b, strong
 	padding-left: 30px
 	+lg(min-height, auto)
 	+lg(padding-left, 0)
+	+xs-block()
+		background-image: url(../img/mbg.jpg)
+		// background-size: 50%
+		background-position: 10% -75px
+	+xxs-block()
+		background-position: 10% -45px		
 	.container
 		max-width: 1200px
 
@@ -213,6 +219,8 @@ a:visited, a:hover, a:active
 	padding-bottom: 220px
 	background-image: url(../img/bg2.jpg)
 	color: #fff
+	+xs-block()
+		padding-bottom: 30px
 	.section-content
 		max-width: 75%
 
