@@ -5,19 +5,20 @@ var images  = $('.rotate');
  var n = 0;
  var k = true;
 
-	$(window).scroll(function() {
+// 	$(window).scroll(function() {
 	
-		if(n % 10 == 0){
-		window.requestAnimationFrame(function() {
-        	isScrolling(); 
+// 		if(n % 10 == 0){
+// 		window.requestAnimationFrame(function() {
+//         	isScrolling(); 
         	    	
-    });
-}
-	n++;
-	if(n == 1000){
-		n = 0;
-	}
-});
+//     });
+// }
+// 	n++;
+// 	if(n == 1000){
+// 		n = 0;
+// 	}
+// });
+
 
 	function isScrolling(){
 
@@ -34,5 +35,11 @@ var images  = $('.rotate');
     }
 
 	}	
+
+setInterval(function() {
+  isScrolling();
+}, 800);	
+
+
 
 });
