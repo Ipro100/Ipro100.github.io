@@ -1,0 +1,395 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	margin: 0
+	color: $text
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+
+.header
+	position: relative
+	&-content
+		position: relative
+		min-height: 28vh
+		padding-top: 14vh
+		padding-bottom: 100px
+		background-image: url(../img/bg.jpg)
+		background-repeat: no-repeat
+		background-size: cover
+		background-position: top center
+		text-align: right
+		+xs-block()
+			background-position: -400px 0
+.container
+	+wrapper()
+
+
+
+
+.headline
+	position: relative
+	top: 0
+	left: 0
+	width: 100%
+	background-color: #60AA6F
+	padding-top: 15px
+	padding-bottom: 15px
+	box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.16)
+	.container
+		max-width: 1170px
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+
+
+
+.button 
+	white-space: nowrap
+	background-color: $accent
+	border-radius: 50px
+	box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.3)
+	padding: 3px 75px
+	text-align: center
+	display: inline-block
+	font-family: $medium-font
+	font-size: 20px
+	line-height: 1.8
+	color: $text
+	text-decoration: none
+	cursor: pointer
+	border: none
+	transition: all 0.5s 
+	&:hover
+		box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.3)
+		outline-color: rgba(255, 255, 255, 0)
+		outline-offset: 15px
+	&:active
+		color: $text
+		text-decoration: none	
+
+a:visited, a:hover, a:active 
+		color: $text
+		text-decoration: none 
+
+
+
+.logo-wrapper
+	position: absolute
+	z-index: 100
+	top: 8px
+
+
+.header-composition
+	text-align: left
+	padding: 30px
+	padding-left: 35px
+	box-sizing: border-box
+	max-width: 570px
+	border-radius: 10px
+	background-color: rgba(0, 0, 0, .65)
+	color: #fff
+	display: inline-block
+	.h1
+		font-family: $bold-font
+		font-size: 36px
+		margin: 0
+		line-height: 1.2
+	p
+		font-size: 28px
+		margin-top: 15px
+		margin-bottom: 0
+		line-height: 1.2
+
+
+
+
+
+
+
+
+
+///////////////section1///////////////
+.s1
+	background: #f2f2f2
+	margin-top: -75px
+	padding-bottom: 45px
+.items
+	display: flex
+	flex-wrap: wrap
+	justify-content: center
+	.item	
+		text-align: center
+		z-index: 200
+		box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.16)
+		border-radius: 10px
+		margin-top: 30px
+		overflow: hidden
+		+col()
+		+size(4)
+		+size-sm(6)
+		+size-xs(10)
+		+size-xxs(12)
+		img
+			width: 100%
+p
+	font-size: 28px
+	margin: 7px 0
+	margin-bottom: 15px
+	line-height: 1.6
+
+
+.section-title
+	position: relative
+	text-align: center
+	display: block
+	h2
+		font-family: $bold-font
+		font-size: 36px
+		position: relative
+		display: inline-block
+		line-height: 1.6
+		padding-bottom: 10px
+		&:before
+			content: ''
+			position: absolute
+			width: 117px
+			height: 2px
+			background: #d5e8d9
+			bottom: 0
+			left: 28%
+
+
+.s2
+	padding: 30px 0
+	.section-title
+		h2
+			margin-bottom: 20px
+	.item	
+		box-shadow: none
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: flex-end
+		margin-top: 20px
+		+size(3)
+		+size-sm(6)
+		+size-xs(10)
+		+size-xxs(12)
+.section-title
+	h2
+		margin: 0
+
+
+
+
+.decor
+	display: inline-block
+	position: absolute
+	+xs(display, none)
+
+.s3
+	padding: 50px 0
+	background: #f2f2f2
+	.container
+		position: relative
+		.decor
+			bottom: 15%
+			left: 35px
+
+	.section-title
+		h2
+			margin-bottom: 25px
+			&:before
+				left: 37%
+	.items
+		.item
+			margin-top: 45px
+			background: #fff
+			p
+				padding: 0 10px
+				span
+					font-size: 22px
+
+
+
+.s4
+	padding: 50px 0
+	.section-title
+		h2
+			margin-bottom: 25px
+	h3
+		font-family: $bold-font
+		font-size: 28px
+		margin: 0
+	p
+		font-size: 24px	
+		margin-top: 0
+		line-height: 1.6
+	.items
+		.item
+			padding: 5px
+
+
+.dinamic-slide
+	display: flex
+	justify-content: center
+	margin-top: 45px
+	
+	.item
+		+col()
+		+size(8)
+		+size-sm(10)
+		+size-xxs(12)
+		overflow: hidden
+		background: #fff
+		text-align: center
+		padding-bottom: 15px
+		box-shadow: 0 3px 7px 0 rgba(0,0,0,.16)	
+		border-radius: 10px
+		p
+			margin-top: 0	
+
+.wrapper
+	position: relative
+	height: 530px	
+	.rotate
+		img
+			width: 70%
+			margin: 0 auto
+.rotate
+	opacity: 0
+	position: absolute
+
+.active, .active1
+	opacity: 1 !important
+
+
+
+///////////SECTION8////////////////
+
+
+.s8
+	display: flex
+	padding: 85px 0
+	padding-top: 40px
+	justify-content: center
+	position: relative
+	.decor
+		right: 20%
+		bottom: 23%
+		+md(right, 10%)
+		+sm(right, 5%)
+	.btn
+		font-size: 26px
+		background: #262424
+		color: #fff
+		letter-spacing: 2px
+		line-height: 59px
+		padding: 7px 105px
+		+xs(padding, 2px 65px)
+		&:active
+			color: #fff
+			text-decoration: none	
+
+		a:visited, a:hover, a:active 
+			color: #fff
+			text-decoration: none 
+
+
+
+
+//////////////footer////////////////////
+
+
+
+
+.footer
+	background-color: #60aa6f
+	color: #fff
+	padding: 50px 0
+	.container
+		max-width: 1160px
+
+.footer__content
+	width: 100%
+	display: flex 
+	flex-wrap: wrap
+	justify-content: space-between
+	+xs(flex-direction, column)
+	+xs(align-items, center)  
+	.footer__content-logo
+		margin-bottom: 25px
+		+col()
+		+size(3)
+		+size-xs(8)
+		text-align: center
+		img
+			width: 100%
+			max-width: 223px
+	.footer__content-block_01
+		+col()
+		+size(6)
+		+size-xs(10)
+		// margin: 0 25px
+		p
+			margin-top: 0
+			font-size: 16px
+			line-height: 18px
+	.footer__content-block_02
+		+col()
+		+size(3)
+		+size-xs(10)
+		font-size: 16px
+		text-align: right
+		position: relative
+		p
+			font-size: 16px 
+			line-height: 18px
+			margin: 0
+			margin-bottom: 10px
+
+		.footer_line
+			position: absolute
+			width: 55px
+			right: 0
+			color: #fff  
+
+		.phone
+			margin-top: 35px  
+			line-height: 25px
+
+
+@import "media"
