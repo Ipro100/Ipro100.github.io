@@ -1,0 +1,58 @@
+@import "vars"
+
+
+/*==========  Desktop First  ==========*/
+
+// ≥1100px
++lg-block()
+	.s1 
+		.h2 
+			&:after
+				left: -82%
+
+
+// ≥992px
++md-block()
+	.s1 
+		.h2 
+			&:after
+				left: -78%
+	
+// ≥768px
++sm-block()
+	.s1 
+		.h2 
+			&:after
+				left: -70%
+
+// ≥576px
++xs-block()	
+	.s1 
+		.content 
+			p
+				width: 100%
+		.h2 
+			&:after
+				left: -48%			
+	.s1 .container .content p
+		width: 100%
+				
+// ≥400px				
++xxs-block()
+	.header-composition .h1
+		margin-left: 0	
+		font-size: 28px
+	.headline .button
+		font-size: 16px	
+	
+@media screen and (max-width: 500px)
+	// 
+@media screen and (max-width: 445px)
+	// 
+
+@media screen and (max-width: 523px)
+	// 
+@media screen and (max-width: 1600px)
+	// 
+@media screen and (max-width: 1300px)
+	//

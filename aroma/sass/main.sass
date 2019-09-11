@@ -1,0 +1,525 @@
+@import vars
+@import fonts
+@import libs
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+
+
+body
+	margin: 0
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: 'Roboto', sans-serif
+	overflow-x: hidden
+	color: $text
+	input, textarea
+	border: #666 1px solid
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+
+.container
+	+wrapper()
+
+.header
+	position: relative	
+	&-content
+		position: relative
+		min-height: 70vh
+		padding-top: 5vh
+		padding-bottom: 50px
+		background-image: url(../img/@2x/bg1.jpg)
+		background-repeat: no-repeat
+		background-size: cover
+		background-position: center
+		text-align: right
+		+xs-block()
+			background-position: -400px 0
+		.container
+			min-height: inherit
+				
+
+
+.headline
+	position: relative
+	top: 0
+	left: 0
+	width: 100%
+	background-color: #fff
+	padding-top: 15px
+	padding-bottom: 15px
+	.container
+		max-width: 1170px
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+
+.button 
+	white-space: nowrap
+	background-color: #000
+	border-radius: 50px
+	box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.3)
+	padding: 3px 75px
+	text-align: center
+	display: inline-block
+	font-size: 20px
+	line-height: 1.8
+	color: #fff
+	text-decoration: none
+	cursor: pointer
+	border: none
+	transition: all 0.25s 
+	+xs(padding, 3px 55px)
+	&:hover
+		box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.3)
+		outline-color: rgba(255, 255, 255, 0)
+		outline-offset: 15px
+	&:active
+		color: #fff
+		text-decoration: none	
+
+a:visited, a:hover, a:active 
+		color: #fff
+		text-decoration: none 
+
+
+
+.logo-wrapper
+	position: absolute
+	z-index: 100
+	top: 8px
+	+xs-block()
+		max-width: 100px
+
+.h2
+	font-family: $coreSans
+	font-weight: 300
+	font-size: 30px
+	letter-spacing: 1px
+	position: relative
+	line-height: 1.25
+	&:after
+		content: ''
+		position: absolute
+		bottom: 0
+		left: -85%
+		height: 2px
+		width: 100%
+		background: #707070
+
+
+p
+	font-family: $coreSans
+	font-size: 19px
+	letter-spacing: .8px
+
+.header
+	&-composition
+		display: flex
+		flex-direction: column
+		align-items: flex-end
+		min-height: inherit
+		.logo-wrapper
+			position: relative
+			max-width: 248px
+		p
+			display: inline-block		
+			text-transform: uppercase
+			font-size: 25px
+			margin-top: 10px
+			font-weight: bold
+			letter-spacing: 0
+			font-family: $coreSansBold
+		.h1
+			margin-top: auto
+			text-align: left
+			align-self: flex-start
+			font-family: $coreSans
+			font-weight: 200
+			font-size: 38px
+			margin-bottom: 15px
+			margin-left: 30px
+			line-height: 1.2
+			+sm(font-size, 30px)
+		.items
+			display: flex
+			flex-wrap: wrap
+			justify-content: space-around
+			align-self: flex-start
+			width: 100%
+			margin-bottom: -157px
+			+sm-block()
+				margin-bottom: -350px
+			+xs-block()
+				margin-bottom: -535px	
+			.item
+				+col()
+				+size(2.3)
+				+size-sm(4)
+				+size-xs(6)
+				background: #fff
+				padding: 20px 5px
+				text-align: center
+				box-sizing: border-box
+				border-radius: 20px
+				display: flex
+				flex-direction: column
+				box-shadow: 0 0 7px 1px rgba(0,0,0,.16)
+				+sm-block()
+					margin-bottom: 20px
+				.wrap-img
+					height: 85px
+					img
+						margin: 0 auto
+						max-width: 80px
+
+				p
+					font-size: 14px	
+					font-weight: 300
+					font-family: $coreSans
+					margin: 0
+					text-transform: none
+.item
+	box-shadow: 0 0 7px 1px rgba(0,0,0,.16)
+	box-sizing: border-box
+	border-radius: 20px
+	
+section p
+	font-size: 22px
+	line-height: 1.5
+
+
+.s1
+	padding-top: 250px
+	+sm(padding-top, 430px)
+	+xs(padding-top, 530px)
+	.container
+
+
+		.content
+			display: flex
+			width: 100%
+			justify-content: space-between
+			+xs-block()
+				flex-direction: column
+				align-items: center
+			p
+				font-size: 22px
+				letter-spacing: .8px
+				width: 80%
+				margin-top: 50px
+				margin-bottom: 53px
+			.wrap-img
+				margin-top: -194px
+				margin-right: -50px
+				max-width: 350px
+				+xs(margin-top, 25px)
+				
+.bg
+	background-position: top center
+	background-size: cover
+	background-repeat: no-repeat
+
+
+
+
+
+
+.s2
+	background-image: url(../img/@2x/dog.jpg)
+	+sm(background-position, 65%)
+	+xs(background-position, 55%)
+	+xxs(background-position, 64%)
+	.wrapper
+		padding: 150px 0
+		background-color: rgba(255,255,255,.6)
+		text-align: center
+		+xs(padding, 30px 0)
+		.container
+			max-width: 800px
+		.h2
+			display: inline-block
+			&:after
+				left: -40px
+				height: 2px
+				width: 121%	
+			
+
+
+.s3
+	padding-top: 100px
+	padding-bottom: 25px
+	background: #f3f3f3
+	+xs(padding-top, 30px)
+	.content
+		display: flex
+		+sm(align-items, center)
+		+xs(flex-direction, column)
+		.left
+			+col()
+			+size(7)
+			+size-xs(12)
+			.h2 
+				margin-bottom: 80px
+				+xs(margin-bottom, 30px )
+				&:after
+					width: 182%				
+		.right
+			+col()
+			+size(5)
+			+size-xs(12)
+			.items
+				display: flex
+				flex-wrap: wrap
+				justify-content: center
+				.item
+					+col()
+					+size(6)
+					+size-sm(8)
+					+size-xs(6)
+					padding: 10px
+					margin-bottom: 30px
+					background: #fff
+
+		
+
+.s4
+	padding: 100px 0
+	+xs(padding, 30px 0)
+	.container
+		.content
+			display: flex
+			+xs(flex-direction, column)
+			.left
+				+col()
+				+size(7)
+				+size-xs(12)
+				margin-left: -55px
+				+md-block()
+					margin-left: 0
+					display: flex
+					align-items: center
+				+xs(order, 2)	
+			.right
+				+col()
+				+size(7.5)
+				+size-xs(12)
+				text-align: right
+				.h2
+					margin-bottom: 60px
+					text-align: center
+					+xs(margin-bottom, 30px )
+					&:after
+						left: 26%
+						width: 5000px
+						+md(left, 12%)
+						+xxs(left, 1%)
+
+.s5
+	background-image: url(../img/@2x/bg5.jpg)
+	.wrapper
+		padding: 50px 0
+		padding-bottom: 150px
+		+xs-block()
+			padding: 30px 0
+			padding-bottom: 30px
+		.container
+			max-width: 900px
+		.h2
+			&:after
+				left: -154px
+				width: 240%
+
+
+
+
+
+
+
+.s6
+	padding: 50px 0
+	.main-title
+		text-align: center	
+		font-size: 40px
+		font-family: $coreSans
+		font-weight: 200		
+		text-transform: uppercase
+		margin-bottom: -30px
+	.heading-title
+		display: flex
+		margin-bottom: 55px
+		margin-left: 55px
+		align-items: center
+		margin-top: 56px
+		+xs(margin-left, 0)
+		.h2
+			margin-top: 60px
+			margin-right: 65px
+			+xs(margin-right, 0)
+			+xs(font-size, 26px)
+			&:after
+				left: -391%
+				width: 500%
+		.decor-img
+			max-width: 134px
+	.right-side
+		justify-content: flex-end
+		margin-top: 46px
+		.h2
+			margin-left: 30px
+			&:after
+				left: 0
+		.decor-img
+			max-width: 114px			
+	.items
+		display: flex
+		flex-wrap: wrap
+		justify-content: center
+		.item
+			+col()
+			+size(3)
+			+size-sm(5)
+			+size-xs(10)
+			+size-xxs(12)
+			text-align: center
+			padding: 20px
+			padding-bottom: 0
+			+sm(margin-bottom, 30px)
+			p
+				font-size: 16px
+				margin-top: 0
+
+///////////SECTION8////////////////
+
+
+.s8
+	display: flex
+	padding: 10px 0
+	padding-top: 30px
+	flex-direction: column
+	align-items: center
+	position: relative
+	.decor
+		display: flex
+		justify-content: center
+		align-items: center
+		margin-top: 10px
+		.wrap-img
+			+col()
+			+size(2.8)
+			margin-right: 5px
+			margin-left: 5px
+			min-width: 90px
+			&:nth-child(2)
+				max-width: 140px
+	.btn
+		font-size: 26px
+		background: #000
+		color: #fff
+		letter-spacing: 2px
+		line-height: 54px
+		padding: 2px 85px
+		+xs(padding, 2px 65px)
+		&:active
+			color: #fff
+			text-decoration: none	
+
+		a:visited, a:hover, a:active 
+			color: #fff
+			text-decoration: none 
+
+
+
+
+//////////////footer////////////////////
+
+
+
+.footer
+	background-image: -moz-linear-gradient( -90deg, rgb(151,148,148) 0%, rgb(0,0,0) 100%)
+	color: #fff
+	padding: 50px 0
+	.container
+		max-width: 1160px
+
+.footer__content
+	width: 100%
+	display: flex 
+	flex-wrap: wrap
+	justify-content: space-between
+	+xs(flex-direction, column)
+	+xs(align-items, center)  
+	.footer__content-logo
+		margin-bottom: 25px
+		+col()
+		+size(3)
+		+size-xs(8)
+		text-align: center
+		img
+			width: 100%
+			max-width: 223px
+	.footer__content-block_01
+		+col()
+		+size(6)
+		+size-xs(10)
+		// margin: 0 25px
+		p
+			margin-top: 0
+			font-size: 16px
+			line-height: 18px
+	.footer__content-block_02
+		+col()
+		+size(3)
+		+size-xs(10)
+		font-size: 16px
+		text-align: right
+		position: relative
+		p
+			font-size: 16px 
+			line-height: 18px
+			margin: 0
+			margin-bottom: 10px
+
+		.footer_line
+			position: absolute
+			width: 55px
+			right: 0
+			color: #fff  
+
+		.phone
+			margin-top: 35px  
+			line-height: 25px
+
+
+
+
+
+
+
+@import 'media'
