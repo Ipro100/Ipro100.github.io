@@ -1,0 +1,453 @@
+@import vars
+@import fonts
+@import libs
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+
+
+body
+	margin: 0
+	font-size: 16px
+	font-weight: bold
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $gilroy, sans-serif
+	overflow-x: hidden
+	color: $text
+	input, textarea
+	border: #666 1px solid
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+header
+	padding-top: 45px
+	+xs(padding-top, 150px)
+
+.container
+	+wrapper()
+
+.container-fluid
+	+wrapper()
+	max-width: 100%
+
+.space-between
+	display: flex
+	justify-content: space-between
+	align-items: center
+	+xs(flex-direction, column)
+.headline
+	position: absolute
+	width: 100%
+	top: 0
+	left: 0
+	background: #fff
+	+xs(padding-bottom, 15px)
+.headline_logo
+	display: flex
+	align-items: center
+	margin-bottom: -32px
+	border-radius: 0 0 20px 20px
+	background-color: #000
+	overflow: hidden
+	+sm(margin-right, 10px)
+	+xs(margin-bottom, 15px)
+	.label
+		max-width: 282px
+	
+
+.button 
+	font-family: $core_sans45
+	letter-spacing: 1px
+	white-space: nowrap
+	background-color: $accent
+	border-radius: 50px
+	box-shadow: 0px 3px 7px 0px rgba(186, 181, 98, 0.3)
+	padding: 7px 68px
+	text-align: center
+	display: inline-block
+	font-size: 28px
+	line-height: 1.4
+	color: #fff
+	text-decoration: none
+	font-weight: bold
+	cursor: pointer
+	border: none
+	transition: all 0.25s 
+	+xs(padding, 7px 55px)
+	&:hover
+		box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.3)
+		outline-color: rgba(255, 255, 255, 0)
+		outline-offset: 15px
+	&:active
+		color: #fff
+		text-decoration: none	
+
+a:visited, a:hover, a:active 
+		color: #fff
+		text-decoration: none 
+
+
+.header-content
+	background-image: url(../img/mbg.jpg)
+	background-position: center
+	background-size: cover
+	background-repeat: no-repeat
+	height: 100%
+	padding-top: 105px
+	+xs(background-position, 70% 45px)
+	// +xxs(background-position, 70% 0)
+
+
+	.header-composition
+		color: #000
+		margin-top: 10px
+		display: inline-block
+		.h1
+			display: inline-block
+			font-family: Sans-serif
+			font-weight: bold
+			color: #000
+			font-size: 80px
+			letter-spacing: 1px
+			line-height: 1
+			margin-bottom: 0
+			+xs(font-size, 60px)
+			span
+				font-family: $core_sans45 
+				font-size: 45px
+				display: block
+				+xs(font-size, 30px)
+
+		p
+			font-family: $caveat
+			font-size: 57px
+			font-weight: 500
+			color: #565857
+			margin-top: 25px
+			padding-right: 15px
+			margin-bottom: 70px
+			+xs(font-size, 47px)
+			+sm(margin-top, 200px)
+			span
+				display: block
+				line-height: 1
+
+	.header-advantages
+		background-image: linear-gradient( -115deg, rgba(0,0,0,0) 39%, rgba(0,0,0,.9) 56%)
+		padding: 15px
+		p
+			font-family: $core_sans45 
+			font-size: 28px
+			margin: 0
+			color: #fff
+			line-height: 1.2
+			font-weight: 400
+			+xs(font-size, 22px)
+			span
+				font-family: sans-serif
+				font-weight: bold
+
+.s1
+	padding: 55px 0
+	.container
+		max-width: 1300px
+		padding-left: 155px
+.items
+	display: flex
+	flex-wrap: wrap
+	justify-content: center
+	align-items: center
+	.item
+		+col()
+		+size(4)
+		+size-sm(6)
+		+size-xxs(12)
+		font-family: sans-serif
+		font-size: 25px
+		color: #000
+		text-align: center
+		p
+			margin-top: 10px
+			font-weight: bold
+			line-height: 1.1
+
+
+
+.sides
+	display: flex
+	flex-wrap: wrap
+	align-items: center
+	+xs(justify-content, center	)
+	.side
+		+col()
+		+size(6)
+		+size-xs(12) 
+	.side_img
+		+size(4)
+		+size-xs(12)
+				
+.bg
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: center
+
+.wrap_img
+	box-shadow: 0 3px 6px rgba(0,0,0,.16)
+	border-radius: 30px
+	overflow: hidden
+
+.s2
+	background-image: url(../img/s2bg.jpg)
+	padding: 50px 0
+	.side_img
+		+shift-right(1.5)
+		+shift-sm-right(0)
+		+size-sm(6)
+		+size-xs(10)
+		+size-xxs(12)
+		.wrap_img
+			display: inline-block
+
+section
+	p
+		font-size: 32px
+		+xxs(font-size, 28px)
+		color: #000
+		line-height: 1.2
+		font-family: $core_sans45
+		font-weight: 300
+
+
+.s3
+	padding: 50px 0
+	.side_text
+		+size(7)
+		+size-sm(6)
+		+size-xs(10)
+		+size-xxs(12)
+		
+
+		+shift-right(1.5)
+		+shift-sm-right(0)
+	.side_img
+		+size(3)	
+		+size-sm(6)
+		+size-xs(10)
+		+size-xxs(12)
+		+size-xs(10)
+		+size-xxs(12)
+	.wrap_img
+		box-shadow: none	
+
+.s4
+	padding: 50px 0
+	.side_text
+		+size(7)
+		+size-sm(6)
+		+size-xs(10)
+		+size-xxs(12)
+	.side_img
+		+size(5)
+		+size-sm(6)
+		+size-xs(10)
+		+size-xxs(12)
+		.wrap_img
+			box-shadow: none	
+
+.s5
+	padding-bottom: 70px
+	.side_img
+		+size(5)
+		+shift-right(.5)
+		+size-xs(10)
+	.side_text
+		+size(6.5)
+		+size-xs(10)
+		+size-xxs(12)	
+	.wrap_img
+		display: flex	
+		align-items: center	
+		justify-content: space-between
+		box-shadow: none	
+		img:first-child
+				margin-right: 100px	
+				+sm(margin-right,20px)
+
+.order-xs
+	+xs(order, -1)
+
+.btn
+	text-align: center
+	margin-top: 50px	
+	.button
+		padding: 9px 75px
+		box-shadow: 0px 6px 11px 1px rgba(0, 0, 0, 0.3)
+
+
+
+.s6
+	background-image: url(../img/s6bg.jpg)
+	text-align: center
+	padding-bottom: 50px
+	margin-bottom: 200px
+
+	.items
+		margin-top: 50px
+		margin-bottom: -220px
+	.wrapper
+		padding-top: 60px
+		background: rgba(255,255,255,.3)
+
+
+
+.description
+	.container
+		max-width: 750px
+h2
+	font-family: Sans-serif
+	font-size: 36px
+	font-weight: bold
+	color: #000
+
+
+.s7
+	text-align: center
+	background: #52C4CC
+	padding-top: 5px
+	h2
+		margin-bottom: 0
+		line-height: 1
+	.description	
+		p
+			margin-bottom: 10px
+		.decor
+			display: flex
+			justify-content: space-between
+			.wrap
+				max-width: 150px
+
+
+.s89
+	padding: 50px 0
+	h2
+		display: inline-block
+		border-bottom: 2px solid #707070
+		margin-bottom: 20px
+	.items
+		.item
+			+size(3)
+			+size-sm(6)
+			+size-xs(10)
+			+size-xxs(12)
+			margin-bottom: 30px
+			.wrap_img
+				box-shadow: none
+.s8
+	background-image: url(../img/s8bg.jpg)
+.s9
+	background-image: url(../img/s9bg.jpg)
+.s10
+	text-align: center
+	background-image: url(../img/s10bg.jpg)
+	padding: 25px 0
+	h2
+		margin-bottom: 0
+		line-height: 1
+	.description
+		.container
+			max-width: 900px
+.s11
+	padding: 50px 0
+	.items
+		.item
+			box-shadow: 0 3px 6px rgba(0,0,0,.16)	
+			border-radius: 30px		
+			overflow: hidden
+			margin-bottom: 30px
+
+//////////////footer////////////////////
+
+.footer
+	background: linear-gradient( 180deg, rgb(151,148,148) 0%, rgb(0,0,0) 100%)
+	color: #fff
+	padding: 50px 0
+	padding-bottom: 30px
+	font-family: $gilroy
+	.container
+		max-width: 1160px
+
+.footer__content
+	width: 100%
+	display: flex 
+	flex-wrap: wrap
+	justify-content: space-between
+	+xs(flex-direction, column)
+	+xs(align-items, center)  
+	.footer__content-logo
+		margin-bottom: 25px
+		+col()
+		+size(3)
+		+size-xs(8)
+		text-align: center
+		img
+			width: 100%
+			max-width: 223px
+	.footer__content-block_01
+		+col()
+		+size(6)
+		+size-xs(10)
+		// margin: 0 25px
+		p
+			margin-top: 0
+			font-size: 16px
+			line-height: 18px
+	.footer__content-block_02
+		+col()
+		+size(3)
+		+size-xs(10)
+		font-size: 16px
+		text-align: right
+		position: relative
+		p
+			font-size: 16px 
+			line-height: 18px
+			margin: 0
+			margin-bottom: 10px
+
+		.footer_line
+			position: absolute
+			width: 55px
+			right: 0
+			color: #fff  
+
+		.phone
+			margin-top: 35px  
+			line-height: 25px
+
+
+
+@import 'media'

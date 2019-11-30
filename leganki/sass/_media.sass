@@ -1,0 +1,39 @@
+@import "vars"
+
+
+/*==========  Desktop First  ==========*/
+
+// ≥1100px
++lg-block()
+	// ≥992px
++md-block()
+	.header-advantages
+		background-image: linear-gradient( -90deg, rgba(0,0,0,0) 22%, rgba(0,0,0,.9) 55%) !important
+	// ≥768px
++sm-block()
+	.header-advantages
+		background-image: linear-gradient( -90deg, rgba(0,0,0,0) 20%, rgba(0,0,0,.9) 55%) !important
+	.header-composition
+		p
+			text-shadow: 1px 1px 5px #fff, 0 0 1em #fff
+	// ≥576px
++xs-block()	
+	.header-advantages
+		background-image: linear-gradient( -90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,.9) 35%) !important	
+	// ≥400px				
++xxs-block()
+	.header-content	
+		background-position: 90%  !important
+@media screen and (max-width: 660px)
+	.slick-arrow
+		top: -45px
+	// 
+@media screen and (max-width: 1600px)
+	.s1
+		.container
+			max-width: 1300px
+			padding-left: 15px
+
+@media screen and (max-width: 1300px)
+	.header-content	
+		background-position: right
