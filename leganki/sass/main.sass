@@ -244,14 +244,13 @@ section
 
 .s3
 	padding: 50px 0
+	padding-bottom: 20px
 	.side_text
 		+size(7)
 		+size-sm(6)
 		+size-xs(10)
 		+size-xxs(12)
-		
-
-		+shift-right(1.5)
+		+shift-right(.7)
 		+shift-sm-right(0)
 	.side_img
 		+size(3)	
@@ -264,7 +263,6 @@ section
 		box-shadow: none	
 
 .s4
-	padding: 50px 0
 	.side_text
 		+size(7)
 		+size-sm(6)
@@ -282,7 +280,6 @@ section
 	padding-bottom: 70px
 	.side_img
 		+size(5)
-		+shift-right(.5)
 		+size-xs(10)
 	.side_text
 		+size(6.5)
@@ -293,9 +290,9 @@ section
 		align-items: center	
 		justify-content: space-between
 		box-shadow: none	
-		.img
-				margin-right: 100px	
-				+sm(margin-right,20px)
+		.img:first-child
+			margin-right: 50px
+			+sm(margin-right,20px)
 
 .order-xs
 	+xs(order, -1)
