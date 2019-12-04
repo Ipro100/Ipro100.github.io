@@ -184,6 +184,12 @@ window.addEventListener("unload", function() {
 
 
   
+ $('.s62').hover(function () {
+        $(this).attr('src', 'img/hover/s62.jpg');
+    }, function () {
+        $(this).attr('src', 'img/s62.png');
+    });  
+
  $('.s82').hover(function () {
         $(this).attr('src', 'img/hover/s82.jpg');
     }, function () {
@@ -205,6 +211,23 @@ window.addEventListener("unload", function() {
         $(this).attr('src', 'img/hover/s93.jpg');
     }, function () {
         $(this).attr('src', 'img/s93.png');
+    });  
+ $('.s111').hover(function () {
+        $(this).attr('src', 'img/hover/s111.jpg');
+    }, function () {
+        $(this).attr('src', 'img/s111.png');
+    });
+
+   $('.s113').hover(function () {
+        $(this).attr('src', 'img/hover/s113.jpg');
+    }, function () {
+        $(this).attr('src', 'img/s113.png');
+    });   
+
+     $('.s115').hover(function () {
+        $(this).attr('src', 'img/hover/s115.jpg');
+    }, function () {
+        $(this).attr('src', 'img/s115.png');
     }); 
 
 
