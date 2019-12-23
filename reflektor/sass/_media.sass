@@ -1,0 +1,38 @@
+@import "vars"
+
+
+/*==========  Desktop First  ==========*/
+
+// ≥1100px
++lg-block()
+	// ≥992px
++md-block()	
+	.header-content .wrapper
+		padding-bottom: 200px
+ 	.print
+ 		bottom: 25px	
++sm-block()
+	.header-content .wrapper
+		padding-top: 0
+		.print
+ 			bottom: 20px	
+ 			right: 60% !important
++xs-block()	
+	// ≥400px				
++xxs-block()
+	.header-content .wrapper .print
+		right: 50% !important
+		max-width: 130px
+	.header-content .wrapper .container .header-composition .h1
+		font-size: 28px	
+@media screen and (max-width: 500px)
+	.s7 .content .composition
+		width: 100%
+@media screen and (max-width: 1600px)
+	// 
+@media screen and (max-width: 1228px)
+	// .s6 .items .item p
+	// 	// margin-right: 0
+@media screen and (max-width: 1585px)
+	.header-content .wrapper .print
+		right: 45%
