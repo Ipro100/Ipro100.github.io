@@ -1,0 +1,509 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+body
+
+	font-size: 16px
+	min-width: 320px
+	margin: 0
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	color: $text
+	margin: 0
+	padding: 0
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+
+.header
+	position: relative
+	background-color: #AEC888
+	background-image: url('../img/bg.jpg')
+	width: 100%	
+	min-height: 100vh
+	background-position: center
+	background-size: cover
+	background-repeat: no-repeat
+	text-transform: uppercase
+	display: flex
+	justify-content: center
+	align-items: center
+	box-sizing: border-box
+	text-align: center
+.header_composition
+	display: inline-block
+	color: #fff
+	+sm-block()
+		bottom: 350px
+	h1
+
+		font-size: 58px
+		margin-bottom: 15px
+		+md(font-size, 42px)
+		+xs(font-size, 32px)
+	p
+		color: orange
+		font-size: 28px	
+		font-weight: bold
+		white-space: nowrap
+		+xs(font-size, 24px)
+		+xs(font-size, 18px)
+	span
+		display: block
+		font-size: 22px
+.header_line
+	position: absolute
+	left: 0
+	top: 0
+	width: 100%
+	text-align: center
+	background-color: rgba(0,0,0,0.20)
+	ul
+		li
+			display: inline-block
+			margin-right: 20px
+			color: #fff
+			font-size: 14px
+			
+			a
+				text-decoration: none
+				color: #fff
+				transition: color 0.25s
+				&:hover, &:focus
+					color: #17bed2			
+
+h1
+	animation-delay: 0.5s
+.anim-descr
+	animation-delay: 1.2s
+
+.descr
+	padding: 35px 0
+	padding-bottom: 5px
+	width: 100%
+	.items	
+		width: 100%
+		display: flex
+		flex-wrap: wrap
+		justify-content: center
+		.item	
+			+col()
+			+size(4)
+			+size-md(6)
+			+size-xs(12)
+			margin: 0
+			.description
+				font-size: 18px
+				display: block
+				text-align: center
+				background: #17BED2
+				transition: background-color .25s
+				&:hover
+					background-color: rgba(0,0,0,0.4)
+				a
+					color: #fff
+					font-size: 22px
+					display: flex
+					flex-direction: column
+					text-decoration: none
+					letter-spacing: 1px
+					transition: color .25s
+					&:hover,&:focus
+					span
+						margin-top: auto
+
+
+.container
+	+wrapper()
+	max-width: 1200px
+	display: flex
+	justify-content: center
+	align-items: center
+
+		
+
+.slick-next, .slick-prev
+	&:before
+		color: #17BED2
+		font-size: 32px
+		
+
+.slick-next		
+	+sm(right, -5px)
+	&:before
+		content: '\203A'
+		position: absolute
+		top: -26px
+		left: 0
+.slick-prev
+	+sm(left, -5px)
+	&:before
+		content: '\2039'
+		position: absolute
+		top: -26px
+		left: 0
+
+.program
+	padding: 50px 0
+	position: relative
+	// background-image: url("../img/bg3.jpg")
+	// background-color: #2a89b5
+	color: $text
+	width: 100%	
+	background-position: top center
+	background-size: cover
+	background-repeat: no-repeat
+	background-attachment: fixed
+	
+	.container
+		flex-direction: column
+		max-width: 800px
+		.section-header
+			margin-bottom: 0
+			h2
+				margin-bottom: 0
+				padding-bottom: 0
+		.items
+			width: 100%
+			.the-day
+				display: block
+				text-align: center
+				font-size: 28px
+				
+				cursor: pointer
+				margin-top: 30px
+				.fas
+					margin-right: 10px
+					font-size: 18px
+			.prog
+				display: none	
+				font-size: 18px
+				
+				ul
+					text-decoration: none
+					list-style-type: none
+					padding: 0
+					margin-top: 0
+					li
+					
+						font-size: 18px
+
+						padding: 7px 15px 5px
+					
+						display: flex
+						+xs(flex-direction, column)
+						+xs-block()
+							text-align: center
+							span
+								margin-right: 0
+						span
+							margin-right: 45px
+							display: inline-block
+							height: 100%
+							white-space: nowrap
+							flex-basis: 12%
+							font-size: 22px
+							+xs(margin-right, 0)
+.section-header
+	h2
+		font-size: 32px			
+
+
+.mfp-img
+	transition: all 0.5s
+
+.cotage
+	padding: 50px 0
+	.container
+		flex-direction: column
+	.items
+		margin-top: 20px
+		display: flex
+		flex-wrap: wrap	
+		justify-content: center
+		.item
+			+col()
+			+size(4)
+			+size-sm(6)
+			+size-xs(12)
+			max-width: 600px
+			margin-bottom: 30px
+			owerflow: hidden
+			box-sizing: border-box
+
+			img
+				width: 100%
+				transition: transform 1.5s ease
+				box-sizing: border-box
+				&:hover
+					transform: scale(1.1)
+					+sm(transform, scale(1.1))
+
+
+.food
+	padding: 50px 0 
+	padding-bottom: 100px
+	background-color: #fff
+	// background-image: url(../img/bg_food.jpg)
+	background-size: cover
+	background-position: center
+	background-repeat: no-repeat
+	.container
+		flex-direction: column
+		background-color: rgba(255,255,255,0.8)
+		box-shadow: 2px -3px 12px 12px rgba(255,255,255,.8)
+	.section-content
+		display: flex
+		align-items: center
+		flex-wrap: wrap
+		margin-top: 30px
+		.img-wrapper
+			+col()
+			+size(7)
+			+size-md(12)
+			flex-wrap: wrap
+			display: flex
+			.wrap
+				+col()
+				+size(6)
+				margin: 2px
+			.wrap:nth-child(3)
+				margin-top: -30px	
+		.descripton
+			padding: 5px
+			+col()	
+			+size(5)
+			+size-md(12)
+			font-size: 18px
+
+
+
+.price	
+	padding: 50px 0
+	.container
+		flex-direction: column
+		.section-header
+			text-align: center
+			h2
+				margin-bottom: 15px
+			.description
+				font-size: 36px
+				font-family: $bold-font
+				color: orange
+			p
+				color: lighten($text, 10%)
+				font-size: 28px		
+		.section-content
+			text-align: center
+			ul
+				margin: 0
+				padding: 0
+				list-style-type: none
+				font-size: 22px
+				display: block
+				text-align: left
+				.fas
+					font-size: 52px
+					margin-right: 45px
+					color: #17bed2
+				li
+					margin-top: 45px	
+					display: flex
+					align-items: center
+					animation-duration: 2s
+					&:nth-child(1)
+						animation-delay: .25s
+						.fas
+							margin-right: 35px
+					&:nth-child(2)		
+						animation-delay: .5s
+					&:nth-child(3)
+						animation-delay: .75s
+						.fas
+							margin-right: 33px
+					&:nth-child(4)
+						animation-delay: 1s
+						.content
+							margin-top: 10px
+						.fas
+							margin-right: 23px
+							align-self: flex-start
+
+					span
+						margin-top: 10px
+						font-size: 12px
+						display: block
+						color: lighten($text, 20%)
+						
+
+
+.map
+	padding: 50px 0
+	// padding-bottom: 0
+	// background-image: url(../img/b2.jpg)
+	background-position: top center
+	background-repeat: no-repeat
+	background-size: cover
+	color: #fff
+	.container
+		flex-direction: column
+	.section_content
+		display: flex
+		flex-wrap: wrap
+		position: relative
+		margin-top: 30px
+		box-sizing: border-box
+		width: 100%
+		overflow: hidden
+		opacity: .8
+		.contacts
+			position: absolute
+			left: 10%
+			top: 30%
+			z-index: 200
+			background-color: rgba(23,190,210,.7)
+			text-align: center
+			padding: 35px
+			font-size: 18px
+			+sm-block()
+				position: relative
+				width: 100%
+				left: 0
+				top: 0
+			span
+				font-size: 18px
+			a
+				text-decoration: none	
+				color: #fff
+				&:hover
+					text-decoration: underline
+				.fab
+					margin-right: 10px
+		.imap
+			width: 100%
+			box-sizing: inherit
+
+.collback_form
+	max-width: 350px
+	position: relative
+	margin: 0 auto
+	background-color: #fff
+	text-align: center
+	padding: 25px
+	display: none
+	.h2
+		margin-bottom: 10px
+	.accent_title
+		font-size: 20px
+	.form
+		display: flex
+		flex-direction: column
+		padding: 25px
+		.input_style
+			height: 36px
+			margin-bottom: 20px
+			padding: 0 10px
+			border: 1px solid #c5c5c5
+			font-size: 14px
+		label
+			margin-top: 10px
+			margin-bottom: 10px
+			font-size: 16px
+		.form-button
+			height: 46px
+			font-size: 18px
+			cursor: pointer
+			background-color: #17bed2
+			color: #000
+			border: none
+			transition: background-color .25s
+			&:hover
+				background-color: lighten(#17bed2, 10%)
+
+
+				
+.thnks
+	display: none
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	text-align: center
+	padding: 45% 0
+	background-color: #fff
+	background-image: url(../img/md.png)
+	background-repeat: no-repeat
+	background-position: top center
+	background-size: cover
+
+	.thnks_wrap
+		h2
+			font-weight: 500
+			font-size: 24px
+
+
+.reg
+	margin-top: 75px
+	background-color: #17BED2
+	border-radius: 42px
+	display: inline-block
+	cursor: pointer
+	color: #fff
+	font-family: $bold-font
+	font-size: 26px
+	font-weight: bold
+	padding: 16px 62px
+	margin-bottom: 55px
+	text-decoration: none
+	// text-shadow: 1px 1px 1px rgb(0, 133, 204)
+	transition: all .25s
+	+xs-block()
+		font-size: 22px
+	&:hover
+	
+	&:active
+		position: relative
+		top: 1px
+	span
+		color: #fff
+		font-size: 16px
+		letter-spacing: 1px
+
+
+.header_composition
+	a
+		margin-top: 15px
+		padding: 10px 55px
+		font-weight: 400
+		font-size: 22px
+		+xs-block()
+			font-size: 20px
+			padding: 10px 42px
