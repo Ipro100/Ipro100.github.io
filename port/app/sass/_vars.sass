@@ -1,0 +1,27 @@
+$default-font: "roboto-example", sans-serif
+$color_accent: #209ed0
+$color_bg_gray: #e1e1e2
+$color_text_gray: #b3b3b6
+$gray_p: #5d5d5d
+$gray_ph: #666666
+
+.mt
+	transition: all .5s ease
+
+@mixin kerning($kerning)
+	letter-spacing: $kerning + px	
+
+// Customization Bootstrap vars from "app/libs/bootstrap/scss/_variables.scss"
+$grid-gutter-width: 30px
+$grid-columns: 12
+$grid-breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px)
+$container-max-widths: (sm: 540px, md: 720px, lg: 960px, xl: 1140px)
+
+$gutter: $grid-gutter-width
+
+// Customization smart-grid
+
+$break_lg: 1200px
+$break_md: 990px
+$break_sm: 768px
+$break_xs: 576px
