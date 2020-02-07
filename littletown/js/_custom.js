@@ -47,7 +47,7 @@ var n = 0;
 
 skrollr.init({
   render: function(data) {
-   console.log(data.curTop);
+   // console.log(data.curTop);
    if(data.curTop > 1700 && data.curTop < 2000){$('.s3 .product').addClass('swing');$('.fmale').addClass('bounce');}
 
   }
