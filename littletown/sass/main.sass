@@ -41,7 +41,6 @@ body
 	color: $text
 	+reset()
 	input, textarea
-	border: #666 1px solid
 	outline: none
 	&:focus:required:invalid
 		border-color: red
@@ -94,11 +93,15 @@ body
 				margin-top: 20px
 				margin-bottom: 20px
 				+xxs(margin-left, 0)
+				+xxs-block()
+					padding: 30px
 				img
 					position: absolute
 					top: 45px
 					left: 15px
 					z-index: -1
+					+xxs-block()
+						top: -10px
 
 		.description
 			font-family: $open-sans
