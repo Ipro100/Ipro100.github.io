@@ -73,6 +73,7 @@
 				width: auto	!important	
 				top: 0	
 				left: 0	
+				border: 1px solid #e6e6e6
 	
 	.s9
 		.d6	
@@ -101,14 +102,16 @@
 				margin: 0
 				+xxs(width, auto)
 			.product
-				margin-right: 0									
+				margin-right: 0			
+	.s4 .content
+		width: 60%										
 
 +xs-block()	
 	.mobile, .fmale,.hamster
 		display: none
 	.s1
 		padding-top: 40px	
-
+	
 @media screen and (max-width: 1920px)
 	body
 		background-size: cover
@@ -135,5 +138,6 @@
 		.content
 			.labels
 				width: 14%	
+				+xxs(width, auto)
 			.product
 				margin-right: 0		

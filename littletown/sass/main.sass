@@ -114,7 +114,6 @@ body
 			margin-bottom: 40px
 			text-shadow: 2px 2px 5px #000
 			+md(margin-top, 70px)
-			+xs(text-shadow, 2px 2px 5px #737373)
 			strong
 				font-family: $monserat 
 .button	
@@ -140,6 +139,7 @@ body
 .items
 	display: flex
 	flex-wrap: wrap
+	+xs(justify-content, space-around)
 	.item
 		+col()
 		+size(4)
@@ -193,6 +193,8 @@ section
 		flex-direction: row
 		.wrapimg
 			margin-left: 5px
+			max-width: 44px
+			padding: 5px 5px
 	.wrapimg
 		display: flex
 		justify-content: center
@@ -201,6 +203,10 @@ section
 		border: 1px solid #E6E6E6
 		margin-bottom: 10px
 		padding: 10px 5px
+		max-width: 87px
+		+xxs-block()
+			max-width: 44px
+			padding: 5px 5px
 .section-description
 	+col()
 	background: #fff	
@@ -268,6 +274,7 @@ section
 	display: block
 	padding-top: 300px
 	+md(padding-top, 100px)
+	+xxs(padding-top, 0)
 	.content
 		+size(6)
 		position: relative
@@ -368,6 +375,7 @@ section
 		.product
 			margin-right: 0
 			+size-md(9)
+			+size-xxs(12)
 			+md-block()
 				display: flex
 				justify-content: flex-end
@@ -393,6 +401,7 @@ section
 		+size-lg(10)
 		+size-md(12)
 		+xxs(margin, 0)
+		+xxs(width, 100% !important)
 		.product
 			+size-md(9)
 			+size-xxs(12)
