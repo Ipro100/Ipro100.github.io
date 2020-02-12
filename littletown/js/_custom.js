@@ -48,7 +48,7 @@ var n = 0;
 skrollr.init({
   render: function(data) {
    // console.log(data.curTop);
-   if(data.curTop > 1700 && data.curTop < 2000){$('.s3 .product').addClass('swing');$('.fmale').addClass('bounce');}
+   if(data.curTop > 1250 && data.curTop < 2000){$('.s3 .product').addClass('swing');$('.fmale').addClass('bounce');}
 
   }
 });
@@ -68,8 +68,10 @@ $('.h1').animated('fadeInDown');
 $('.header-composition .description').animated('fadeInUp');
 
 if(window.screen.width < 1200) {
+$('fmale').removeClass('animated');
+$('.mobile,fmale').animated('bounce');
 
-$('.mobile').animated('bounce');
+$('.s8 .content .labels').html($('.s5 .content .labels').html());
 
 }
 

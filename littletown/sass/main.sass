@@ -23,12 +23,12 @@ input, textarea
 	height: auto
 	&.img-width
 		width: 100%
-
 html
 	background-image: url(../img/bg_05.png)
+	
 body
 	background-image: url(../img/bg.png)
-	+lg(background-image, url(../img/s9/bg.png))
+	+md(background-image, url(../img/s9/bg.png))
 	background-repeat: no-repeat
 	background-position: top center
 	box-shadow: 0 1px 51px 17px #FDE0B2
@@ -295,6 +295,7 @@ section
 		justify-content: flex-end
 		.product
 			position: relative	
+			margin-top: 50px
 			+size-sm(9)
 			+size-xxs(12)
 		.labels
@@ -317,9 +318,9 @@ section
 			.h2,p
 				display: inline-block
 		.product
-			+size-md(10)
+			+size-md(9)
 			+size-xxs(12)	
-
+		
 .s6
 	transform: translate(0, -230px)
 	+md(transform, translate(0, 0))
@@ -366,13 +367,14 @@ section
 		justify-content: flex-end
 		.product
 			margin-right: 0
-			+size-md(12)
+			+size-md(9)
 			+md-block()
 				display: flex
 				justify-content: flex-end
 		.section-description
-			+size-md(10)
+			+size-lg(10)
 			+size-xxs(12)	
+
 			.h2
 				display: inline-block
 		.labels

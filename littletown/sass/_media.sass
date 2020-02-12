@@ -31,16 +31,15 @@
 		bottom: 50%
 	.header-content .wrapper .container .header-composition .h1
 		font-size: 28px	
-@media screen and (max-width: 500px)
-	// .s7 .content .composition
-	// 	width: 100%
+
+
 @media screen and (max-width: 1600px)
 	// 
 @media screen and (max-width: 1200px)
 	.hamster
 		display: none
-	.mobl,.mobile
-		// display: block
+	// .mobl,.mobile
+	// 	display: block
 	.mobile
 		bottom: 0	
 	.product
@@ -54,8 +53,6 @@
 			top: -75px
 			
 	.s8
-		.labels
-			display: none	
 		.d6	
 			top: -93px	
 			.dialog-content
@@ -66,7 +63,17 @@
 					transform: rotate(-2deg)	
 				&:after
 					left: 135px	
-
+	.s8 .content
+		width: 55% 
+		.labels
+			margin: 0
+			.wrapimg
+				position: relative
+				opacity: 1 !important
+				width: auto	!important	
+				top: 0	
+				left: 0	
+	
 	.s9
 		.d6	
 			top: -85px
@@ -86,11 +93,16 @@
 			.dialog-content
 				&:before,&:after
 					top: 107px
-					transform: rotate(1deg)					
-	// 	// margin-right: 0
-@media screen and (max-width: 1585px)
-	// .header-content .wrapper .print
-	// 	right: 45%
+					transform: rotate(1deg)		
+	.s7,.s9,.s5
+		.content
+			.labels
+				width: 14%	
+				margin: 0
+				+xxs(width, auto)
+			.product
+				margin-right: 0									
+
 +xs-block()	
 	.mobile, .fmale,.hamster
 		display: none
@@ -107,3 +119,21 @@
 		padding-top: 130px
 	.s2
 		padding-top: 0	
+	.s3
+		padding-top: 250px	
+
+@media screen and (max-width: 650px)
+	.mobl,.mobile,.fmale
+		display: none
+	
+@media screen and (max-width: 1400px)
+	.s8 .content .labels .wrapimg
+		width: 200px
+
+@media screen and (max-width: 1155px)
+	.s7
+		.content
+			.labels
+				width: 14%	
+			.product
+				margin-right: 0		
