@@ -1,0 +1,542 @@
+@import vars
+@import fonts
+@import libs
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+
+
+body
+	margin: 0
+	font-size: 16px
+	font-weight: bold
+	min-width: 320px
+	position: relative
+	line-height: 1.4
+	font-family: $gilroy, sans-serif
+	overflow-x: hidden
+	color: $text
+	input, textarea
+	border: #666 1px solid
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+
+.container
+	+wrapper()
+
+
+.space-between
+	display: flex
+	justify-content: space-between
+	align-items: center
+	+xs(flex-direction, column)
+
+
+
+
+.button 
+	font-family: $monserat
+	letter-spacing: 1px
+	white-space: nowrap
+	background-color: $accent
+	border-radius: 50px
+	box-shadow: 0px 5px 7px 0px rgba(186, 181, 98, 0.3)
+	padding: 18px 72px
+	text-align: center
+	display: inline-block
+	font-size: 19px
+	line-height: 1.4
+	color: #fff
+	text-decoration: none
+	font-weight: bold
+	cursor: pointer
+	border: none
+	transition: all 0.25s 
+
+	&:hover
+		box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.3)
+		outline-color: rgba(255, 255, 255, 0)
+		outline-offset: 15px
+	&:active
+		color: #fff
+		text-decoration: none	
+
+a:visited, a:hover, a:active 
+		color: #fff
+		text-decoration: none 
+
+
+.bgimg
+	background-repeat: no-repeat
+	background-position: top center
+	background-size: cover
+
+.header
+	background-image: url(../img/head/bg.png)
+	max-height: 690px
+	+sm-block()
+		max-height: 900px
+		background-position: 70% center
+	+xs(max-height, 950px)
+
+.headline
+	width: 100%
+	padding-top: 40px
+	flex-wrap: wrap
+	&-mail
+		display: flex
+		align-items: center
+		&__name
+			font-family: $monserat
+			font-size: 18px
+			letter-spacing: 1px
+			color: #fff
+			margin-left: 10px
+
+.header
+	&-composition
+		display: flex
+		margin-top: 80px
+		+sm-block()
+			margin-top: 20px
+			flex-wrap: wrap
+		.title
+			flex-basis: 52%
+			.h1
+				font-size: 55px
+				color: #fff
+				font-weight: 300
+				line-height: 1.3
+				margin-bottom: 50px
+				white-space: nowrap
+				+lg(font-size, 45px)
+				+sm(text-shadow, 2px 2px 10px #000)
+				+xs(white-space, normal)
+				span
+					display: block
+					font-family: sans-serif
+					font-weight: 900
+					text-transform: uppercase
+					white-space: nowrap
+					+sm(text-shadow, 2px 2px 10px #000)
+					+xxs(white-space, normal)
+
+		.product
+			margin-top: 60px
+			margin-left: -100px
+			+md(margin-left, -200px)
+			+sm(margin-left, 0)
+			position: relative
+			.garantee
+				position: absolute
+				bottom: 10px
+				right: -120px
+				display: inline-block
+				font-family: $monserat
+				font-size: 48px
+				background: #2CA775
+				border: 7px solid #fff
+				border-radius: 100%
+				color: #fff
+				box-sizing: border-box
+				padding: 55px 20px
+				text-align: center
+				text-transform: uppercase
+				line-height: 1
+				white-space: nowrap
+				+sm-block()
+					padding: 40px 20px
+					font-size: 28px
+					right: 0
+					bottom: -10px
+				+xxs-block
+					padding: 36px 15px
+					// font-size: 18px
+					border: 5px solid #fff	
+				span
+					display: block
+					text-transform: none
+					font-family: $gilroy
+					font-size: 28px
+					+sm-block()
+						font-size: 20px
+
+
+
+
+
+
+.s1
+	padding: 100px 0
+	padding-top: 120px
+	.section-title
+		.h2
+			margin: 25px 0
+	.items
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-around
+
+		.item
+			+col()
+			+size(4)
+			+size-sm(6)
+			+size-xxs(11)
+			+sm(margin-bottom, 15px)
+			&-description	
+				display: flex
+				align-items: center
+				margin-top: 10px
+				p
+					margin-left: 10px
+					font-size: 18px
+
+.text-right
+	text-align: right
+	margin-right: 50px
+	padding-left: 20%
+	+md(padding-left, 0)
+
+.margin-right
+	margin-right: 50px	
+
+.padding-right
+	padding-right: 18%
+	+md(padding-right, 0)
+
+
+.dec
+	position: absolute	
+	+md(width, 80px)
+	+xs(bottom, -20px !important)
+	+xs(top, auto !important)
+
+
+.s2
+	background: #EAF6F5
+	padding: 100px 0
+	.items
+		display: flex
+		flex-wrap: wrap
+		position: relative
+		.item
+			width: 100%	
+			display: flex
+			align-items: center
+			margin-bottom: 50px
+			position: relative
+			+xs-block()
+				flex-direction: column
+				justify-content: center
+				align-items: center
+			.decor1
+				top: 4%			
+			.decor2
+				bottom: 0
+				right: 0			
+			.decor3
+				bottom: 0
+				left: -10%			
+			.decor4
+				bottom: 0
+				right: 0
+			.img
+				align-self: flex-end
+				position: relative
+				+size-sm(6)
+				+size-xs(12)
+				+xs(order, -1)
+				+sm-block()
+					+col()				
+					display: block
+					max-width: 100%
+					height: auto
+					img
+						width: 100%	
+				.size
+					background: #76A8CF
+					position: absolute
+					right: -60px
+					bottom: -75px
+					border-radius: 100%
+					border: 7px solid #fff
+					text-align: center
+					color: #fff
+					font-size: 38px
+					font-family: $monserat
+					box-sizing: border-box
+					padding: 25px 28px
+					img
+						margin: 0 auto
+						margin-bottom: -5px
+						+xxs(margin-bottom, 0)
+						+xxs(margin-top, -8px)
+			.description
+				flex-grow: 1	
+				font-size: 24px
+				color: #333
+				line-height: 1.8
+				+size-sm(6)
+				+size-xs(12)
+				+xs(text-align, left)
+				+sm-block()
+					+col()
+					font-size: 20px
+					line-height: 1.5
+
+.description
+	font-size: 24px
+	+sm(font-size, 20px)
+
+
+.section-title .h2
+	font-family: $gilroybold
+	font-size: 34px
+	margin: 0
+	letter-spacing: 1px
+
+
+
+
+p
+	font-size: 24px
+	+xxs(font-size, 20px)
+	color: #333
+
+
+
+.s3
+	padding: 100px 0
+	padding-bottom: 250px
+	+sm(padding-bottom, 100px)
+	.items	
+		display: flex
+		flex-wrap: wrap
+		justify-content: center
+		margin-top: 50px
+		position: relative
+		.item
+			+col()
+			+size(6)
+			+size-sm(10)
+			+size-xs(12)
+			&-title
+				display: flex
+				align-items: center
+				font-size: 28px
+				margin-left: 15px
+				margin-bottom: 30px
+				+xxs(margin-left, 0)
+				img
+					min-width: 50px
+				p
+					margin: 0
+					margin-left: 20px
+			&-img
+				display: block		
+			&-description
+				margin-left: 10px
+				.h3
+					font-family: $gilroybold
+					font-size: 24px
+					margin-top: 35px
+					margin-bottom: 5px
+				p
+					color: #333
+					line-height: 1.7
+					margin-top: 0
+		.decor
+			bottom: -150px
+			right: -200px
+			+sm(bottom, -70px)
+
+
+
+.s4
+	+md(background, #EBEBEB)
+	.container
+		max-width: 1920px
+		padding-right: 0
+		padding-left: 0
+		.items
+			display: flex
+			+md(flex-wrap, wrap)
+			.item
+				+col()
+				margin-left: 0
+			.item:nth-child(1)	
+				+size-md(12)
+				background: #fff
+				+md(margin-right, 0)
+				+md(width, 100%)
+				+md(padding, 30px 0)
+				.img
+					img
+						+md(margin, 0 auto)
+			.item:nth-child(2)
+				background: #EBEBEB
+				+size(9)
+				+size-md(12)
+				padding-left: 6%	
+				+lg(padding-left, 20px)
+				+md(order, -1)
+				+md(padding-top, 50px)
+				margin-right: 0
+				display: flex
+				flex-direction: column
+				justify-content: center
+				.subitems
+					display: flex
+					flex-wrap: wrap
+					margin-top: 60px
+					+lg(margin-top, 20px)
+					+md(padding-top, 30px)
+					+xs(justify-content, center)
+					.subitem
+						+col()
+						+size(4)
+						+size-xs(10)
+						text-align: center
+						display: flex
+						flex-direction: column
+						align-items: center
+					.subitem:nth-child(3)	
+						.subitem-icon
+							margin-bottom: 15px
+						p
+							padding: 0 25px
+
+
+
+.s5
+	padding: 100px 0
+	.section-title
+		display: flex
+		flex-wrap: wrap
+		align-items: center
+		margin-bottom: 40px
+		.h2
+			margin-right: 50px
+	.items
+		display: flex
+		flex-wrap: wrap
+		.item
+			+col()
+			+size(6)
+			+size-sm(12)
+			+sm(text-align, center)
+			+sm(margin-bottom, 50px)
+			p
+				margin-bottom: 50px
+			img
+				display: inline-block	
+
+
+
+
+
+
+.s6
+	background: #EAF6F5
+	padding-top: 100px
+	.section-title
+		margin-bottom: 60px
+	img
+		margin: 0 auto
+
+
+.btn
+	text-align: center
+	padding: 80px 0
+	.button
+		font-size: 24px
+
+//////////////footer////////////////////
+
+.footer
+	background: #3B3C3E
+	color: #fff
+	padding: 50px 0
+	padding-bottom: 30px
+	font-family: $gilroy
+	.container
+		max-width: 1160px
+
+.footer__content
+	width: 100%
+	display: flex 
+	flex-wrap: wrap
+	justify-content: space-between
+	+xs(flex-direction, column)
+	+xs(align-items, center)  
+	.footer__content-logo
+		margin-bottom: 25px
+		+col()
+		+size(3)
+		+size-xs(8)
+		text-align: center
+		img
+			width: 100%
+			max-width: 223px
+	.footer__content-block_01
+		+col()
+		+size(6)
+		+size-xs(10)
+		// margin: 0 25px
+		p
+			color: #fff
+			margin-top: 0
+			font-size: 16px
+			line-height: 18px
+	.footer__content-block_02
+		+col()
+		+size(3)
+		+size-xs(10)
+		font-size: 16px
+		text-align: right
+		position: relative
+		p
+			font-size: 16px 
+			line-height: 18px
+			margin: 0
+			margin-bottom: 10px
+			color: #fff
+
+		.footer_line
+			position: absolute
+			width: 55px
+			right: 0
+			color: #fff  
+
+		.phone
+			margin-top: 35px  
+			line-height: 25px
+
+
+
+
+@import 'media'

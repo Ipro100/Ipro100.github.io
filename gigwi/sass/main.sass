@@ -1,0 +1,527 @@
+@import vars
+@import fonts
+@import libs
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+
+
+body
+	margin: 0
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.4
+	font-family: 'myriadPro-regular', sans-serif
+	overflow-x: hidden
+	color: $text
+	input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+	+reset()	
+
+
+.container
+	+wrapper()
+	position: relative
+
+
+.space-between
+	display: flex
+	justify-content: space-between
+	align-items: center
+	+xs(flex-direction, column)
+
+
+
+
+.button 
+	letter-spacing: 1px
+	white-space: nowrap
+	background-color: $accent
+	border-radius: 50px
+	padding: 8px 40px
+	text-align: center
+	display: inline-block
+	font-size: 25px
+	line-height: 1.4
+	color: #fff
+	text-decoration: none
+	cursor: pointer
+	border: none
+	transition: all 0.25s 
+	background: linear-gradient(0deg, rgba(79,84,160,0.9079832616640406) 49%, rgba(137,116,176,1) 100%, rgba(252,176,69,1) 100%)
+	&:hover
+		box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.3)
+		outline-color: rgba(255, 255, 255, 0)
+		outline-offset: 15px
+	&:active
+		color: #fff
+		text-decoration: none	
+
+a:visited, a:hover, a:active 
+		color: #fff
+		text-decoration: none 
+
+
+.bgimg
+	background-repeat: no-repeat
+	background-position: top center
+	background-size: cover
+
+.header
+	position: relative
+	background: #E6E1EF
+	&-top
+		padding: 25px 0
+		+xxs(padding-bottom, 30px)
+		background: #fff
+		&__phone
+			display: flex
+			justify-content: flex-end
+			align-items: center
+			+xs-block()
+				flex-wrap: wrap
+				justify-content: center
+			.icon
+				display: inline-block
+				+xxs(max-width, 40px)
+			a
+				text-decoration: none
+			.phone
+				margin: 0 15px
+				margin-right: 35px
+				p
+					font-family: "MyriadPro-SemiCn"
+					font-size: 23px
+					+xs(font-size, 20px)
+					color: #80868B
+					line-height: 1
+				span
+					color: #2C519F
+					font-size: 35px
+					+xs(font-size, 28px)
+	&-content
+		background-image: url(../img/head/bg.png)
+		background-size: cover
+		max-width: 1920px
+		margin: 0 auto
+		min-height: 650px
+		+to(1300px)
+			background-size: 100%
+			min-height: 480px
+		+lg(min-height, 400px)		
+		+md(min-height, 310px)		
+		+xs-block()
+			background-image: url(../img/head/mbg.png)
+			min-height: 370px			
+		+to(500px)
+			min-height: 320px			
+		+to(400px)
+			background-size: cover
+			background-position: 100% center
+			min-height: 260px	
+		.container
+			min-height: inherit
+		.logo
+			position: absolute
+			top: -90px
+			left: 0
+			+to(1300px)
+				max-width: 20vw
+			+sm-block
+				top: -30px	
+				min-width: 110px
+		.h1
+			position: absolute
+			right: -25px
+			bottom: 37%
+			font-family: "MyriadPro-BoldIt"
+			font-size: 37px
+			color: #454D9C
+			max-width: 500px
+			text-align: center
+			line-height: 1.1
+			+to(1300px)
+				font-size: 2.3vw
+				max-width: 300px
+				right: 17%
+			+md-block()
+				max-width: 250px
+				bottom: 27%
+			+to(860px)
+				font-size: 3vmax	
+				bottom: 30%
+				right: 10%
+			+sm-block()
+				bottom: 15px
+				right: 10%
+				max-width: 500px
+			+to(400px)
+				bottom: -75px
+				right: 0
+				background: #E6E1EF
+				padding: 15px 0
+
+.items
+	display: flex
+	flex-wrap: wrap
+
+.s1
+	padding: 50px 0
+	+xxs(padding-top, 120px)
+	.items
+		+sm(justify-content, center)
+		.item
+			+col()
+			+size(4)
+			+size-sm(6)
+			+size-xxs(12)
+			text-align: center
+			+sm(margin-bottom, 30px)
+			.img
+				margin-bottom: 10px
+				img
+					display: inline-block
+			p
+				font-family: "MyriadPro-BlackSemiCn"
+				font-size: 33px
+				color: #072A96
+				line-height: 1.1
+		.item:nth-child(1)
+			margin-top: 20px
+		.item:nth-child(2)
+			.img
+				img
+					margin-left: 20px
+	.hr
+		margin-top: 50px
+		width: 100%
+		height: 30px
+		background: #E8E2EB
+		border: none
+
+.s2
+	padding: 10px 0
+	.section-title
+		margin-bottom: 30px
+		.h2
+			font-family: "MyriadPro-BoldIt"
+			font-size: 60px
+			text-align: center
+			color: #4054A0
+			line-height: 1
+			+sm(font-size, 42px)
+			+xs(font-size, 37px)
+			+xxs(font-size, 29px)
+	.items
+		flex-direction: column		
+		+md(align-items, center)
+		.item
+			+col()
+			+size(4)
+			.img
+				+xs(text-align, center)
+			.description
+				font-family: "MyriadPro-SemiCnIt"
+				font-size: 45px
+				+xs(font-size, 32px)
+				font-weight: 300
+				color: #072A96
+				span
+					font-family: "MyriadPro-BoldSemiCn"
+					font-style: italic
+					display: block
+	.item:nth-child(1),.item:nth-child(3)
+		+size(12)
+		display: flex
+		margin-bottom: 150px
+		+md(margin-bottom, 50px)
+		.description
+			margin-top: 160px
+			padding-left: 15px
+			+xs(padding-left, 0)
+			+sm(margin-top, 35px)	
+			+sm(line-height, 1.1)		
+		+xs-block()
+			flex-direction: column	
+	.item:nth-child(2)	
+		position: absolute
+		+md-block()
+			position: static
+			margin-bottom: 50px
+		right: 13%
+		top: 640px
+		+size(4.3)
+		+size-lg(4.8)
+		+size-md(8)
+		+size-xs(10)
+		+size-xxs(12)
+		+to(1030px)
+			top: 660px
+		margin-top: 150px
+		+xxs(margin-top, 100px)
+		border: 6px solid #A38EC0		
+		text-align: center	
+		padding: 45px
+		box-sizing: border-box
+		line-height: 1.1
+		+xxs(padding, 30px)
+		.img
+			display: inline-block
+			margin-top: -190px
+			+xxs(margin-top, -130px)
+			border-radius: 100%
+			border: 15px solid #fff	
+			background: #fff
+	.item:nth-child(3)
+		+md(margin-top, 50px)
+		.description
+			margin-top: 250px
+			+md-block()
+				margin-top: 75px
+				padding-left: 25px
+			+sm(margin-top, 25px)	
+			+sm(line-height, 1.1)	
+			
+.s3
+	background-image: url(../img/s3/1.png)
+	padding-top: 500px
+	+xs(padding-top, 300px)
+	padding-bottom: 50px
+	.container
+		max-width: 1080px
+		.section-title
+			text-align: center
+			font-family: "MyriadPro-BoldIt"	
+			font-size: 60px
+			color: #fff
+			line-height: 1
+			text-shadow: 1px 2px 2px rgba(0,0,0,0.7)
+			+sm(font-size, 42px)
+			+xs(font-size, 37px)
+			+xxs(font-size, 29px)
+
+
+.s4
+	padding-top: 70px
+	.items
+		justify-content: center
+		.item
+			+col()
+			+size(6)
+			+size-xs(10)
+			+size-xs(12)
+			+xs(margin-bottom, 50px)
+			.img
+				text-align: center
+			.description
+				margin-top: 30px
+				font-family: "MyriadPro-SemiCnIt"
+				font-size: 45px
+				+xs(font-size, 32px)
+				font-weight: 300
+				color: #072A96
+				text-align: center
+				line-height: 1
+				span
+					font-family: "MyriadPro-BoldSemiCn"
+					font-style: italic
+					display: block
+	.hr
+		height: 30px
+		background: #F1F1F2
+		border: none
+		margin-top: 50px
+
+
+.s5
+	padding: 50px 0
+	text-align: center
+	.section-title
+		text-align: center
+		font-family: "MyriadPro-Black"
+		font-size: 48px
+		display: inline-block
+		background: #5A6DB1
+		color: #fff
+		padding: 2px 85px
+		+xs(padding, 4px 65px)
+		position: relative
+		padding-top: 15px
+		+xs(padding-top, 20px)
+		&:before
+			position: absolute
+			top: -5px
+			left: 0
+			content: ''
+			width: 100%
+			height: 20px
+			background: #fff
+			transform: rotate(-1deg)
+		&:after
+			position: absolute
+			right: -4px
+			bottom: -2px
+			content: ""
+			height: 110%
+			width: 20px
+			background: #fff
+			transform: rotate(5deg)
+
+
+
+
+.s5
+	.section-title
+		margin-bottom: 30px
+	.h2
+		font-family: "MyriadPro-BoldIt"
+		text-align: center
+		color: #fff
+		+sm(font-size, 42px)
+		+xs(font-size, 37px)
+		+xxs(font-size, 29px)
+	.items
+		margin-top: 50px
+		.item
+			+col()
+			+size(4)
+			+size-sm(6)
+			+size-xs(12)
+			display: flex
+			flex-direction: column
+			margin-bottom: 30px
+			.img
+				margin-top: auto
+			.description
+				text-align: center
+				max-width: 150px
+				margin: 0 auto
+				box-sizing: border-box
+				p:nth-child(1)
+					text-transform: uppercase
+					font-size: 14px
+					color: #636365
+				p:nth-child(2)
+					text-transform: uppercase
+					font-weight: bold
+					color: #808082
+				p:nth-child(3)
+					font-size: 21px	
+					font-family: "MyriadPro-BoldSemiCn"
+					color: #272525
+					line-height: 1
+					margin-bottom: 3px
+				p:nth-child(4)
+					color: #636365
+					line-height: 1.5
+				p:nth-child(5)	
+					color: #9f9f9f
+					font-size: 22px
+				p:nth-child(6)
+					color: #272525		
+	.buy
+		margin-top: 50px		
+		.button
+			padding: 10px	60px
+			font-size: 40px
+			background: linear-gradient(0deg, rgba(117,94,163,1) 49%, rgba(137,116,176,1) 100%, rgba(252,176,69,1) 100%)
+					
+.footer
+	background: #AE292F
+	color: #fff
+	padding: 40px 0
+	padding-bottom: 30px
+	overflow: hidden
+	.container
+		max-width: 1200px
+		position: relative
+		.print
+			position: absolute
+			max-width: 55%
+			bottom: -200px
+			left: 150px
+			z-index: 1
+.footer__content
+	z-index: 100
+	width: 100%
+	display: flex 
+	flex-wrap: wrap
+	justify-content: space-between
+	+xs(flex-direction, column)
+	+xs(align-items, center)  
+	.footer__content-logo
+		z-index: 100
+		margin-bottom: 25px
+		+col()
+		+size(3)
+		+size-xs(8)
+		text-align: center
+		img
+			width: 100%
+			max-width: 165px
+	.footer__content-block_01
+		z-index: 100
+		+col()
+		+size(6)
+		+size-xs(10)
+		text-align: center
+		display: flex
+		justify-content: center
+		align-items: center
+		margin-bottom: 35px
+		p
+			margin-top: 0
+			font-size: 21px
+			line-height: 1.2
+	.footer__content-block_02
+		z-index: 100
+		+col()
+		+size(3)
+		+size-xs(10)
+		font-size: 21px
+		position: relative
+		p
+			font-size: 21px 
+			line-height: 21px
+			margin: 0
+			margin-bottom: 10px
+		.phone
+			margin-top: 20px  
+			line-height: 1.3
+
+
+
+
+
+
+
+
+
+
+
+@import 'media'
