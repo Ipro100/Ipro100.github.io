@@ -212,11 +212,89 @@ a:visited, a:hover, a:active
 
 
 .s1
-	.img_md
-		display: none
-		+md(display, block)
-	.big
-		+md(display, none)
+	display: flex
+	justify-content: center
+	background-image: url(../img/s1/bg_green.png)
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: top center
+	.container
+		position: relative
+	.desc
+		position: absolute
+		font-family: $open-sans
+		font-size: 28px
+		font-weight: 300
+		+lg(font-size, 1.5rem)
+		+md(font-size, 1.2rem)
+		+sm(font-size, 1rem)
+		+xs(font-size, .8rem)
+		+xxs(font-size, .5rem)
+		color: #fff
+		line-height: 1
+	.d1
+		top: 31%
+		left: 3%
+		+sm(top, 30%)
+		+xxs(left, 5%)
+	.d2
+		left: 3%
+		+xxs(left, 5%)
+		bottom: 29%
+	.d3
+		top: 18%
+		right: 3%
+		text-align: right
+		+sm(top, 16%)
+	.d4
+		top: 49%
+		right: 14%
+
+.mobile
+	display: none
+	+xs(display, block)
+	.imgdec
+		width: 40%
+	.m1
+		bottom: 40%
+	.d1
+		top: 44%
+	.m2
+		bottom: 18%	
+		left: 0
+		width: 45%
+	.d2
+		bottom: 30%	
+		left: 1%
+	.m3
+		top: 38%
+		right: 0	
+	.d3
+		top: 32%	
+		right: 9px
+	.m4
+		bottom: 22%
+		right: 3%	
+		width: 45%
+	.d4
+		top: 62%
+		right: 3%
+.desktop
+	+xs(display, none)
+
+
+
+.imgdec
+	position: absolute
+
+
+
+
+
+
+
+
+
 
 
 .s2
