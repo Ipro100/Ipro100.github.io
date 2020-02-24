@@ -1,0 +1,337 @@
+@import vars
+@import fonts
+@import libs
+
+
+
+::selection
+	background-color: $accent
+	color: #fff
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+
+
+body
+	margin: 0
+	min-width: 320px
+	position: relative
+	overflow-x: hidden
+	color: $text
+	input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+.container
+	+wrapper()
+	
+
+.header
+	display: flex
+	justify-content: center
+	align-items: center
+	+sm(align-items, flex-start)
+	background-image: url(../image/bg4.jpg)
+	+sm(background-image, url(../image/gl2.jpg))
+	background-size: cover
+	background-position: top center
+	background-repeat: no-repeat
+	background-attachment: fixed
+	min-height: 80vh
+	+sm(min-height, 100vh)
+	font-family: $core_sans45
+	&__composition
+		max-width: 50%
+		min-width: 768px
+		+sm(min-width, 100%)
+		+sm(max-width, 100%)
+		text-align: center
+		position: relative
+		&__img
+			border: 5px solid #fff
+			box-shadow: 2px 2px 5px -1px rgba(0,0,0,0.75)
+			+sm(display, none)
+		&__text
+			position: absolute
+			left: 0
+			top: 0
+			+sm(position, static)
+			+sm(margin-bottom, 30px)
+			color: #fff
+			width: 100%
+			padding-top: 50px
+			+xs(padding-top, 30px)
+		&__h1
+			font-size: 60px
+			line-height: 1
+			margin-bottom: 15px
+			margin-top: 0
+			color: #f03a18
+			font-family: "MyriadPro-Black"
+			font-weight: 400
+			+xs(font-size, 50px)
+			+xxs(font-size, 40px)
+		&__description
+			color: #fc0
+			font-size: 32px
+			font-style: italic
+			+xxs(font-size, 26px)
+		.btn1
+			color: #fff
+			background: #f62d2d
+			position: absolute
+			margin-left: auto
+			margin-right: auto
+			left: 0
+			right: 0
+			bottom: 60px
+			+sm(bottom, -350px)
+			+xs(bottom, -300px)
+
+.btn1
+	height: 55px
+	padding: 0 5px
+	display: flex
+	align-items: center
+	justify-content: center
+	max-width: 300px
+	border-radius: 45px
+	border: 2px solid
+	color: #bc0000
+	cursor: pointer
+	width: 100%
+	font-size: 18px
+	font-weight: 700
+	text-decoration: none
+	transition: all .25s
+	&:hover
+		background: #32a110
+		inset 0 0 20px rgba(188,0,0,.5),0 0 20px rgba(255,255,255,.3)
+
+
+section
+	font-family: $gilroy
+
+.advantage
+	padding: 50px 0
+	&__items
+		display: flex
+		justify-content: center
+	&__item
+		+col()
+		+size(4)
+		+size-xs(6)
+		+size-xxs(10)
+		+xxs(margin-bottom, 30px)
+		text-align: center
+	&__item-icon
+		font-size: 100px
+		color: orange
+	&__item-description
+		+sm(font-size, 18px !important)
+
+
+
+
+.advantage
+	padding: 12px 0
+	&__items
+		display: flex
+		flex-wrap: wrap
+		&__item
+			+col()
+			+size(4)
+			text-align: center
+	&__item-icon
+		font-size: 100px
+		color: #ed600e
+	&__item-description
+		font-size: 22px
+		color: #000
+		line-height: 1
+		font-weight: bold
+
+.items
+	display: flex
+	flex-wrap: wrap
+	justify-content: center
+.item
+	+col()
+
+
+.title
+	text-align: center
+	margin-bottom: 50px
+	font-size: 50px
+	+xxs(font-size, 40px)
+	font-weight: bold
+	color: #000
+
+
+
+.products
+	padding: 100px 0
+	&__items
+		
+	&__item
+		+size(3)
+		+size-md(6)
+		+size-xs(7)
+		+size-xxs(11)
+		+md(margin-bottom, 30px)
+		position: relative
+		border: 1px solid transparent
+		transition: all .25s
+		display: flex
+		flex-direction: column
+		&:hover
+			border: 1px solid #dfdfdf
+			.products__item-btn
+				button
+					background: #32a110
+			.products__item-video
+				box-shadow: inset 0 0 15px rgba(255,255,255,.5),0 0 15px rgba(255,255,255,.2)	
+			.products__item-img
+				img
+					transform: scale(1.03)
+	&__item-img
+		margin-bottom: auto
+		overflow: hidden
+		img		
+			transition: all .5s ease
+	&__item-video
+		position: absolute
+		top: -10px
+		left: -10px
+		background: $accent
+		border-radius: 100%
+		width: 70px
+		height: 70px
+		cursor: pointer
+		overflow: hidden
+		transition: all .25s
+		a
+			text-decoration: none
+			color: #fff
+			text-align: center
+			font-weight: bold
+			border-radius: 100%
+			width: 100%
+			height: 100%
+			font-size: 14px
+			letter-spacing: 1px
+			display: flex
+			align-items: center
+			justify-content: center
+		&:hover	
+			box-shadow: inset 0 0 10px rgba(255,255,255,.5),0 0 10px rgba(255,255,255,.2)
+	&__item-kod
+		margin-top: 15px
+		color: #2D2D2D
+		padding-left: 5px 
+		font-size: 16px
+	&__item-price
+		margin-top: 10px
+		font-size: 23px
+		font-weight: bold
+		color: #2D2D2D
+		padding-left: 5px 
+	&__item-btn
+		margin-top: 15px
+		padding-left: 5px 
+		padding-bottom: 5px
+		button
+			background: $accent
+			border: none
+			padding: 5px 55px
+			font-size: 18px
+			color: #fff
+			cursor: pointer
+			transition: all .25s
+			&:hover	
+				box-shadow: inset 0 0 10px rgba(255,255,255,.5),0 0 10px rgba(255,255,255,.2)
+
+
+
+.reviews
+	background-image: url(../image/gl2.jpg)
+	background-size: cover
+	background-position: top center
+	background-repeat: no-repeat
+	background-attachment: fixed
+	background-color: #fff
+	padding: 100px 0
+	margin: 0 auto
+	.title
+		color: #fc0
+	&__items
+		margin-top: 100px
+	&__item
+		+size(4)
+		+size-sm(6)
+		+size-xs(10)
+		+sm(margin-bottom, 100px)
+		text-align: center
+		background: #F7F7F7
+		padding: 20px
+		border-radius: 5px
+	&__item-img
+		max-width: 100px
+		max-height: 100px
+		display: inline-block
+		border-radius: 100%
+		overflow: hidden
+		margin-top: -70px
+		margin-bottom: 10px
+	&__item-title
+		font-size: 16px
+		font-weight: bold
+		color: #000
+		margin-bottom: 5px
+	&__item-description
+		color: #777
+		margin-bottom: 15px
+	&__item-text
+		color: #333
+
+.title
+
+.items
+
+.item
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@import 'media'
