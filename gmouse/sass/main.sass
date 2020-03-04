@@ -387,12 +387,12 @@ a:visited, a:hover, a:active
 		margin-top: 50px
 	&-content
 		display: flex
-		flex-wrap: wrap
-		+xxs(justify-content, center)
+		+xs(flex-wrap, wrap)
+		+xs(justify-content, center)
 		align-items: center
 		line-height: 1.05
 		padding: 65px 15px
-		+xxs(padding, 35px 0)
+		+xs(padding, 35px 0)
 		max-width: 870px
 		margin: 0 auto
 		margin-top: 80px
@@ -402,8 +402,9 @@ a:visited, a:hover, a:active
 		.icon
 			+col()
 			+size(3.5)
+			+size-xs(6)
 			+size-xxs(8)
-			+xxs(margin-bottom, 15px)
+			+xs(margin-bottom, 15px)
 		.bottom_text
 			+col()
 			+size(9)			
