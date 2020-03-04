@@ -153,6 +153,9 @@ a:visited, a:hover, a:active
 		right: 41%
 		+xs(right, 50%)
 		z-index: 10
+		opacity: 1
+		transition: 1s 
+
 	.logo
 		position: absolute
 		top: -90px
@@ -258,8 +261,8 @@ a:visited, a:hover, a:active
 						height: 55px
 			.mouse
 				position: absolute
-				transition: 1s
-				+md(transition, 2s)
+				transition: 2s
+				opacity: 1
 				+md-block()	
 					max-width: 300px
 				+sm-block()	
@@ -319,13 +322,25 @@ a:visited, a:hover, a:active
 					top: 150px
 
 .move
-	transform: translate3d(-500px,1px,0)
+	transform: translate3d(-800px,1px,0)
+	opacity: 0 !important
 .move2
 	transform: translate3d(-1000px,1000px,0)
+	opacity: 0 !important
 .move3
 	transform: translate3d(1000px,0,0)
+	opacity: 0 !important
 .move4
 	transform: translate3d(500px,500px,0)
+	opacity: 0 !important
+
+.move5
+	transform: translate3d(0,-100%,0)
+
+.trigger
+	position: absolute
+	left: 0
+	bottom: 0
 
 
 
