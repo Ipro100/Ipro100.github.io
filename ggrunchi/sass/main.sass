@@ -1,0 +1,615 @@
+@import vars
+@import fonts
+@import libs
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+
+
+body
+	margin: 0
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.4
+	font-family: 'myriadPro-regular', sans-serif
+	overflow-x: hidden
+	color: $text
+	input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+	+reset()	
+
+
+.container
+	+wrapper()
+	position: relative
+
+
+.space-between
+	display: flex
+	justify-content: space-between
+	align-items: center
+	+xs(flex-direction, column)
+
+
+
+
+.button 
+	letter-spacing: 1px
+	white-space: nowrap
+	background-color: $accent
+	border-radius: 50px
+	padding: 8px 40px
+	text-align: center
+	display: inline-block
+	font-size: 25px
+	line-height: 1.4
+	color: #fff
+	text-decoration: none
+	cursor: pointer
+	border: none
+	transition: all 0.25s 
+	z-index: 999
+	background: linear-gradient(0deg, rgba(44,81,159,0.90) 49%, rgba(44,81,159,.6) 100%, rgba(44,81,159,1) 100%)
+	&:hover
+		box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.3)
+		outline-color: rgba(255, 255, 255, 0)
+		outline-offset: 15px
+	&:active
+		color: #fff
+		text-decoration: none	
+
+a:visited, a:hover, a:active 
+		color: #fff
+		text-decoration: none 
+
+
+.bgimg
+	background-repeat: no-repeat
+	background-position: top center
+	background-size: cover
+
+.header
+	position: relative
+	// background: #E1E2E3
+	&-top
+		padding: 25px 0
+		+xxs(padding-bottom, 30px)
+		background: #fff
+		&__phone
+			display: flex
+			justify-content: flex-end
+			align-items: center
+			+xs-block()
+				flex-wrap: wrap
+				justify-content: center
+			.icon
+				display: inline-block
+				max-width: 65px
+				margin-bottom: 6px
+				+xxs(max-width, 40px)
+			a
+				text-decoration: none
+			.phone
+				margin: 0 15px
+				margin-right: 35px
+				+xxs-block()
+					margin-right: 0
+					text-align: center
+				p
+					font-family: "MyriadPro-SemiCn"
+					font-size: 23px
+					+xs(font-size, 20px)
+					color: #80868B
+					line-height: 1
+					letter-spacing: .5px
+				span			
+					font-size: 37px
+					line-height: 1.3
+					+xxs(font-size, 32px)
+					color: $accent
+
+.header
+	&__content
+		position: relative
+		background-color: #F7F7F8
+		
+	&__content-img
+		text-align: right
+		margin-right: -220px
+		z-index: 200
+		background-image: url(../img/head/print.png)
+		background-repeat: no-repeat
+		background-size: 80%
+		background-position: 5% center
+		+to(1550px)
+			margin-right: 0
+			padding-left: 100px
+			z-index: 200
+		img
+			display: inline-block
+			margin-bottom: -65px
+			+sm-block()
+				margin-bottom: 0
+	.logo
+		position: absolute
+		top: -80px
+		left: -70px
+		+to(1300px)
+			max-width: 20vw
+			left: 0
+		+sm-block
+			min-width: 110px	
+		+xs-block()
+			left: 25px	
+			top: -30px
+		+xxs-block()
+			left: 0	
+	&__content-composition
+		position: absolute
+		top: 44%
+		left: 45px
+		text-align: center
+		+to(1550px)
+			left: 15px
+		+xs-block()
+			position: static
+			text-align: center
+			max-width: 100%
+			display: block
+			padding: 25px 0
+			padding-top: 10px
+		.h1
+			font-family: "MyriadPro-Black"
+			font-size: 42px
+			margin-bottom: 12px
+			text-align: center
+			line-height: 1.1
+			color: #67686A
+			+sm-block()
+				font-size: 36px
+		.buy
+			display: inline-block	
+		.button
+			width: 250px
+			height: 65px
+			font-size: 42px
+			display: flex
+			justify-content: center
+			align-items: center
+			+lg-block()
+				width: 200px
+				height: 50px
+				font-size: 32px
+			+sm-block()	
+				width: 150px
+				height: 40px
+
+section
+	.container
+		max-width: 1290px
+
+.s1
+	padding: 110px 0
+	overflow: hidden
+	+xs-block()
+		padding: 50px 0
+	&__top
+		margin-bottom: 200px
+		text-align: left
+		z-index: 100
+		+md-block()
+			margin-bottom: 270px
+		+xs-block()	
+			margin-bottom: 10px
+	&__content
+		max-width: 580px
+		display: inline-block
+	&__middle
+		position: absolute
+		top: -17%
+		left: 12%
+		right: 0
+		bottom: 12%
+		z-index: -1
+		+md-block()
+			top: -5%
+			left: -5%
+		+sm-block()
+			top: 0
+			left: -10%
+			right: 15%
+		+xs-block()
+			position: static
+			overflow: hidden
+		+xxs-block()
+			top: 0	
+		.anim-img
+			transform: rotate(45deg)
+			position: relative
+			height: 1000px
+			+sm-block()
+				transform: rotate(65deg)
+			+xs-block()	
+				height: 300px
+				left: 15%
+				bottom: 65px
+			+xxs-block()
+				left: 10px
+				bottom: 35px
+			.step
+				position: absolute
+				opacity: 0
+				transition: .1s
+				+sm-block()
+					bottom: 290px
+				+xs-block()
+					bottom: auto			
+					top: 0
+
+				+xxs-block()
+					// bottom: 380px	
+	&__bottom
+		text-align: right
+	.h2
+		margin-bottom: 8px	
+	.section-text
+		padding: 0 115px
+		+xs-block()
+			padding: 0
+
+.content
+	text-align: center
+
+.active
+	opacity: 1 !important
+
+.h2
+	font-size: 43px
+	font-family: "MyriadPro-BoldIt"
+	color: #AE292F
+	line-height: 1.1
+	+xxs-block()
+		font-size: 38px
+		line-height: 1
+.section-description
+	font-size: 32px
+	font-family: "MyriadPro-Black"
+	color: #67686A
+	line-height: 1.1
+	+xxs-block()
+		font-size: 28px
+.section-text
+	font-size: 34px
+	color: #67686A
+	font-family: "MyriadPro-SemiCnIt"
+	line-height: 1
+	+xxs-block()
+		font-size: 22px
+	span
+		font-weight: 600
+		display: block
+
+
+
+
+.s2
+
+	.container
+		max-width: 1138px
+	.content
+		border: 25px solid #ECEDEE
+		border-radius: 55px
+		display: flex
+		flex-wrap: wrap
+		padding: 10px
+		+xs-block()
+			justify-content: center
+			padding: 0
+			padding-bottom: 15px
+			padding-top: 15px
+			border: 12px solid #ECEDEE
+		&__img
+			+col()
+			+size(4)
+			+size-xs(10)
+			+md-block()
+				display: flex
+				align-items: center
+				justify-content: center
+		&__descr
+			+col()
+			+size(8)
+			+size-xs(12)
+			padding-top: 25px
+			.h2
+				font-size: 49px
+				+md(font-size, 43px)
+				text-align: left
+				margin-bottom: 15px
+				+xxs(font-size, 36px)
+			.section-text
+				font-size: 37px
+				text-align: left
+				+xxs(font-size, 32px)
+
+
+.s3
+	padding: 70px 0
+	+sm(padding-top, 100px)
+	+xxs(padding-top, 50px)
+	border-bottom: 30px solid #F1F1F2
+	padding-bottom: 100px
+	+xs(padding-bottom, 60px)
+	.container
+
+	.content
+		display: flex
+		flex-wrap: wrap
+		align-items: center
+		+sm(justify-content, center)
+		.content-img
+			+col()
+			+size(8)
+			+size-sm(10)
+			+size-xs(12)
+			+sm-block()
+				transform: rotate(90deg)
+			img
+				+sm-block()
+					max-width: 110%					
+				+xxs-block()
+					max-width: 130%	
+		.content-descr
+			+col()
+			+size(4)
+			+size-sm(10)
+			+size-xxs(12)
+			display: flex
+			flex-direction: column
+			text-align: center
+			margin-top: 120px
+			+sm-block()
+				margin-top: 150px
+			+xxs-block()
+				margin-top: 120px
+			.img
+				+sm(text-align, center)
+				img
+					display: inline-block
+			.h2
+				margin-top: 10px
+				margin-bottom: 25px
+				font-family: "MyriadPro-Black"
+				white-space: nowrap
+	.section-description
+		span
+			color: #272525
+			text-decoration: underline
+
+
+
+
+.s4
+	padding: 70px 0
+	border-bottom: 30px solid #F1F1F2
+	padding-bottom: 20px
+	+sm(padding, 40px 0)
+	.container
+		max-width: 1200px
+	.section-title
+		margin-top: 50px
+		margin-bottom: 30px
+		text-align: center
+		color: #fff
+		overflow-y: hidden
+		+sm(overflow-x, hidden)
+		.h2
+			display: inline-block
+			font-family: "MyriadPro-Black"
+			font-size: 39px
+			background: #AE292F
+			color: #fff
+			padding: 15px
+			position: relative
+			line-height: 1
+			padding-right: 15px
+			padding-left: 30px
+			padding-bottom: 20px
+			.obe
+				position: absolute
+				content: ''
+				height: 110%
+				width: 10px
+				background: #fff
+				left: -5px
+				top: -5px
+				transform: rotate(-1.5deg)
+			.obeone
+				position: absolute
+				background: #fff
+				width: 125%
+				height: 15px
+				left: -30px
+				bottom: -7px
+				transform: rotate(1deg)
+			&:before
+				content: ''
+				position: absolute
+				width: 50px
+				height: 130%
+				background: #AE292F
+				top: -10px
+				right: -15px
+				z-index: -1
+				transform: rotate(13deg)
+			&:after
+				position: absolute
+				content: ''
+				width: 125%
+				height: 15px
+				top: -7px
+				left: -30px
+				background: #fff
+				transform: rotate(-1deg)		
+	.items
+		margin-top: 80px			
+		display: flex
+		flex-wrap: wrap
+		justify-content: center
+		.item
+			+col()
+			+size(3)
+			+size-sm(6)
+			+size-xs(12)
+			display: flex
+			flex-direction: column
+			margin-bottom: 30px
+			.img
+				margin: 0 auto
+				margin-bottom: auto
+			.description
+				text-align: center
+				max-width: 165px
+				margin: 0 auto
+				box-sizing: border-box
+				p:nth-child(1)
+					text-transform: uppercase
+					font-size: 14px
+					line-height: 1.1
+					color: #636365
+				p:nth-child(2)
+					text-transform: uppercase
+					font-weight: bold
+					font-size: 14px
+					line-height: 1.1
+					color: #808082
+					margin-bottom: 6px
+				p:nth-child(3)
+					font-size: 19px	
+					font-family: "MyriadPro-BoldSemiCn"
+					color: #272525
+					line-height: 1.1
+					margin-bottom: 3px
+				p:nth-child(4)
+					font-size: 13px
+					color: #636365
+					line-height: 1.1
+				p:nth-child(5)	
+					color: #9f9f9f
+					font-size: 22px
+					margin-top: 5px
+					line-height: 1
+				p:nth-child(6)
+					color: #272525	
+					font-size: 21px	
+					span
+						font-weight: 900
+		.image
+			+size(6)
+			+size-sm(10)
+			+size-xxs(12)
+			+sm(order,-1)
+
+
+				
+.buy_bottom
+	margin: 100px 0		
+	text-align: center
+	.button
+		padding: 15px	70px
+		+xxs(padding, 10px 50px)
+		font-size: 40px
+		background: linear-gradient(0deg, rgba(44,81,159,0.90) 49%, rgba(44,81,159,.6) 100%, rgba(44,81,159,1) 100%)
+
+			
+
+.footer
+	background: #AE292F
+	color: #fff
+	padding: 40px 0
+	padding-bottom: 30px
+	overflow: hidden
+	.container
+		max-width: 1200px
+		position: relative
+		.print
+			position: absolute
+			max-width: 55%
+			bottom: -200px
+			left: 150px
+			z-index: 1
+.footer__content
+	z-index: 100
+	width: 100%
+	display: flex 
+	flex-wrap: wrap
+	justify-content: space-between
+	+xs(flex-direction, column)
+	+xs(align-items, center)  
+	.footer__content-logo
+		z-index: 100
+		margin-bottom: 25px
+		+col()
+		+size(3)
+		+size-xs(8)
+		text-align: center
+		img
+			width: 100%
+			max-width: 165px
+	.footer__content-block_01
+		z-index: 100
+		+col()
+		+size(6)
+		+size-xs(10)
+		text-align: center
+		display: flex
+		justify-content: center
+		align-items: center
+		margin-bottom: 35px
+		p
+			margin-top: 0
+			font-size: 21px
+			line-height: 1.2
+	.footer__content-block_02
+		z-index: 100
+		+col()
+		+size(3)
+		+size-xs(10)
+		font-size: 21px
+		position: relative
+		p
+			font-size: 21px 
+			line-height: 21px
+			margin: 0
+			margin-bottom: 10px
+		.phone
+			margin-top: 20px  
+			line-height: 1.3
+
+
+@import 'media'
