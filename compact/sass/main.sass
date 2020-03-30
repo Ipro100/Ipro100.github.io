@@ -1,0 +1,739 @@
+@import vars
+@import fonts
+@import libs
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+
+.img-responsive
+	display: inline-block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+
+
+body
+	margin: 0
+	font-size: 16px
+	font-weight: bold
+	min-width: 320px
+	position: relative
+	line-height: 1.4
+	font-family: $gilroy, sans-serif
+	overflow-x: hidden
+	color: $text
+	input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+	+reset()	
+
+
+.container
+	+wrapper()
+	max-width: 1500px
+
+
+.space-between
+	display: flex
+	justify-content: space-between
+	align-items: center
+	+xs(flex-direction, column)
+
+
+
+
+.button 
+	font-family: $monserat
+	letter-spacing: 1px
+	white-space: nowrap
+	background-color: $accent
+	border-radius: 50px
+	padding: 16px 60px
+	text-align: center
+	display: inline-block
+	font-size: 20px
+	font-weight: 700
+	line-height: 1.4
+	color: #fff
+	text-decoration: none
+	cursor: pointer
+	border: none
+	transition: all 0.25s 
+
+	&:hover
+		box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.3)
+		outline-color: rgba(255, 255, 255, 0)
+		outline-offset: 15px
+	&:active
+		color: #fff
+		text-decoration: none	
+
+a:visited, a:hover, a:active 
+		color: #fff
+		text-decoration: none 
+
+
+.bgimg
+	background-repeat: no-repeat
+	background-position: top center
+	background-size: cover
+
+.header
+	&__top
+		padding: 25px 0
+		background: #fff
+		+sm-block()
+			flex-wrap: wrap
+			justify-content: center
+	&__top-logo
+		+sm-block()
+			margin-bottom: 25px
+		+xs-block()
+			margin-top: 15px
+	&__top-mail
+		display: flex
+		align-items: center
+		+md(margin-left, 15px)
+		+xs-block()
+			flex-wrap: wrap
+			justify-content: center
+		img
+			margin-right: 10px
+			min-width: 24px	
+	.mail
+		font-family: $monserat
+		font-size: 20px
+		font-weight: 300
+		vertical-align: middle
+		display: flex
+		align-items: center
+		color: #3B3C3E
+		+xs-block()
+			margin-bottom: 15px
+	.button
+		margin-left: 42px
+		+md(margin-left, 15px)
+		+xs-block()
+			margin-bottom: 15px
+			margin-left: 0
+
+
+.header
+	&__bottom
+		background-image: url(../img/head/bg.png)
+		background-position: bottom center
+		.container
+			display: flex
+	&__bottom-content
+		
+	&__composition
+		display: flex
+		margin-top: 120px
+		+sm-block()
+			flex-wrap: wrap
+			margin-top: 50px
+			justify-content: center
+	&__composition-img
+		max-width: 181px
+		margin-right: 55px
+		+sm-block()
+			margin-right: 0
+			margin-bottom: 15px
+	&__composition-descr
+		margin-top: 8px
+		z-index: 10
+		.h1
+			font-family: "monserat-black"
+			font-size: 63px
+			text-transform: uppercase
+			+xxs(font-size, 52px)
+			+xxs(line-height, 1.2)
+		.text
+			font-family: "open-sans"
+			font-size: 38px
+			font-weight: 300
+			+xs(font-size, 32px)
+			+xxs(font-size, 20px)
+	&__products
+		display: flex
+		flex-wrap: wrap
+		justify-content: center
+		margin-top: 65px
+		width: 90%
+		+sm(width, 100%)
+		box-sizing: border-box
+		+sm-block()
+			justify-content: flex-start
+	&__products-product
+		+col()
+		+size(3)
+		+size-xs(4.5)
+		+size-xxs(5)
+		margin: 0
+	&__bottom-img
+		margin-left: -250px
+		margin-top: -25px
+		z-index: 1
+		+md(margin-top, 140px)
+		+md(margin-left, -230px)
+		+sm-block()
+			margin-top: 280px
+		+xs(display, none)
+
+
+
+.s1
+	padding: 75px 0
+	background: #4C4D4F
+	+xxs(padding-bottom, 45px)
+	&__text
+		color: #fff
+		text-align: center
+		font-family: "open-sans_bold"
+		font-size: 18px
+		margin-top: 10px
+	.container
+		max-width: 1220px
+.items
+	display: flex
+	flex-wrap: wrap
+	justify-content: center
+.item
+	+col()
+	+size(3)
+	+size-sm(4)
+	+size-xs(5)
+	+size-xxs(12)
+	text-align: center
+	+sm(margin-bottom, 30px)
+.label
+	padding-right: 30px
+	+lg(padding-right, 0)
+	+sm(display, none)
+
+
+
+.s2
+	padding: 82px 0
+.title
+	display: flex
+	align-items: center
+	&__img
+		max-width: 108px
+		margin-right: 30px
+		margin-right: 30px
+		+xxs(margin-right, 15px)
+	&__h2
+		font-family: "monserat-black"
+		font-size: 38px
+		text-transform: uppercase
+		+xs(font-size, 32px)
+		+xxs(font-size, 22px)
+		+xxs(line-height, 1.3)
+.scontent
+	margin-top: 35px
+	display: flex
+	flex-wrap: wrap
+	align-items: center
+	&__img
+		+col()
+		+size(5.5)
+		+size-xs(12)
+	&__description
+		+col()
+		+size(6)
+		+size-xs(12)
+		font-family: "open-sans"
+		font-size: 30px
+		padding-left: 18px
+		color: #373737
+		font-weight: 300
+		margin-top: 30px
+		+lg(margin-top, 0)
+		+md(font-size, 25px)
+		+sm(font-size, 20px)
+		+xs(font-size, 22px)
+		+xxs(font-size, 20px)
+		+xs(padding-left, 0)
+		+xs(padding-top, 20px)
+
+
+
+
+.s3
+	padding: 100px 0
+	background: #F1F1F1
+.title
+	&__img
+		min-width: 56px
+
+.s3-items
+	margin-top: 50px
+	justify-content: flex-start
+	+xs(justify-content, center)
+.s3-item
+	+size(2.2)
+	+size-md(2.4)
+	+size-sm(2.8)
+	+size-xs(4)
+	+size-xxs(4.4)
+	padding: 0 !important
+	display: flex
+	align-items: center
+	
+.arrow
+	+size(1.8)	
+	+size-xs(4)
+	+xxs-block()
+		margin-right: 0
+		margin-left: 0
+.last-arrow
+	+size-xs(4)
+	+xs-block()
+		max-width: 185px
+		margin-bottom: 50px
+		margin-left: 150px
+		margin-top: 10px
+	+xxs-block()
+		margin-bottom: 40px	
+		margin-left: 120px
+	img
+		+xs-block()
+			transform: rotate(130deg)
+		+xxs-block()	
+			transform: rotate(120deg)
+.last-item
+	+size-xs(9)	
+	+xs-block()
+		justify-content: center		
+.s3-content
+	+xs(margin-top, 0)			
+.s3-text
+	+size(12)
+	padding-left: 0
+
+
+section
+	+xs(padding, 50px 0 !important)
+
+.s4
+	padding: 36px 0
+
+
+
+
+
+.s5
+	padding: 105px 0
+	background: #F1F1F1
+	+xs(padding, 50px 0)
+
+.s5-content
+	+xs(margin-top, 0)
+	+xs(margin-top, 0)
+
+.s5-img
+	+xs(order, -1)
+	+xs(margin-top, 30px)
+
+
+.s6
+	padding: 80px 0
+	padding-bottom: 125px
+.s6-content
+	margin-top: 20px	
+.s6-description,.s6-img
+	+size(12)
+.s6-description
+	margin-top: 0
+	padding-left: 0
+	margin-bottom: 45px
+
+
+.s7
+	padding: 95px 0
+	background: #F1F1F1
+
+.s7-content
+	margin-top: 45px
+
+
+
+
+
+.s8
+	padding: 145px 0
+	&__video
+		margin-top: 55px
+		+xs(margin-top, 20px)
+		width: 97%
+		+lg(width, 100%)
+		border-radius: 15px
+		iframe
+			width: 100% !important
+			min-height: 550px
+			height: 100%
+			border-radius: 30px
+			+md(min-height, 500px)
+			+sm(min-height, 400px)
+			+xs(min-height, 300px)
+			+xxs(min-height, 200px)
+			+xxs(border-radius, 15px)
+
+.s8-content
+	margin-top: 0
+
+
+.s8-description
+	+size(12)
+	padding: 0
+	ol
+		list-style-type: none
+		padding: 0
+		li
+			display: block
+			margin-bottom: 13px
+			span
+				margin-right: 13px
+				border-radius: 50%
+				background: #001E4F
+				display: inline-block
+				text-align: center
+				width: 36px
+				height: 36px
+				padding-top: 3px
+				box-sizing: border-box
+				color: #fff	
+				font-family: "open-sans_bold"
+				font-size: 20px
+
+
+.s9
+	background: #F1F1F1
+	padding: 85px 0
+	&__title
+		justify-content: center
+		text-align: center
+	&__description
+		display: flex
+		flex-direction: column
+		margin-top: 35px
+	&__items
+		display: flex
+		position: relative
+		&:after
+			content: ''
+			position: absolute
+			width: 95%
+			left: 30px
+			bottom: 0
+			height: 1px
+			background: #eaeaea
+		
+	&__item
+		width: 50%
+		font-family: "open-sans"
+		font-size: 18px
+		font-weight: 300
+		color: #373737
+		display: flex
+		padding: 25px
+		padding-top: 35px
+		padding-bottom: 30px
+		padding-left: 35px
+		+xs-block()
+			flex-wrap: wrap
+			padding-right: 10px
+			padding-left: 20px
+			display: block
+		+xxs-block()
+			font-size: 14px
+			padding: 15px
+			padding-right: 5px
+		&:first-child
+			background: #fff
+	&__item-true
+		display: block
+		width: 46px
+		height: 46px
+		margin-right: 20px
+		margin-top: 5px
+		+xs-block()
+			margin-bottom: 15px
+	&__item-false
+	.container
+		max-width: 1133px
+.items-img
+	display: flex
+	margin-bottom: 10px
+.item-img
+	width: 50%
+	text-align: center
+
+
+
+
+
+
+
+.s10
+	padding: 95px 0
+	padding-bottom: 40px
+	background-image: url(img/s10/bg.png)
+	&__title
+		text-align: center
+		justify-content: center
+	&__items
+		display: flex
+		flex-wrap: wrap
+		+sm(justify-content, center)
+		text-align: center
+		margin-top: 55px
+		margin-bottom: 85px
+		+xs(margin-bottom, 50px)
+	&__item
+		+col()
+		+size(4)
+		+size-md(4.2)
+		+size-sm(6)
+		+size-xs(10)
+		+size-xxs(12)
+		+sm(margin-bottom, 30px)
+		border-radius: 25px
+		border: 1px solid #DFDFDF
+		box-shadow: 3px 3px 7px rgba(0,0,0,.16)
+		margin-right: 7px
+		margin-left: 7px
+		overflow: hidden
+		img
+			max-width: 150px
+	&__item-top
+		padding: 20px 0
+		padding-bottom: 15px
+		margin-bottom: 30px
+		font-weight: 300
+		img
+			max-width: 85px
+	&__item-text
+		font-family: "monserat-bold"
+		font-size: 18px
+		color: #fff
+		margin-top: 5px
+	&__item-bottom
+		padding-bottom: 10px
+	&__item-description
+		color: #373737
+		font-family: "monserat-bold"
+		font-size: 18px
+		font-weight: 300
+	.container
+		max-width: 1006px
+.last_item-description
+	margin-top: -5px		
+
+.buy
+	text-align: center
+	display: flex
+	justify-content: center
+	margin-bottom: 70px
+	.button
+		font-size: 28px
+		max-width: 400px
+		max-height: 94px
+		width: 100%
+		height: 94px
+		+xs(height, 75px)
+		box-sizing: border-box
+		display: flex
+		align-items: center
+		justify-content: center
+
+.fixed-bg
+	height: 202px
+	max-width: 1920px
+	background-position: top center
+	background-attachment: fixed
+	background-size: contain
+	margin: 0 auto
+	+xs(height, 150px)
+
+
+
+
+
+.s11
+	+xs(padding-top, 0 !important)
+	.fixed-bg
+		margin-top: -35px
+.product
+	align-items: flex-start
+	margin-top: 20px
+	+md(align-items, center)
+	+xs(justify-content, center)
+.product-description
+	margin-top: 75px
+	+md(margin-top, 0)
+	+size(8)
+	+size-xs(12)
+	margin-bottom: 70px
+	+xs(margin-bottom, 30px)
+	+xs(order, -1)
+.product-img
+	+size(4)	
+	+size-xs(8)
+	+size-xxs(12)
+	position: relative
+.product-title
+	display: block
+.title
+	&__descr
+		display: flex
+		align-items: center
+		font-family: "open-sans_bold"
+		font-size: 32px
+		+xs(font-size, 25px)
+		+xxs(font-size, 20px)
+		margin-top: 20px
+	&__descr-img
+		margin-right: 13px
+	&__descr-text
+.wrapper
+	max-width: 1400px
+
+.scontent__options
+	margin-top: 25px
+	+md(margin-top, 15px)
+.option
+	display: flex
+	margin-bottom: 10px
+	+md(margin-bottom, 0)
+.option-title
+	font-family: "open-sans_bold"
+	font-size: 30px
+	margin-right: 10px
+	white-space: nowrap
+	+md(font-size, 22px)
+	+xs(font-size, 20px)
+	+xxs(font-size, 18px)
+.option-descr
+	white-space: nowrap
+	+xs(white-space, normal)
+
+
+
+
+.s12
+	padding: 30px 0
+	+xs(padding-top, 0 !important)
+	.product-description
+		margin-top: 50px
+		+xs(margin-top, 0)
+.product-label
+	position: absolute
+	left: -20px
+	bottom: 55px
+	+md-block()
+		max-width: 55%
+		bottom: 0
+
+.s13
+	padding: 10px 0
+	+xs(padding-top, 0 !important)
+	.product-description
+		margin-top: 110px
+		+xs(margin-top, 0)
+	.buy
+		margin-top: 40px
+		margin-bottom: 90px
+		+xs(margin-bottom, 10px)
+
+
+
+
+
+
+
+
+		
+//////////////footer////////////////////
+
+.footer
+	background: #3B3C3E
+	color: #fff
+	padding: 50px 0
+	padding-bottom: 30px
+	font-family: $gilroy
+	.container
+		max-width: 1160px
+
+.footer__content
+	width: 100%
+	display: flex 
+	flex-wrap: wrap
+	justify-content: space-between
+	+xs(flex-direction, column)
+	+xs(align-items, center)  
+	.footer__content-logo
+		margin-bottom: 25px
+		+col()
+		+size(3)
+		+size-xs(8)
+		text-align: center
+		img
+			width: 100%
+			max-width: 223px
+	.footer__content-block_01
+		+col()
+		+size(6)
+		+size-xs(10)
+		// margin: 0 25px
+		p
+			color: #fff
+			margin-top: 0
+			font-size: 16px
+			line-height: 18px
+	.footer__content-block_02
+		+col()
+		+size(3)
+		+size-xs(10)
+		font-size: 16px
+		text-align: right
+		position: relative
+		p
+			font-size: 16px 
+			line-height: 18px
+			margin: 0
+			margin-bottom: 10px
+			color: #fff
+
+		.footer_line
+			position: absolute
+			width: 55px
+			right: 0
+			color: #fff  
+
+		.phone
+			margin-top: 35px  
+			line-height: 25px
+
+
+
+
+@import 'media'
