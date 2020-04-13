@@ -21,6 +21,8 @@
 	<meta name="theme-color" content="#000">
 	<!-- Custom Browsers Color End -->
 	<link rel="stylesheet" href="css/styles.min.css" type="text/css">
+	<link rel="stylesheet" href="libs/simple-line-icons/css/simple-line-icons.css" type="text/css">
+
 
 </head>
 
@@ -31,7 +33,7 @@
 </div>
 <div id="container" class="wrapper">
 
-<header class="bg main_head"  data-image-src="img/34600.png">
+<header class="bg main_head" data-parallax="scroll"  data-image-src="img/34600.png">
 
 	<div class="mnu_line clearfix">
 		<div class="container">
@@ -41,8 +43,8 @@
 					<div class="col">
 
 						<ul class="main_mnu">
-							<li><a href="#about">Обо мне</a></li>
 							<li><a href="#portfolio">Портфолио</a></li>
+							<li><a href="#about">Обо мне</a></li>
 							<li><a href="#contacts">Контакты</a></li>
 						</ul>
 
@@ -51,56 +53,71 @@
 			</div>
 		</div>
 
-
-		
-		<div class="header_content">
-			<h1>Игорь Прохоренко</h1>
+		<div class="header_content" >
+			<h1 class="animated fadeInDown delay-5s">Игорь Прохоренко</h1>
 			<div class="wrap_descr">
-				<div class="line_caption">
-					<p><span>Web-дизайнер/Front-end разработчик</span></p>
+				<div class="line_caption animated fadeInUp delay-3s">
+					<p><span>Front-end разработчик</span></p>
 				</div>
+				<div class="social_wrap">
+							<ul>
+								<li><a href="https://vk.com/igorproha" target="_blank"><i class="fab fa-vk"></i></a></li>
+								<li><a href="https://www.facebook.com/frensis.fordcopolla" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+									<li><a href="https://github.com/Ipro100" target="_blank"><i class="fab fa-github"></i></a></li>
+								</ul>
+							</div>
 			</div>
 		</div>
 
 </header>
 
 
-	<section id="about" class="s_about bg_light bg">
-		<div class="section_header"
-		
-		>
-			<h2>Обо мне</h2>
+
+
+	<section class="advantage blue_bg bg">
+
+		<div class="adv">
+				<div class="section_header">
+			<h2>Профессиональное создание сайтов</h2>
 			<div class="s_descr_wrap">
-				<div class="s_descr">Познакомимся ближе</div>
+				<div class="s_descr">Этапы разработки</div>
 			</div>
 		</div>
-		<div class="about_content animFadeIn">
-			<div class="photo">
-				<img src="img/photo2.png" alt="photo">
+		<div class="wrapper">
+			<div class="adv_items">
+				<div class="adv_items-item animLeft">
+					<i class="icofont-institution"></i>
+					<h3><span class="number">1</span>DESIGN</h3>
+					<p>Дизайн который располагает, вызывает правильные эмоции.</p>
+				</div>					
+				<div class="adv_items-item animLeft">
+					<i class="icofont-file-html5"></i>
+					<h3><span class="number">2</span>HTML/CSS</h3>
+					<p>Адаптивная верстка под мобильные и десктопы.</p>
+				</div>				
+<!-- 				<div class="adv_items-item animLeft">
+					<i class="icofont-file-css"></i>
+					<h3><span>3.</span>CSS</h3>
+					<p>Адаптивная верстка под мобильные и десктопы.</p>
+				</div>	 -->			
+				<div class="adv_items-item animLeft">
+					<i class="icofont-file-javascript"></i>
+					<h3><span class="number">3</span>JS/Jguery</h3>
+					<p>Живая анимация, отзывчивый интерфейс. </p>
+				</div>			
+					<div class="adv_items-item animLeft">
+					<i class="icofont-beard"></i>
+					<h3><span class="number">4</span>PHP/Frontend</h3>
+					<p>Удобная админ-панель для cамстоятельного наполнения сайта.</p>
+				</div>	
 			</div>
-			<div class="about_description resume_item ">
-				<p>Мне 29 лет, занимаюсь разработкой сайтов, интернет-магазинов
- 				начиная с дизайна до размещения в интернете. <br>
-				</p>
-				<p class="do_it">В своей работе использую только актуальные технологии и принципы которые делают ваш сайт </p>
-						<ul>
-							<li><i class="icofont-check-circled"></i>Быстрым</li>
-							<li><i class="icofont-check-circled"></i>Стабильным</li>
-							<li><i class="icofont-check-circled"></i>Красивым на всех экранах <br></li>
-						</ul>
-						<span>Пишите, сделаем сайт на любой вкус и на любой буджет.</span>
-						<div class="social_wrap">
-							<ul>
-								<li><a href="https://vk.com/igorproha" target="_blank"><i class="icofont-vk"></i></a></li>
-								<li><a href="https://www.facebook.com/frensis.fordcopolla" target=
-									"_blank"><i class="icofont-facebook"></i></a></li>
-									<li><a href="https://github.com/Ipro100" target="_blank"><i class="icofont-github"></i></a></li>
-								</ul>
-							</div>
-						</div>
-						</div>	
-<div id="anchor2"></div>
+		</div>
+</div>
+
 	</section>
+
+
+
 
 <section id="portfolio" class="s_portfolio s_head bg">
 		<div class="section_header">
@@ -377,50 +394,43 @@
 	
 	</section>
 
-	<section class="advantage blue_bg bg">
 
-		<div class="adv">
-				<div class="section_header">
-			<h2>Профессиональное создание сайтов</h2>
+<section id="about" class="s_about bg_light bg">
+		<div class="section_header"
+		
+		>
+			<h2>Обо мне</h2>
 			<div class="s_descr_wrap">
-				<div class="s_descr">Этапы разработки</div>
+				<div class="s_descr">Познакомимся ближе</div>
 			</div>
 		</div>
-		<div class="wrapper">
-			<div class="adv_items">
-				<div class="adv_items-item animLeft">
-					<i class="icofont-institution"></i>
-					<h3><span>1.</span>DESIGN</h3>
-					<p>Дизайн который располагает, вызывает правильные эмоции.</p>
-				</div>					
-				<div class="adv_items-item animLeft">
-					<i class="icofont-file-html5"></i>
-					<h3><span>2.</span>HTML</h3>
-					<p>Создание валидной структуры.</p>
-				</div>				
-				<div class="adv_items-item animLeft">
-					<i class="icofont-file-css"></i>
-					<h3><span>3.</span>CSS</h3>
-					<p>Адаптивная верстка под мобильные и десктопы.</p>
-				</div>				
-				<div class="adv_items-item animLeft">
-					<i class="icofont-file-javascript"></i>
-					<h3><span>4.</span>JS</h3>
-					<p>Живая анимация, отзывчивый интерфейс. </p>
-				</div>			
-					<div class="adv_items-item animLeft">
-					<i class="icofont-beard"></i>
-					<h3><span>5.</span>ADMIN</h3>
-					<p>Удобная админ-панель для cамстоятельного наполнения сайта.</p>
-				</div>	
+		<div class="about_content animFadeIn">
+			<div class="photo">
+				<img src="img/photo2.png" alt="photo">
 			</div>
-		</div>
-</div>
-
+			<div class="about_description resume_item ">
+				<p>Мне 29 лет, занимаюсь разработкой сайтов, интернет-магазинов
+ 				начиная с дизайна до размещения в интернете. <br>
+				</p>
+				<p class="do_it">В своей работе использую только актуальные технологии и принципы которые делают ваш сайт </p>
+						<ul>
+							<li><i class="icofont-check-circled"></i>Быстрым</li>
+							<li><i class="icofont-check-circled"></i>Стабильным</li>
+							<li><i class="icofont-check-circled"></i>Красивым на всех экранах <br></li>
+						</ul>
+						<span>Пишите, сделаем сайт на любой вкус и на любой буджет.</span>
+						<div class="social_wrap">
+							<ul>
+								<li><a href="https://vk.com/igorproha" target="_blank"><i class="icofont-vk"></i></a></li>
+								<li><a href="https://www.facebook.com/frensis.fordcopolla" target=
+									"_blank"><i class="icofont-facebook"></i></a></li>
+									<li><a href="https://github.com/Ipro100" target="_blank"><i class="icofont-github"></i></a></li>
+								</ul>
+							</div>
+						</div>
+						</div>	
+<div id="anchor2"></div>
 	</section>
-
-
-	
 
 	<section id="contacts" class="s_contacts bg">
 		<div class="section_header">
