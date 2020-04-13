@@ -14,7 +14,7 @@ $(document).ready(function() {
   $(".header_content h1").animated("fadeInDown");
    $(".line_caption p, .section_header").animated("fadeInUp");
    // $(".line_caption").animated("fadeInUp");
-   $(".portfolio_item").animated("fadeInUp");
+   // $(".portfolio_item").animated("zoomIn");
    $(".mnu_line").animated("zoomIn");
    
    $(".anim_zoom ").animated("zoomIn","zoomOut");
@@ -71,7 +71,16 @@ $(document).ready(function() {
   });
 
 
+
+
+
 });
+
+
+  $(".filter").click(function() {
+    $(".filter").removeClass("active");
+    $(this).addClass("active");
+  });
 
 // Закрыть попап «спасибо»
 $('.js-close-thank-you').click(function() { // по клику на крестик
@@ -83,6 +92,32 @@ $(document).mouseup(function (e) { // по клику вне попапа
     if (e.target!=popup[0]&&popup.has(e.target).length === 0){
         $('.js-overlay-thank-you').fadeOut();
     }
+
+$('#all_inc').on('click',function(){
+  $('.portfolio_item, .store-tab').hide();
+  $('.all_inc').show();
+
+});
+
+// $('#html_css').on('click',function(){
+//   $('.portfolio_item').hide();
+//   $('.html_css').show();
+
+// });
+
+$('#store').on('click',function(){
+  $('.portfolio_item').hide();
+  $('.store').show().css('display', 'flex');
+
+});
+
+$('#all').on('click',function(){
+  $('.store-tab').hide();
+  $('.portfolio_item').show();
+
+});
+
+
 
 
 
