@@ -47,7 +47,7 @@ body
 
 .container
 	+wrapper()
-	max-width: 1500px
+	max-width: 1160px
 
 
 .space-between
@@ -136,22 +136,24 @@ a:visited, a:hover, a:active
 
 
 .header
+
 	&__bottom
 		background-image: url(../img/head/bg.png)
 		background-position: bottom center
 		.container
 			display: flex
 	&__bottom-content
-		
+		max-width: 80%	
+		+xs(max-width, 100%)
 	&__composition
 		display: flex
-		margin-top: 120px
+		margin-top: 100px
 		+sm-block()
 			flex-wrap: wrap
 			margin-top: 50px
 			justify-content: center
 	&__composition-img
-		max-width: 181px
+		max-width: 160px
 		margin-right: 55px
 		+sm-block()
 			margin-right: 0
@@ -161,13 +163,13 @@ a:visited, a:hover, a:active
 		z-index: 10
 		.h1
 			font-family: "monserat-black"
-			font-size: 63px
+			font-size: 58px
 			text-transform: uppercase
 			+xxs(font-size, 52px)
 			+xxs(line-height, 1.2)
 		.text
 			font-family: "open-sans"
-			font-size: 38px
+			font-size: 32px
 			font-weight: 300
 			+xs(font-size, 32px)
 			+xxs(font-size, 20px)
@@ -195,19 +197,18 @@ a:visited, a:hover, a:active
 		+xxs(margin-bottom, 30px)
 		+xxs(margin-right, 10px)
 	&__bottom-img
-		margin-left: -230px
+		margin-left: -100px
 		margin-top: -25px
 		z-index: 1
-		+to(1500px)
-			margin-top: 50px
-			margin-left: -150px
+		// +to(1500px)
+		// 	margin-top: 50px
+		// 	margin-left: -150px
 		+to(1120px)
-			margin-top: 140px	
-		+md(margin-top, 220px)
-
+			// margin-top: 140px	
+		+md(margin-top, 100px)
 		+sm-block()
-			margin-top: 390px
-			margin-left: -120px
+			margin-top: 200px
+			margin-left: -50
 		+xs(display, none)
 
 
@@ -274,11 +275,11 @@ a:visited, a:hover, a:active
 		+size(6)
 		+size-xs(12)
 		font-family: "open-sans"
-		font-size: 30px
+		font-size: 26px
 		padding-left: 18px
 		color: #373737
 		font-weight: 300
-		margin-top: 30px
+		// margin-top: 30px
 		+lg(margin-top, 0)
 		+md(font-size, 25px)
 		+sm(font-size, 20px)
@@ -648,7 +649,7 @@ section
 		margin-right: 13px
 	&__descr-text
 .wrapper
-	max-width: 1400px
+	max-width: 1160px
 
 .scontent__options
 	margin-top: 25px
@@ -685,6 +686,8 @@ section
 	position: absolute
 	left: -20px
 	bottom: 55px
+	max-width: 165px
+	animation-delay: 1s
 	+md-block()
 		max-width: 55%
 		bottom: 0
