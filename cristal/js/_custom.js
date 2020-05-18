@@ -6,6 +6,7 @@ $('.product-title').animated('fadeIn');
 $('.product__slang-img').animated('fadeInRight');
 $('.s3__item').animated('fadeIn');
 $('.product-label').animated('zoomIn');
+$('h1 span:last-child	span').animated('zoomIn');
 
 
 const width = window.screen.width;
@@ -34,34 +35,79 @@ $( window ).resize(function() {
 });
 
 
-	$.fn.elem = function(inEffect, outEffect) {
-		$(this).each(function() {
-			var ths = $(this);
-			ths.css("opacity",".4").addClass("lazyload").waypoint(function(dir) {
-						if (dir === "down") {
-								ths.removeClass(outEffect).addClass(inEffect).attr('autoplay' , 'true').css("opacity", ".4");
-						} else {
-								ths.removeClass(inEffect).addClass(outEffect).removeAttr("autoplay").css("opacity", ".4");
-						};
-			}, {
-				offset: "90%"
-			});
-		ths.waypoint(function(dir) {
-					if (dir === "down") {
-								ths.removeClass(inEffect).addClass(outEffect).removeAttr('autoplay').css("opacity", ".4");
-						} else {
-								ths.removeClass(outEffect).addClass(inEffect).attr('autoplay' , 'true').css("opacity", ".4");
-						};
-			}, {
-				offset: -$(window).height()
-			});	
+// 	$.fn.elem = function(inEffect, outEffect) {
+// 		$(this).each(function() {
+// 			var ths = $(this);
+// 			ths.css("opacity",".4").addClass("lazyload").waypoint(function(dir) {
+// 						if (dir === "down") {
+// 								ths.removeClass(outEffect).addClass(inEffect).attr('autoplay' , 'true').css("opacity", ".4");
+// 						} else {
+// 								ths.removeClass(inEffect).addClass(outEffect).removeAttr("autoplay").css("opacity", ".4");
+// 						};
+// 			}, {
+// 				offset: "90%"
+// 			});
+// 		ths.waypoint(function(dir) {
+// 					if (dir === "down") {
+// 								ths.removeClass(inEffect).addClass(outEffect).removeAttr('autoplay').css("opacity", ".4");
+// 						} else {
+// 								ths.removeClass(outEffect).addClass(inEffect).attr('autoplay' , 'true').css("opacity", ".4");
+// 						};
+// 			}, {
+// 				offset: -$(window).height()
+// 			});	
 			
-		});
-	};
+// 		});
+// 	};
 
 
 
-$('.video video').elem('play' ,'stop');
+// $('.video video').elem('play' ,'stop');
+
+
+
+const images1  = $('#product1 .slide');
+const images2  = $('#product2 .slide');
+
+const images = [
+	$('#product1 .slide'),
+	$('#product2 .slide'),
+	$('#product3 .slide'),
+	$('#product4 .slide'),
+	$('#product5 .slide'),
+	$('#product6 .slide')
+];
+ 
+
+let n = 0;
+
+function move() {
+		
+
+images.forEach(function(item){
+  item[n].classList.remove('active');
+  console.log(item[n]);
+
+
+})
+
+n++;
+
+  if(n >= 9){
+      n = 0;
+    }  
+
+images.forEach(function(item){
+  
+  item[n].classList.add('active');
+
+})
+
+  }
+   			
+
+
+const timer1 = setInterval(move, 300);
 
 
 
