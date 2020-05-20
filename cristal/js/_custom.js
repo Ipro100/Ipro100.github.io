@@ -35,79 +35,100 @@ $( window ).resize(function() {
 });
 
 
-// 	$.fn.elem = function(inEffect, outEffect) {
-// 		$(this).each(function() {
-// 			var ths = $(this);
-// 			ths.css("opacity",".4").addClass("lazyload").waypoint(function(dir) {
-// 						if (dir === "down") {
-// 								ths.removeClass(outEffect).addClass(inEffect).attr('autoplay' , 'true').css("opacity", ".4");
-// 						} else {
-// 								ths.removeClass(inEffect).addClass(outEffect).removeAttr("autoplay").css("opacity", ".4");
-// 						};
-// 			}, {
-// 				offset: "90%"
-// 			});
-// 		ths.waypoint(function(dir) {
-// 					if (dir === "down") {
-// 								ths.removeClass(inEffect).addClass(outEffect).removeAttr('autoplay').css("opacity", ".4");
-// 						} else {
-// 								ths.removeClass(outEffect).addClass(inEffect).attr('autoplay' , 'true').css("opacity", ".4");
-// 						};
-// 			}, {
-// 				offset: -$(window).height()
-// 			});	
-			
-// 		});
-// 	};
 
 
 
-// $('.video video').elem('play' ,'stop');
 
 
 
-const images1  = $('#product1 .slide');
-const images2  = $('#product2 .slide');
 
-const images = [
-	$('#product1 .slide'),
-	$('#product2 .slide'),
-	$('#product3 .slide'),
-	$('#product4 .slide'),
-	$('#product5 .slide'),
-	$('#product6 .slide')
-];
- 
+
+	$.fn.elem = function(inEffect, outEffect) {
+		$(this).each(function() {
+			var ths = $(this);
+      if(!(ths.hasClass('animated'))) {
+
+			ths.css("opacity","1").addClass("lazyload").waypoint(function(dir) {
+            
+						if (dir === "down") {
+								ths.removeClass(outEffect).addClass(inEffect).css("opacity", "1");
+                ths.addClass('animated');  
+                setTimeout(move,0,ths.find('.slide'));
+    
+						} else {
+								ths.removeClass(inEffect).addClass(outEffect).css("opacity", "1");
+                
+               
+						};
+			}, {
+				offset: "50%"
+			});
+		ths.waypoint(function(dir) {
+					if (dir === "down") {
+								ths.removeClass(inEffect).addClass(outEffect).css("opacity", "1");
+                
+                
+						} else {
+								ths.removeClass(outEffect).addClass(inEffect).css("opacity", "1");
+               
+                
+						};
+			}, {
+				offset: -$(window).height()
+			});	
+	}		
+		});
+
+	};
+
+function move(arr) {
 
 let n = 0;
+let timer = setInterval(function(){
 
-function move() {
-		
-
-images.forEach(function(item){
-  item[n].classList.remove('active');
-  console.log(item[n]);
-
-
-})
+  $(arr).removeClass('active');
 
 n++;
-
-  if(n >= 9){
+console.log(n)
+  if(n > arr.length - 2){
+      clearInterval(timer);
+      console.log("stop");
       n = 0;
+      $(arr[arr.length - 1]).addClass('active');
+      return;
     }  
+ 
+  $(arr[n]).addClass('active');
+},300);
 
-images.forEach(function(item){
-  
-  item[n].classList.add('active');
 
-})
 
-  }
+}
+
+
+ $('.images').elem('play' ,'stop');
+
+
+
+// const images = [
+// 	$('#product1 .slide'),
+// 	$('#product2 .slide'),
+// 	$('#product3 .slide'),
+// 	$('#product4 .slide'),
+// 	$('#product5 .slide'),
+// 	$('#product6 .slide')
+// ];
+ 
+
+
+
+
+
    			
 
 
-const timer1 = setInterval(move, 300);
+// const timer1 = setInterval(move, 300);
+
 
 
 
