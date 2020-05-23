@@ -1,0 +1,183 @@
+@import vars
+@import fonts
+@import libs
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+
+.img-responsive
+	display: inline-block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+
+
+body
+	margin: 0
+	font-size: 16px
+	font-weight: bold
+	min-width: 320px
+	position: relative
+	line-height: 1.4
+	font-family: $roboto, sans-serif
+	overflow-x: hidden
+	color: $text
+	input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+	+reset()	
+
+
+.container
+	+wrapper()
+	max-width: 1500px
+
+
+.header
+	position: relative
+	+from(1930px)
+		background-color: #0B2443
+	+xs-block()
+		padding-top: 20px	
+		background-color: #0B2443
+	
+			
+	&__logo
+		max-width: 15%
+		min-width: 60px
+		position: absolute
+		z-index: 100
+		right: 8%
+		top: 5px
+		+to(1500px)
+			max-width: 6%
+		+xs-block()
+			top: -15px
+			min-width: 50px	
+	&__content
+		position: relative
+		// 
+		background-position: top center
+		
+		background-repeat: no-repeat
+		max-width: 1920px
+		margin: 0 auto
+		+sm-block()
+			min-height: 210px
+			background-image: url(../img/header/hbg.png)
+			background-size: cover
+		+xxs-block()	
+			min-height: 170px
+.buy
+	position: absolute
+	background-color: #0C2444
+	bottom: 5%
+	max-width: 27%
+	+from(1920px)
+		max-width: 500px
+	+to(1500px)
+		max-width: 25%
+		bottom: 3%
+	+to(1250px)
+			left: 39%
+			bottom: 5%
+	+md-block()
+		bottom: 4%	
+	+sm-block()	
+		max-width: 300px
+		padding: 3px
+		left: 50%
+		margin-left: -110px
+	+xxs-block()
+		margin-left: -89px	
+		bottom: 3px
+	border-radius: 10px
+	text-align: center
+	padding: 7px
+	box-sizing: border-box
+	left: 36.5%
+.button
+	text-transform: uppercase
+	font-size: 2.9vw
+	+from(1920px)
+		font-size: 55px
+	+to(1250px)
+		font-size: 2vw	
+	+md-block()
+		border: 3px solid #fff	
+	+sm-block()	
+		font-size: 20px
+		padding: 5px 45px
+	+xxs-block()
+		font-size: 18px
+		padding: 5px 30px	
+	color: #fff
+	border: 7px solid #fff
+	border-radius: 10px
+	padding: .7vh 4vw
+	padding-bottom: 10px
+	letter-spacing: 0
+	text-decoration: none
+	font-family: 'oswald-bold'
+	font-weight: bold
+	max-width: 100%
+	white-space: nowrap
+	display: block
+
+
+
+.header-bg
+	+sm-block
+		display: none
+
+
+
+.section-content
+	display: flex
+	flex-wrap: wrap
+	align-items: center
+
+.s1
+	background-image: url(../img/s1/s1bg.png)
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: top center
+	margin-top: -5px
+.s1-content
+	justify-content: space-around	
+.s1-img
+	+col()
+	+size(6)
+.s1-text
+	color: $accent
+	+col()
+	+size(5.2)
+	font-size: 104px
+	+to(1500px)
+		font-size: 6vw
+	text-transform: uppercase
+	font-family: 'oswald-bold'
+	font-weight: 900
+	line-height: 1.1
+	display: flex
+	justify-content: flex-end
+
+		
+@import 'media'
