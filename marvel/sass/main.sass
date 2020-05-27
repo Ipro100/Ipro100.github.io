@@ -57,7 +57,7 @@ body
 
 .header
 	position: relative		
-	+xs-block()
+	+xs-block()+xs-block()
 		padding-top: 20px	
 		background-color: #0B2443
 	
@@ -100,7 +100,7 @@ body
 	+to(1250px)
 			left: 38.5%
 			bottom: 6%
-			border-radius: 10px
+			border-radius: 5px
 	+md-block()
 		bottom: 4%	
 		border-radius: 10px
@@ -121,6 +121,9 @@ body
 	padding: 7px
 	box-sizing: border-box
 	left: 36.5%
+	transition: background-color .25s
+	&:hover
+		background-color: #143a6c
 .button
 	text-transform: uppercase
 	font-size: 2.7vw
@@ -130,7 +133,9 @@ body
 	+to(1250px)
 		font-size: 2vw	
 		border: 3px solid #fff
-		border-radius: 10px
+		border-radius: 5px
+		padding-bottom: .8vh
+	+md-block()
 	+sm-block()	
 		font-size: 20px
 		padding: 5px 45px
@@ -224,7 +229,7 @@ body
 .s3
 	background-image: url(../img/s3/dog.gif)
 	background-size: 100%
-	margin-top: -5px
+	margin-top: -7px
 	+to(1800px)
 		background-size: cover
 		background-position: 95% 0
@@ -298,7 +303,7 @@ body
 .s3-wrapper
 	padding: 50px 0
 	+sm-block()
-		background-color: rgba(255,255,255,.2)	
+		background-color: rgba(255,255,255,.7)	
 
 
 
@@ -453,12 +458,15 @@ body
 	&__img
 		display: inline-block
 		margin-bottom: auto
+		position: relative
+		z-index: 500
 	&__text
 		font-size: 24px
 		line-height: 1.2
 		margin-top: 5px
+		font-weight: 500
 		+to(1100px)
-			font-size: 18px
+			font-size: 20px
 .products-img
 	+col()
 	+size(3)
@@ -471,25 +479,31 @@ body
 		right: 0
 .hero-img
 	position: absolute
+	width: 100%
 	left: -22%
 	top: -48%
 	+to(1500px)
 		top: -40%
 		left: -30%
 	+lg-block()
-		left: -40%
-		top: -50%	
+		left: -20%
+		top: -15%	
 	+sm-block()
-		left: -60%	
-		top: -20%
+		left: -30%	
+		top: 0
 	+xs-block()
 		position: relative
+		top: 10%
+		left: -50%
+	+to(512px)
+		margin-top: 10%
 	img
+		position: absolute
 		max-width: 200%
 		+to(1500px)
-			max-width: 130%
-		+lg(max-width, 140%)	
-		+xs(max-width, 200%)
+			max-width: 173%
+		+sm(max-width, 200%)
+		+xs(max-width, 180%)
 
 
 
@@ -605,15 +619,17 @@ body
 		
 .hulk
 	z-index: 100
-	+md(top, -35%)
-	+sm(top, -15%)
+	+md(top, -15%)
+	+md(left, -30%)
+	+sm(top, -5%)
 	+xs-block()
 		left: 0
 	img
-		max-width: 107%
+		max-width: 135%
 		+to(1200px)
-			max-width: 120%
-
+			max-width: 150%
+		+xs-block()
+			max-width: 105%
 .products-cap
 	right: 0
 	top: 5px
@@ -623,39 +639,56 @@ body
 	+xxs-block()	
 		min-width: 142px
 .cap-img
-	left: -66%
-	top: -41%
+	left: -35%
+	top: -42%
 	img
 		+from(1500px)
-			max-width: 117%
-	+sm-block()
-		left: -117%
-		top: -31%
+			max-width: 177%
+		+md-block()
+			max-width: 247%	
+		+xs-block()
+			max-width: 200%	
+	+md-block()		
+		top: -12%
+		left: -65%
 	+xs-block()	
 		left: -55%
 		top: 0
+	+xxs-block()	
+		top: -20px
+
+
 
 .gg-img
 	z-index: 100
-	left: -32%
-	top: -84%
+	left: -22%
+	top: -55%
 	+to(1800px)
-		top: -70%
+		top: -45%
 	+to(1460px)
-		top: -58%	
+		top: -40%	
 	+to(1100px)	
 		left: -43%
 	+md-block()	
 		left: -46%
-		top: -55%
+		top: -45%
 	+sm-block()
 		left: -62%
 		top: -8%	
 	+xs-block()
 		left: 0
 		top: 0	
+		margin-top: 0
+	+xxs-block()	
+		margin-left: -15px
 	img
-		max-width: 145%
+		max-width: 175%
+		+md-block()	
+			max-width: 205%		
+		+sm-block()	
+			max-width: 235%
+		+xs-block()		
+			max-width: 165%
 
 .products-gg
 	left: 0
@@ -698,7 +731,6 @@ body
 		img
 			max-width: auto
 			width: 100%
-
 		+sm(display, none)
 	.buy
 		background: #fff
@@ -716,6 +748,9 @@ body
 			bottom: 20px
 		+to(687px)
 			bottom: 25px	
+		+xxs-block()
+			padding: 3px
+			bottom: 28px
 .bottom-btn
 	background: #fff
 	border: 7px solid #09182D
@@ -724,6 +759,45 @@ body
 		padding-bottom: 4px
 		border-radius: 5px
 		border: 5px solid #09182D
+	+xxs-block()
+		border: 3px solid #09182D	
+	transition: all .25s
+	&:hover
+		border-color: #152a46
+		color: #152a46
+
+
+.sm-img
+	left: -42%
+	top: -45%
+	z-index: 10
+	+lg-block()
+		top: -15%
+	+to(512px)
+		margin-top: 0	
+		top: 5%
+		margin-left: 25px
+	+xs-block()
+		left: -94%
+
+.hero-anim
+	img
+		opacity: 0
+.active
+	opacity: 1 !important
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -777,6 +851,7 @@ body
 		font-size: 16px
 		text-align: right
 		position: relative
+		+xs(margin-top, 30px)
 		p
 			font-size: 16px 
 			line-height: 18px
