@@ -4,34 +4,55 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=1440px>
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/stylePrivacy.css">
 
     <title>Beauty saloon privacy</title>
 </head>
 
 <body>
-    <header class="header-content">
-        <nav>
+    <header class="header-content header-position">
+        <div class="header-menu">
+            <div class="toggle_mnu"><a href="#"><span></span></a></div> 
+            <div class="mobile-menu container">
+                <div class="mobile-menu_logo">
+                 <img class="logo" src="img/svg/logo.svg" alt="logo">
+            </div>
+            <div class="mobile-list">
+                    <ul>
+                        <li><a href="">Партнерство</a></li>
+                        <li><a href="">Условия сотрудничества</a></li>
+                        <li><a href="">Связаться с нами</a></li>
+                    </ul>
+                <a href="tel:+79993335401" class="phone-mobile">+7 999 333 54 01</a>
+            </div>
+            </div>
+            <div class="container">
+             <nav>
             <ul class="list list--left">
-                <li><a href="index.html#OurGoal">НАША ЦЕЛЬ</a></li>
-                <li><a href="index.html#Partnership">ПАРТНЁРСТВО</a></li>
-                <li><a href="index.html#benefit">ВЫГОДА</a></li>
+                <li><a href="#OurGoal">НАША ЦЕЛЬ</a></li>
+                <li><a href="#Partnership">ПАРТНЁРСТВО</a></li>
+                <li><a href="#benefit">ВЫГОДА</a></li>
             </ul>
-
-            <img class="logo" src="/img/svg/logo.svg" alt="logo">
-
+            <div class="header-logo">
+                 <img class="logo" src="img/svg/logo.svg" alt="logo">
+            </div>
             <ul class="list list--right">
-                <li><a href="index.html#cooperation">УСЛОВИЯ СОТРУДНИЧЕСТВА</a></li>
-                <li><a href="index.html#contacts">СВЯЗАТЬСЯ С НАМИ</a></li>
+                <li><a href="#cooperation">УСЛОВИЯ СОТРУДНИЧЕСТВА</a></li>
+                <li><a href="#contacts">СВЯЗАТЬСЯ С НАМИ</a></li>
             </ul>
-        </nav> 
-        <p class="telephone">+7 999 333 54 01</p>
+        </nav>
+        </div>
+        </div>
+        <div class="header-phone">
+              <a href="tel:+79993335401" class="telephone">+7 999 333 54 01</a>
+        </div>
     </header>
 <main>
 
     <section class="wrapper_content">
+        <div class="container">
         <h1 class="title">
             Политика в отношении обработки персональных данных
         </h1>
@@ -89,34 +110,33 @@
         <br>8.2. В данном документе будут отражены любые изменения политики обработки персональных данных Оператором. Политика действует бессрочно до замены ее новой версией.
         <br>8.3. Актуальная версия Политики в свободном доступе расположена в сети Интернет по адресу http://umbeauty.ru/privacy/.
         </p>
-
+</div>
     </section>
  </main>
 
 <footer>
+        <div class="container" style="max-width: 1360px">
+            <div class="footer-content">
     <div class="footer_content-promo">
-        <img class="logo-footer" src="/img/svg/logo.svg" alt="logo">
+        <img class="logo-footer" src="img/svg/logo.svg" alt="logo">
         <p class="footer_promo-text">
             United Beauty - одно из подразделений группы  компаний United Market.
             <br> Мы помогаем развивать бизнес в сети Интернет.
         </p>
-        <p class="footer_promo-text__company">
-            ©United Market, 2021
-        </p>
+
     </div>
     <div class="footer_content-company">
         <p class="footer_content-company__text">
-  margin-bottom: 30px auto 0 auto;
-           <a href="index.html#Partnership" class="footer_ancor">Партнерство</a> 
+            <a href="#Partnership" class="footer_ancor">Партнерство</a>
         </p>
         <p class="footer_content-company__text">
-           <a href="index.html#cooperation" class="footer_ancor">Условия сотрудничества</a> 
+            <a href="#cooperation" class="footer_ancor">Условия сотрудничества</a>
         </p>
         <p class="footer_content-company__text">
-           <a href="privacy.html" class="footer_ancor">Политика Конфиденциальности</a> 
+            <a href="privacy.html" class="footer_ancor">Политика Конфиденциальности</a>
         </p>
     </div>
-    <div class="footer_content-contacts">
+    <div class="footer_content-contacts" id="contacts">
         <p class="telephone footer_telephone footer_content-contacts__text ">
             +7 999 333 54 01
         </p>
@@ -129,13 +149,20 @@
         <p class="footer_content-contacts__text">
             Москва, г. Зеленоград, Савелкинский проезд дом 4, офис 2606
         </p>
-        <a href="https://www.instagram.com/unitedmarketorg/" class="footer_content-contacts__logo"><img src="/img/svg/logo/instagram.svg" alt="instagram"></a>
-        <a href="https://vk.com/unitedmarketorg" class="footer_content-contacts__logo"><img src="/img/svg/logo/vk-social-logotype.svg" alt="vk.com"></a>
-        <a href="https://www.facebook.com/United-Market-160182772502217" class="footer_content-contacts__logo"><img src="/img/svg/logo/facebook.svg" alt="facebook"></a>
-        <a href="https://www.youtube.com/channel/UCns7aIJwqWZFPPwWXd6iq6g" class="footer_content-contacts__logo"><img src="/img/svg/logo/youtube.svg" alt="youtube"></a>
-        <a href="https://t.me/unitedmarket" class="footer_content-contacts__logo"><img src="/img/svg/logo/telegram.svg" alt="telegram"></a>
+        <a href="https://www.instagram.com/unitedmarketorg/" class="footer_content-contacts__logo" target="blank"><img src="img/svg/logo/instagram.svg" alt="instagram" ></a>
+        <a href="https://vk.com/unitedmarketorg" class="footer_content-contacts__logo" target="blank"><img src="img/svg/logo/vk-social-logotype.svg" alt="vk.com" ></a>
+        <a href="https://www.facebook.com/United-Market-160182772502217" class="footer_content-contacts__logo" target="blank"><img src="img/svg/logo/facebook.svg" alt="facebook" ></a>
+        <a href="https://www.youtube.com/channel/UCns7aIJwqWZFPPwWXd6iq6g" class="footer_content-contacts__logo" target="blank"><img src="img/svg/logo/youtube.svg" alt="youtube" ></a>
+        <a href="https://t.me/unitedmarket" class="footer_content-contacts__logo" target="blank"><img src="img/svg/logo/telegram.svg" alt="telegram"></a>
+</div>
+    </div>
+            <p class="footer_promo-text__company">
+            ©United Market, 2021
+        </p>
     </div>
 </footer>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="js/app.js"></script>
 </body>
 
 </html>

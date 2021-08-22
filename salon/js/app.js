@@ -5,4 +5,19 @@ $(".toggle_mnu").click(function() {
   $(".mobile-menu").slideToggle();
   return false;
 });
+
+
+$('.partner-form').magnificPopup({
+	 overflowY: 'scroll',
+	items: {
+      src: '#iamPartner',
+      type: 'inline'
+  },
+ 
+});
+
+$('.hood').on('click' , function(){
+	$.magnificPopup.close();
+});
+
 });
