@@ -1566,7 +1566,10 @@ display: none;
   width: auto;
 }
 
-
+.cooperation_wrapper-select {
+  padding-bottom: 10px;
+}
+.map__input {margin-bottom: 7px;}
 }
 
 @media (max-width: 500px) { 
