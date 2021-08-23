@@ -42,6 +42,10 @@ main {
   margin-bottom: 30px;
 }
 
+.header-logo {
+  cursor: pointer;
+}
+
 .header-position {
     position: relative;
     padding-top: 80px !important;
