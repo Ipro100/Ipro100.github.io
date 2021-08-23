@@ -71,27 +71,10 @@ try{
   backToPoint('.header__list li a')
 } catch{}
 
-try{
-  closeBlock('.hood', '.iamPartner')
-} catch{}
-try{
-  closeBlock('.application__close', '.application')
-} catch{}
-try{
-  closeBlock('.sorry__close', '.sorry')
-} catch{}
-try{
-  closeBlock('.sorry__btn', '.sorry')
-} catch{}
-try{
-  closeBlock('.thanks__btn', '.thanks')
-} catch{}
-try{
-  closeBlock('.thanks__close', '.thanks')
-} catch{}
-try{
-  closeBlock('.header__close', '.header__menu')
-} catch{}
+
+// try{
+//   closeBlock('.sorry__close', '.sorry')
+// } catch{}
 
 function cityCheck(btn, input, city, block, anotherBlock){
   setTimeout(function(){

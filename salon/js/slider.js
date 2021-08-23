@@ -31,13 +31,12 @@ function setPage(index) {
 function prevPage() {
   currentIndex > 0
     ? setPage(currentIndex - 1)
-    : setPage(pages.length - 1)
+    : '';
 }
 
 function nextPage() {
-  currentIndex < pages.length - 1
-    ? setPage(currentIndex + 1)
-    : setPage(0)
+   currentIndex < pages.length - 1
+    ? setPage(currentIndex + 1)  : '';
 }
 
 $buttonLeft.addEventListener('click', prevPage)

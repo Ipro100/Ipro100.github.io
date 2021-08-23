@@ -534,6 +534,8 @@ table {
   font-weight: 600;
   font-size: 18px;
   margin-bottom: 7.5%;
+  line-height: 160%;
+  letter-spacing: 0.03em;
 }
 .partner_content__btn {
   margin-left: 7%;
@@ -622,6 +624,8 @@ footer {
   margin-right: 28px;
 }
 
+.socials {display: flex;}
+
 .input-select {
   max-width: 373px;
   margin-bottom: 26px;
@@ -650,7 +654,7 @@ footer {
     right: 20px;
     width: 38px;
     height: 38px;
-    position: fixed;
+    position: absolute;
     top: 62px;
     cursor: pointer;
     z-index: 500;
@@ -705,8 +709,8 @@ footer {
 
 .mobile-menu{
   background: #FFF;
-  position: fixed;
-  height: 100vh;
+  position: absolute;
+  min-height: 100vh;
   display: none;
   z-index: 200;
   padding-bottom: 32% !important;
@@ -718,8 +722,7 @@ footer {
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  margin-top: 65px;
 }
 
 .mobile-list ul{
@@ -727,7 +730,7 @@ footer {
 }
 
 .mobile-list ul li {
-  margin-bottom: 70px;
+  margin-bottom: 64px;
   text-align: center;
 }
 
@@ -757,9 +760,11 @@ footer {
   font-weight: 600;
   font-size: 20px;
   line-height: 140%;
-  margin-top: 55px;
+  margin-top: 34px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .mobile-menu_logo {
@@ -837,6 +842,7 @@ footer {
     margin: 0 auto;
     z-index: 20;
     position: relative;
+    display: block;
 }
 .iamPartner__title {
     letter-spacing: 0.09em;
@@ -929,7 +935,7 @@ footer {
 .hood {
     position: absolute;
     top: 47px !important;
-    right: 55px !important;
+    right: 79px !important;
     cursor: pointer;
 }
 .iamPartner form input {
@@ -987,6 +993,9 @@ footer {
     color: #151820;
 }
 
+.footer_promo-text {
+  max-width: 239px
+}
 
 .profit__change {
     cursor: pointer;
@@ -1048,7 +1057,7 @@ footer {
 }
 
 .map__input input {
-    width: 373px;
+    width: 96%;
     border: none;
     border-bottom: 1.50018px solid #747475;
     font-weight: 600;
@@ -1062,8 +1071,8 @@ footer {
 
 .map__arrow {
     position: absolute;
-    right: 10px;
-    top: 8px;
+    right: 24px;
+    top: 5px;
     cursor: pointer;
 }
 
@@ -1096,8 +1105,9 @@ footer {
     z-index: 6;
     margin: 0 auto;
     max-width: 1110px;
-    padding: 70px 160px;
+    padding: 70px 104px;
     font-family: "Open Sans", sans-serif;
+    position: relative;
 }
 .application__title {
 font-family: Open Sans;
@@ -1109,13 +1119,20 @@ text-align: center;
 letter-spacing: 0.03em;
 color: #494949;
 margin-bottom: 100px;
+max-width: 642px;
+margin: 0 auto;
+margin-bottom: 100px;
 
 }
 .application__close {
     position: absolute;
-    right: 50px;
-    top: 50px;
+    right: 6% !important;
+    top: 32px !important;
     cursor: pointer;
+}
+
+.application__close img{
+  width: 42px;
 }
 .question__btn {
     border: none;
@@ -1144,7 +1161,7 @@ margin-bottom: 100px;
 }
 .question__form {
     max-width: 642px;
-    margin-left: 30px;
+    margin: 0 auto;
 }
 .question__form input {
     background-color: transparent;
@@ -1294,7 +1311,8 @@ margin-bottom: 100px;
 .cooperation__wrapper-select_text {
   margin-bottom: 15px;
 }
-
+.socials .footer_content-contacts__logo {margin-right: 15px;}
+.footer_content-company{padding-right: 15px;}
 }
 @media (max-width: 768px) { 
 .header-content {
@@ -1429,6 +1447,12 @@ display: none;
 .application {
   padding: 30px 60px;
 }
+.hood {
+    position: absolute;
+    top: 19px !important;
+    right: 33px !important;
+    cursor: pointer;
+}
 
 }
 
@@ -1516,6 +1540,11 @@ display: none;
 
 .application__title {
   font-size: 20px;
+  text-align: left;
+  margin-bottom: 20px;
+  font-weight: bold;
+  line-height: 160%;
+  letter-spacing: 0.1em;
 }
 
 .iamPartner {
@@ -1525,7 +1554,16 @@ display: none;
 
 .application {
   padding: 30px 15px;
-  padding-top: 100px;
+  padding-top: 69px;
+}
+
+.application__close {
+  top: 10px !important;
+  right: 33px !important;
+}
+
+.application__close img {
+  width: auto;
 }
 
 
@@ -1571,6 +1609,14 @@ display: none;
 
 .cooperation_wraper-imfMap {
   width: 100%;
+}
+
+form button {
+  width: 100%;
+}
+
+.application__form {
+  margin-left: 0;
 }
 
 }
@@ -1634,6 +1680,11 @@ display: none;
 @media (max-width: 360px) { 
 .header-bg {
   background-size: 150%;
+}
+.phone-mobile {
+  width: 310px;
+  height: 70px;
+  padding: 21px;
 }
 }
 
