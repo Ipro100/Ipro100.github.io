@@ -1079,13 +1079,14 @@ footer {
 .map__list {
     position: absolute;
     display: none;
-    width: 100%;
+    width: 96%;
     height: 300px;
     overflow-y: scroll;
     top: 32px;
     background-color: #fff;
     -webkit-box-shadow: 0px 0px 5px rgba(0,0,0,0.2);
     box-shadow: 0px 0px 5px rgba(0,0,0,0.2);
+    z-index: 500;
 }
 
 .map__list .my__city {
@@ -1454,6 +1455,10 @@ display: none;
     cursor: pointer;
 }
 
+.partner_section {
+  background-image: url(../img/Rinat_bg.png);
+}
+
 }
 
 @media (max-width: 568px) { 
@@ -1570,6 +1575,21 @@ display: none;
   padding-bottom: 10px;
 }
 .map__input {margin-bottom: 7px;}
+
+.cooperation_wrapper-slider {
+  padding-top: 103px;
+  background-image: url(../img/mbg.png);
+  position: relative;
+  padding-bottom: 194px;
+}
+
+.slider__controls {
+  left: 106% !important;
+  top: 88% !important;
+}
+.cooperation__wrapper-select_title-slider {
+  min-height: 90px
+}
 }
 
 @media (max-width: 500px) { 
