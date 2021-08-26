@@ -147,7 +147,7 @@ try{
   chooseText('.map__input input', '.my__city', '.map__list')
 } catch{}
 try{
-  chooseText('.kategory__choose', '.my__city', '.kategory__list')
+  chooseText('.kategory__choose', '.my__caregory', '.kategory__list')
 } catch{}
 
 
