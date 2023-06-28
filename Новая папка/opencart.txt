@@ -1,2 +1,4 @@
 Добавить столбец в таблицу
 $this->db->query("ALTER TABLE `".DB_PREFIX."product` ADD `selfdelivery` varchar(500) NOT NULL AFTER `mpn`");
+
+test naw fitcha
